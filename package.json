@@ -15,6 +15,7 @@
     "jquery": "^3.6.1",
     "nanoid": "^4.0.0",
     "swiper": "^8.4.4",
+    "vant": "^2.12.51",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "sass-loader": "^13.1.0",
     "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
+    "unplugin-vue-components": "^0.22.9",
     "url-loader": "^4.1.1",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^5.74.0",
