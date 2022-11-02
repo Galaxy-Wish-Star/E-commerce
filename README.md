@@ -22,7 +22,6 @@
   - [贡献者](#贡献者)
   - [页面描述](#页面描述)
   - [安装使用](#安装使用)
-- [进入目录](#进入目录)
 - [安装依赖](#安装依赖)
 - [开启服务器，浏览器访问 http://localhost:8080](#开启服务器浏览器访问-httplocalhost8080)
 - [特别感谢：](#特别感谢)
@@ -124,12 +123,6 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 ## 安装使用
 
 首先确保你的电脑安装了 Nodejs
-
-# 进入目录
-
-```bash
-cd hello-mall
-```
 
 # 安装依赖
 
