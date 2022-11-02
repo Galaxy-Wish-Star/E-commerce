@@ -133,7 +133,7 @@ npm install
 # 开启服务器，浏览器访问 http://localhost:8080
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 # 特别感谢：
