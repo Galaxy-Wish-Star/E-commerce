@@ -17,8 +17,8 @@ module.exports = {  //px转换vw
       }
     }
   };
+  
 // const path = require("path");
-
 // module.exports = ({ webpack }) => {
 // 	const designWidth = webpack.resourcePath.includes(
 // 		path.join("node_modules", "vant"),
