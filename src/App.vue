@@ -6,6 +6,7 @@
 
 <script>
 // import axios from "axios"
+// import bootstrap from "bootstrap"
   export default {
     name:"App",
     comments:{
