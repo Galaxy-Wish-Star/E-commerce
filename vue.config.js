@@ -16,19 +16,19 @@ module.exports = {
   },
 };
 
-//代理服务器
-module.exports = {
-  devServer: {
-    proxy: {
-      '/api': {
-        target: '<url>',//代理转发路径
-        pathRewrites:{"^/api":""},//匹配字符串
-        ws: true,//支持websocket
-        changeOrigin: true,//host源
-      },
-      '/foo': {
-        target: '<other_url>'
-      }
-    }
-  }
-}
+// //代理服务器
+// module.exports = {
+//   devServer: {
+//     proxy: {
+//       '/api': {
+//         target: '<url>',//代理转发路径
+//         pathRewrites:{"^/api":""},//匹配字符串
+//         ws: true,//支持websocket
+//         changeOrigin: true,//host源
+//       },
+//       '/foo': {
+//         target: '<other_url>'
+//       }
+//     }
+//   }
+// }
