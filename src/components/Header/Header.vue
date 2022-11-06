@@ -1,10 +1,12 @@
 <template>
     <!-- /*---------------- head部分---------------- */ -->
     <div class="head" id="translation">
-        <div class="header">
+        <div class="header-top header">
             <div class="header-box contain">
                 <div class="header-top">
                     <ul class="header-left">
+                        <li>欢迎来到脱贫地区农副产品网络销售平台！</li>
+                        <span>|</span>
                         <li>
                             <a href="../www/mobile_index.html"><i class="fa fa-mobile-alt"></i>手机版</a>
                         </li>
@@ -134,15 +136,12 @@
                 </div>
             </div>
         </div>
-        <div class="header">
+        <div class="header-nav header">
             <div class="header-box contain">
                 <div class="header-body">
-                    <img class="logo" src="" alt="" />
+                    <img class="logo" src="./images/logo.png" alt="" />
                     <div class="search">
-                        <input class="search search-input" type="text" value="请输入内容" /><i
-                            class="fa fa-camera camera"
-                            title="点击上传图片就可以搜索啦"
-                        ></i>
+                        <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn">搜索</button>
                         <ul id="ul"></ul>
                     </div>
@@ -154,7 +153,6 @@
                                 <span>/</span>
                                 注册</a
                             >
-                            
                         </div>
 
                         <span>|</span>
@@ -163,7 +161,6 @@
                 </div>
             </div>
         </div>
-       
     </div>
 </template>
 
@@ -194,13 +191,17 @@ body {
         padding: 0 4px;
     }
     a {
-        color: #f3f3f3;
+        color: #999;
         text-decoration: none;
         &:hover {
             color: #8dc742;
         }
     }
-    background-color: #f3f3f3;
+    .header-top {
+        .fa,.fa-user-friends {
+            color: #06c152;
+        }
+    }
     /*---------------- head部分---------------- */
     .contain {
         /* 固定容器的宽度 */
@@ -209,13 +210,14 @@ body {
         margin: 0 auto;
         box-sizing: border-box; //IE盒模型
     }
-    .header {
+    .header-nav {
         border-bottom: 1px solid rgb(220, 220, 220);
+        background-color: #f5f5f5;
     }
     .head {
-        background: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
+        background: #c8c8c8;
     }
-  
+
     .header-box {
         color: #f3f3f3;
         .header-top {
@@ -227,13 +229,15 @@ body {
             font-size: 14px;
             color: #f3f3f3;
             .header-left {
-                width: 150px;
+                color: #999;
+                width: 450px;
                 height: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
             .header-right {
+                color: #999;
                 li:nth-child(9) {
                     position: relative;
                     .show_z {
@@ -329,6 +333,9 @@ body {
                     color: #e6560e;
                 }
                 .loc-mc-box {
+                    .fa {
+                        color: #e6560e;
+                    }
                     width: 90px;
                     height: 160px;
                     overflow: hidden;
@@ -351,7 +358,6 @@ body {
                             width: 100%;
                             line-height: 36px;
                             text-align: center;
-                            color: #f3f3f3;
                         }
                         &:nth-child(3) {
                             position: absolute;
@@ -400,6 +406,9 @@ body {
                 height: 100%;
             }
             .header-body-right {
+                span{
+                    color: #999;
+                }
                 width: 270px;
                 display: flex;
                 justify-content: space-between;
@@ -420,22 +429,19 @@ body {
                     height: 44px;
                     font-size: 16px;
                     border: 5px solid #8dc742;
-                    border-right: 6px solid #fff;
-                    border-left: 6px solid #fff;
                     outline: none;
                     color: rgb(195, 195, 195);
+                    border-right-color: rgb(134, 191, 50);
+                    border: 3px solid #8dc742;
                 }
                 .search-btn {
-                    &:hover {
-                        background-color: rgb(117, 167, 43);
-                    }
-                    color: rgb(195, 195, 195);
+                    cursor: pointer;
                     height: 44px;
-                    width: 52px;
+                    width: 80px;
                     padding: 0;
                     border: none;
                     background-color: rgb(134, 191, 50);
-                    color: #616161;
+                    color: #f3f3f3;
                     font-size: 16px;
                     border: 1px solid rgb(224, 224, 224);
                     border-left: none;
