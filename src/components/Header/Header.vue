@@ -163,25 +163,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-footer">
-            <div class="header-footer-footer">
-                <ol>
-                    <li class="classification">
-                        <a href="javascript:;"><i class="fa fa-grip-horizontal"></i>分类</a>
-                    </li>
-                </ol>
-                <div class="footer-bar">
-                    <ul class="topbar">
-                        <li><a id="index" href="javascript:;">网站首页</a></li>
-                        <li><a id="caigou" href="javascript:;">采购大厅</a></li>
-                        <li><a id="community" href="javascript:;">社区论坛</a></li>
-                        <li><a id="aixin" href="javascript:;">爱心助农</a></li>
-                        <li><a id="nongye" href="javascript:;">农业资讯</a></li>
-                        <li><a id="guanyu" href="javascript:;">关于我们</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+       
     </div>
 </template>
 
@@ -233,59 +215,7 @@ body {
     .head {
         background: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
     }
-    .header-footer {
-        background-color: #f9f9f9;
-
-        background: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
-        // border: 2px solid;
-        // border-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50)) 1;
-        // border-image-slice: 1;
-        // border-image-repeat: stretch;
-        .header-footer-footer {
-            /* 固定容器的宽度 */
-            width: 1226px;
-            /* 设置容器居中 */
-            margin: 0 auto;
-            height: 40px;
-            display: flex;
-            justify-content: space-between;
-            a {
-                padding: 11px 40px;
-                &:hover {
-                    color: rgb(134, 191, 50);
-                    background-color: #f3f3f3;
-                }
-            }
-            ol {
-                display: flex;
-                width: 100%;
-                align-self: center;
-            }
-            .classification {
-                width: 124px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                a {
-                    padding: 13px 33px;
-                }
-            }
-            .footer-bar {
-                display: flex;
-                justify-content: flex-end;
-                .topbar {
-                    li {
-                        line-height: 40px;
-                    }
-                    width: 1000px;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-        }
-    }
+  
     .header-box {
         color: #f3f3f3;
         .header-top {
