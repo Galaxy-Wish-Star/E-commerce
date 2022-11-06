@@ -6,76 +6,119 @@
 			<div class="footer-header">
 				<div class="introduce">
 					<i class="fa fa-leaf"></i>
-					<div class="foolter-header-title">绿色</div>
+					<div class="foolter-header-title">精准帮扶</div>
 				</div>
 
 				<div class="introduce">
 					<i class="fa fa-cloud"></i>
-					<div class="foolter-header-title">智能</div>
+					<div class="foolter-header-title">售后无忧</div>
 				</div>
 				<div class="introduce">
 					<i class="fa fa-tags"></i>
-					<div class="foolter-header-title">实惠</div>
+					<div class="foolter-header-title">产地保证</div>
 				</div>
 				<div class="introduce">
 					<i class="fa fa-paper-plane"></i>
-					<div class="foolter-header-title">安全</div>
-				</div>
-				<div class="introduce">
-					<i class="fa fa-desktop"></i>
-					<div class="foolter-header-title">便捷</div>
+					<div class="foolter-header-title">双向信用</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer-head-body">
-			<div class="footer-header-body">
-				<span>xx农产网是一家专注于绿色有机农产品的专业服务网</span>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footerList">
+                    <div class="footerItem">
+                        <h4>购物指南</h4>
+                        <ul class="footerItemCon">
+                            <li>购物流程</li>
+                            <li>会员介绍</li>
+                            <li>生活旅行/团购</li>
+                            <li>常见问题</li>
+                            <li>购物指南</li>
+                        </ul>
 
-				<span>xx专注于满足市场需求不断拓展服务区域</span>
-
-				<span>没有中间商，免除差价让交易更加简单</span>
-
-				<span>实名认证登录、注册专业渠道让交易更加有保障</span>
-
-				<span>快速稳定的销往全国各地经销商和个体户</span>
-			</div>
-		</div>
-		<div class="footer-body">
-			<ul class="aboutt">
-				<li><a href="javascript:;">关于我们</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">法律申明</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">使用协议</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">版权隐私</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">友情链接</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">成功案例</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">XX大事件</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">产品库</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">品种库</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">产品价格大全</a></li>
-				<span>|</span>
-				<li><a href="javascript:;">产品地图</a></li>
-			</ul>
-		</div>
-		<div class="foolter-bootm">
-			<ul class="infor ip-infor" id="ipadrees-infor"></ul>
-			<ol class="infor">
-				<li>蜀ICP备12345678号-1服务热线:400-008-8888</li>
-				<li>
-					互联网农产品信息服务资格证书:(蜀)–经营性-2019-0001四川xx农产品网营业执照
-				</li>
-				<li>&copy;-2022 Cnhnb B2B SYSTEN ALL Rights Reserved</li>
-			</ol>
-		</div>
-		
+                    </div>
+                    <div class="footerItem">
+                        <h4>配送方式</h4>
+                        <ul class="footerItemCon">
+                            <li>上门自提</li>
+                            <li>211限时达</li>
+                            <li>配送服务查询</li>
+                            <li>配送费收取标准</li>
+                            <li>海外配送</li>
+                        </ul>
+                    </div>
+                    <div class="footerItem">
+                        <h4>支付方式</h4>
+                        <ul class="footerItemCon">
+                            <li>货到付款</li>
+                            <li>在线支付</li>
+                            <li>分期付款</li>
+                            <li>邮局汇款</li>
+                            <li>公司转账</li>
+                        </ul>
+                    </div>
+                    <div class="footerItem">
+                        <h4>售后服务</h4>
+                        <ul class="footerItemCon">
+                            <li>售后政策</li>
+                            <li>价格保护</li>
+                            <li>退款说明</li>
+                            <li>返修/退换货</li>
+                            <li>取消订单</li>
+                        </ul>
+                    </div>
+                    <div class="footerItem">
+                        <h4>特色服务</h4>
+                        <ul class="footerItemCon">
+                            <li>夺宝岛</li>
+                            <li>DIY装机</li>
+                            <li>延保服务</li>
+                            <li>尚品汇E卡</li>
+                            <li>尚品汇通信</li>
+                        </ul>
+                    </div>
+                    <div class="footerItem">
+                        <h4>帮助中心</h4>
+                        <img src="./images/qrcode-login.jpg">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <ul class="helpLink">
+                        <li>关于我们
+                            <span class="space"></span>
+                        </li>
+                        <li>联系我们
+                            <span class="space"></span>
+                        </li>
+                        <li>关于我们
+                            <span class="space"></span>
+                        </li>
+                        <li>商家入驻
+                            <span class="space"></span>
+                        </li>
+                        <li>营销中心
+                            <span class="space"></span>
+                        </li>
+                        <li>友情链接
+                            <span class="space"></span>
+                        </li>
+                        <li>关于我们
+                            <span class="space"></span>
+                        </li>
+                        <li>营销中心
+                            <span class="space"></span>
+                        </li>
+                        <li>友情链接
+                            <span class="space"></span>
+                        </li>
+                        <li>关于我们</li>
+                    </ul>
+                    <p>地址：北京市昌平区宏福科技园综合楼6层</p>
+                    <p>京ICP备19006430号</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -90,24 +133,73 @@ export default {
 
 @import "src/assets/css/_color.scss";
 @import "src/assets/css/_fonts.scss";
-.footer-head {
-    padding-top: 40px;
-    background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
-    width: 100%;
-    background-size: 1400% 300%;
-    animation: dynamics 5s ease infinite;
-    @keyframes dynamics {
-        0% {
-            background-position: 0% 0%;
-        }
 
-        10% {
-            background-position: 40% 50%;
-        }
-        30% {
-            background-position: 100% 100%;
+
+.footer {
+        background-color: #eaeaea;
+
+        .footer-container {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            .footerList {
+                padding: 20px;
+                border-bottom: 1px solid #e4e1e1;
+                border-top: 1px solid #e4e1e1;
+                overflow: hidden;
+                padding-left: 40px;
+
+                .footerItem {
+                    width: 16.6666667%;
+                    float: left;
+
+                    h4 {
+                        font-size: 14px;
+                    }
+
+                    .footerItemCon {
+                        li {
+                            line-height: 18px;
+                        }
+                    }
+
+                    &:last-child img {
+                        width: 121px;
+                    }
+                }
+            }
+
+            .copyright {
+                padding: 20px;
+
+                .helpLink {
+                    text-align: center;
+
+                    li {
+                        display: inline;
+
+                        .space {
+                            border-left: 1px solid #666;
+                            width: 1px;
+                            height: 13px;
+                            background: #666;
+                            margin: 8px 10px;
+                        }
+                    }
+                }
+
+                p {
+                    margin: 10px 0;
+                    text-align: center;
+                }
+            }
         }
     }
+body{
+    background: #f5f5f5;
+}
+.footer-head {
     .footer-header {
         /* 固定容器的宽度 */
         width: 1226px;
@@ -141,81 +233,6 @@ export default {
         }
     }
 }
-.footer-head-body {
-    background-image: linear-gradient(to right, #1d99e3, rgb(134, 191, 50));
-    animation: dynamics 5s ease infinite;
-    width: 100%;
-    background-size: 1400% 300%;
-    .footer-header-body {
-        /* 固定容器的宽度 */
-        width: 1226px;
-        /* 设置容器居中 */
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        span {
-            position: relative;
-            top: -30px;
-            left: 5px;
-            width: 170px;
-            color: #f3f3f3;
-            font-size: 14px;
-        }
-    }
-}
-.footer-body {
-    background-color: rgb(64, 64, 64);
-    .aboutt {
-        li{
-            a{
-                color: $words-color;
-            }
-        }
-        padding-top: 10px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        span {
-            color: #000;
-            margin: 0 18px;
-        }
-    }
-}
-.foolter-bootm {
-    padding-top: 10px;
-    background-color: rgb(64, 64, 64);
-    color: #f3f3f3;
-    font-size: 14px;
-    .infor {
-        text-align: center;
-        li {
-            padding-top: 5px;
-            &:last-child {
-                padding-bottom: 10px;
-            }
-        }
-    }
-    .ip-infor {
-        display: flex;
-        justify-content: center;
-        li {
-            margin: 10px 10px;
-
-            a {
-                &:hover {
-                    color: $bule-color;
-                }
-            }
-            &:nth-child(2n) {
-                color: $green-color !important;
-                font-weight: bold;
-            }
-        }
-    }
-}
-
 .container {
     /* 固定容器的宽度 */
     width: 1200px;
