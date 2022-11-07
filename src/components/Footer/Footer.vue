@@ -2,27 +2,27 @@
     <div>
         <!-- /*---------------- 脚部---------------- */ -->
 
-		<div class="footer-head">
-			<div class="footer-header">
-				<div class="introduce">
-					<i class="fa fa-leaf"></i>
-					<div class="foolter-header-title">精准帮扶</div>
-				</div>
+        <div class="footer-head">
+            <div class="footer-header">
+                <div class="introduce">
+                    <i class="fa fa-leaf"></i>
+                    <div class="foolter-header-title">精准帮扶</div>
+                </div>
 
-				<div class="introduce">
-					<i class="fa fa-cloud"></i>
-					<div class="foolter-header-title">售后无忧</div>
-				</div>
-				<div class="introduce">
-					<i class="fa fa-tags"></i>
-					<div class="foolter-header-title">产地保证</div>
-				</div>
-				<div class="introduce">
-					<i class="fa fa-paper-plane"></i>
-					<div class="foolter-header-title">双向信用</div>
-				</div>
-			</div>
-		</div>
+                <div class="introduce">
+                    <i class="fa fa-cloud"></i>
+                    <div class="foolter-header-title">售后无忧</div>
+                </div>
+                <div class="introduce">
+                    <i class="fa fa-tags"></i>
+                    <div class="foolter-header-title">产地保证</div>
+                </div>
+                <div class="introduce">
+                    <i class="fa fa-paper-plane"></i>
+                    <div class="foolter-header-title">双向信用</div>
+                </div>
+            </div>
+        </div>
         <!-- 底部 -->
         <div class="footer">
             <div class="footer-container">
@@ -35,7 +35,6 @@
                             <li>生活旅行/团购</li>
                             <li>购物指南</li>
                         </ul>
-
                     </div>
                     <div class="footerItem">
                         <h4>配送方式</h4>
@@ -75,42 +74,51 @@
                     </div>
                     <div class="footerItem">
                         <h4>帮助中心</h4>
-                        <img src="./images/qrcode-login.jpg">
+                        <img src="./images/qrcode-login.jpg" />
                     </div>
                 </div>
                 <div class="copyright">
                     <ul class="helpLink">
-                        <li>关于我们
+                        <li>
+                            关于我们
                             <span class="space"></span>
                         </li>
-                        <li>联系我们
+                        <li>
+                            联系我们
                             <span class="space"></span>
                         </li>
-                        <li>关于我们
+                        <li>
+                            关于我们
                             <span class="space"></span>
                         </li>
-                        <li>商家入驻
+                        <li>
+                            商家入驻
                             <span class="space"></span>
                         </li>
-                        <li>营销中心
+                        <li>
+                            营销中心
                             <span class="space"></span>
                         </li>
-                        <li>友情链接
+                        <li>
+                            友情链接
                             <span class="space"></span>
                         </li>
-                        <li>关于我们
+                        <li>
+                            关于我们
                             <span class="space"></span>
                         </li>
-                        <li>营销中心
+                        <li>
+                            营销中心
                             <span class="space"></span>
                         </li>
-                        <li>友情链接
+                        <li>
+                            友情链接
                             <span class="space"></span>
                         </li>
                         <li>关于我们</li>
                     </ul>
                     <p>地址：北京市昌平区宏福科技园综合楼6层</p>
-                    <p>京ICP备19006430号</p>
+                    <p><img src="./images/国徽.png" alt="" />京ICP备19006430号</p>
                 </div>
             </div>
         </div>
@@ -118,9 +126,7 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -129,75 +135,79 @@ export default {
 @import "src/assets/css/_color.scss";
 @import "src/assets/css/_fonts.scss";
 
-
 .footer {
-        background-color: #eaeaea;
+    background-color: #eaeaea;
 
-        .footer-container {
-            width: 1226px;
-            margin: 0 auto;
-            padding: 0 15px;
+    .footer-container {
+        width: 1226px;
+        margin: 0 auto;
+        padding: 0 15px;
 
-            .footerList {
-                padding: 20px;
-                border-bottom: 1px solid #e4e1e1;
-                border-top: 1px solid #e4e1e1;
-                overflow: hidden;
-                padding-left: 40px;
-                .footerItem {
-                    border-right: 1px solid #616161;
-                    &:last-child{
-                        border-right: none;
-                    }
-                    text-align: center;
-                    width: 15.6666667%;
-                    float: left;
-
-                    h4 {
-                        font-size: 17px;
-                        font-weight: bold;
-                    }
-
-                    .footerItemCon {
-                        li {
-                            font-size: 14px;
-                            line-height: 30px;
-                        }
-                    }
-
-                    &:last-child img {
-                        width: 121px;
-                    }
+        .footerList {
+            padding: 20px;
+            border-bottom: 1px solid #e4e1e1;
+            border-top: 1px solid #e4e1e1;
+            overflow: hidden;
+            padding-left: 40px;
+            .footerItem {
+                border-right: 1px solid #616161;
+                &:last-child {
+                    border-right: none;
                 }
-            }
+                text-align: center;
+                width: 15.6666667%;
+                float: left;
 
-            .copyright {
-                padding: 20px;
+                h4 {
+                    font-size: 17px;
+                    font-weight: bold;
+                }
 
-                .helpLink {
-                    text-align: center;
-
+                .footerItemCon {
                     li {
-                        display: inline;
-
-                        .space {
-                            border-left: 1px solid #666;
-                            width: 1px;
-                            height: 13px;
-                            background: #666;
-                            margin: 8px 10px;
-                        }
+                        font-size: 14px;
+                        line-height: 30px;
                     }
                 }
 
-                p {
-                    margin: 10px 0;
-                    text-align: center;
+                &:last-child img {
+                    width: 121px;
                 }
             }
         }
+
+        .copyright {
+            padding: 20px;
+
+            .helpLink {
+                text-align: center;
+
+                li {
+                    display: inline;
+
+                    .space {
+                        border-left: 1px solid #666;
+                        width: 1px;
+                        height: 13px;
+                        background: #666;
+                        margin: 8px 10px;
+                    }
+                }
+            }
+
+            p {
+                img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                margin: 20px 0;
+                text-align: center;
+            }
+        }
     }
-body{
+}
+body {
     background: #f5f5f5;
 }
 .footer-head {
