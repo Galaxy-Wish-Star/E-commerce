@@ -140,7 +140,7 @@
             <div class="header-box contain">
                 <div class="header-body">
                     <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
-                    <div class="search" v-show="!($route.path == '/register') && !($route.path == '/login')">
+                    <div class="search" v-show="searchHide">
                         <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
@@ -180,6 +180,7 @@
 </template>
 
 <script>
+
 export default {
     name: "",
     methods: {
@@ -188,7 +189,15 @@ export default {
             this.$router.push("search");
         },
     },
-    computed: {},
+
+    computed: {
+        searchHide(){
+           return !(this.$router.path == '/register') && !(this.$router.path == '/login')
+        }
+    },
+    mounted(){
+        // this.searchHide()
+    },
 };
 </script>
 
