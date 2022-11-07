@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 // import store from './store'
 
-//引入vue router
-// import VueRouter from 'vue-router'
+//引入router
+import router from '@/router'
 
 //使用路由插件
 // Vue.use(VueRouter)
@@ -16,4 +16,6 @@ import App from './App.vue'
 new Vue({
   render: h => h(App),
   // store,
+  //注册路由
+  router
 }).$mount('#app')

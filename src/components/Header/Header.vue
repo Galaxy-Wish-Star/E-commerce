@@ -139,23 +139,31 @@
         <div class="header-nav header">
             <div class="header-box contain">
                 <div class="header-body">
-                    <img class="logo" src="./images/logo.png" alt="" />
+                   <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
                     <div class="search">
                         <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn">搜索</button>
                         <ul id="ul">
-                            <span style="float: left;margin-right: 4px;">热门搜索：</span>
-                            <span class="hot_search_box"><a style="color: #F40000;" href="javascript:;">北京仓优选</a><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a><a style="" href="javascript:;">832福油</a></span>
+                            <span style="float: left; margin-right: 4px;">热门搜索：</span>
+                            <span class="hot_search_box"
+                                ><a style="color: #f40000;" href="javascript:;">北京仓优选</a
+                                ><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a
+                                ><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a
+                                ><a style="" href="javascript:;">832福油</a></span
+                            >
                         </ul>
                     </div>
 
                     <div class="header-body-right">
                         <div class="login-dis">
-                            <a id="login-regster-btn" href="javascript:void(0)"
+                            <!-- <a id="login-regster-btn" href="javascript:void(0)"
                                 ><i class="fa fa-user"></i>登录
                                 <span>/</span>
                                 注册</a
-                            >
+                            > -->
+                            <router-link to="/login" id="login-regster-btn">登录</router-link>
+                            <span>/</span>
+                            <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
 
                         <span>|</span>
@@ -197,7 +205,7 @@ body {
         color: #999;
         text-decoration: none;
         &:hover {
-            color: #8dc742;
+            color: rgb(131, 131, 131);
         }
     }
     .header-top {
@@ -219,7 +227,7 @@ body {
         background-color: #fff;
     }
     .head {
-        background: #c8c8c8;
+        background-color: #f5f5f5;
     }
 
     .header-box {
@@ -318,7 +326,7 @@ body {
                 }
                 a {
                     &:hover {
-                        color: #1d99e3;
+                        color: rgb(117, 117, 117);
                     }
                 }
                 .loc-an-box {
@@ -425,14 +433,14 @@ body {
                 }
             }
             .search {
-                ul{
-                    span{
+                ul {
+                    span {
                         color: #999;
                     }
                     font-size: 12px;
                     margin-top: 5px;
-                    span{
-                        a{
+                    span {
+                        a {
                             margin: 0 6px;
                         }
                     }
