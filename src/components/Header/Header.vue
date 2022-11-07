@@ -162,7 +162,6 @@
                                 注册</a
                             > -->
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
-                            <span>/</span>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
 
@@ -190,6 +189,17 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/css/_color.scss";
 @import "src/assets/css/_fonts.scss";
+.login-dis{
+    #login-regster-btn{
+        border: 1px solid #06c152;
+        line-height: 25px;
+        width: 60px;
+        text-align: center;
+    }
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
 body {
     $width: 1226px;
     $width-contain: 1400px;
@@ -426,6 +436,10 @@ body {
                 height: 95px;
             }
             .header-body-right {
+                &:last-child{
+                    display: flex;
+                    align-items: center;
+                }
                 span {
                     color: #06c152;
                 }
