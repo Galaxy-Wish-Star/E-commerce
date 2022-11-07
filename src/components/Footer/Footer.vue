@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="introduce">
-                    <i class="fa fa-cloud"></i>
+                    <i class="fa fa-phone"></i>
                     <div class="foolter-header-title">售后无忧</div>
                 </div>
                 <div class="introduce">
@@ -117,7 +117,10 @@
                         </li>
                         <li>关于我们</li>
                     </ul>
-                    <p>地址：北京市昌平区宏福科技园综合楼6层</p>
+                    <p>版权所有 脱贫地区农副产品网络销售平台 | 京ICP备15050565号-10 | 京ICP证151138号</p>
+                    <p>支持媒体： 中华合作时报 中国政府采购新闻网 友情链接： 供销e家 采购人管理系统</p>
+                    <p>本网站由<a href="javascript:;">Galaxy-Wish-Star团队</a>运营维护</p>
+                    <img src="./images/s-footerImg.png" alt="" />
                     <p><img src="./images/国徽.png" alt="" />京ICP备19006430号</p>
                 </div>
             </div>
@@ -178,13 +181,17 @@ export default {};
 
         .copyright {
             padding: 20px;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             .helpLink {
                 text-align: center;
 
                 li {
+                    color: #616161;
+                    font-size: 13px;
                     display: inline;
-
                     .space {
                         border-left: 1px solid #666;
                         width: 1px;
@@ -196,13 +203,22 @@ export default {};
             }
 
             p {
+                color: #616161;
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 img {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
-                margin: 20px 0;
+                margin: 15px 0;
                 text-align: center;
+                a {
+                    color: #999;
+                    margin: 0 5px;
+                }
             }
         }
     }
@@ -219,27 +235,38 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 200px;
+        height: 140px;
         .introduce {
+            &:nth-child(1) {
+                color: #e64e2b;
+            }
+            &:nth-child(2) {
+                color: #66cde5;
+            }
+            &:nth-child(3) {
+                color: #eda327;
+            }
+            &:nth-child(4) {
+                color: #eda327;
+            }
             position: relative;
-            width: 120px;
-            height: 120px;
-            border: 1px solid #f3f3f3;
-            border-radius: 50%;
+            top: -40px;
+            width: 60px;
+            height: 60px;
             i {
+                scale: 2.5;
                 position: absolute;
                 top: 50px;
                 left: 50px;
-                transform: scale(3.5, 3.5);
-                color: #f3f3f3;
             }
             .foolter-header-title {
                 font-family: "myfont";
-                font-size: 22px;
                 position: absolute;
-                top: -25px;
-                left: 39px;
-                color: #f3f3f3;
+                top: 85px;
+                width: 65px;
+                left: 30px;
+                color: #616161;
+                
             }
         }
     }
