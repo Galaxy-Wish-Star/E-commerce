@@ -140,7 +140,7 @@
             <div class="header-box contain">
                 <div class="header-body">
                     <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
-                    <div class="search">
+                    <div class="search" v-show="!($route.path == '/register') && !($route.path == '/login')">
                         <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
@@ -154,7 +154,12 @@
                         </ul>
                     </div>
 
-                    <div class="header-body-right">
+                    <div
+                        class="header-body-right"
+                        v-show="
+                            !($route.path == '/search') && !($route.path == '/register') && !($route.path == '/login')
+                        "
+                    >
                         <div class="login-dis">
                             <!-- <a id="login-regster-btn" href="javascript:void(0)"
                                 ><i class="fa fa-user"></i>登录
@@ -183,14 +188,15 @@ export default {
             this.$router.push("search");
         },
     },
+    computed: {},
 };
 </script>
 
 <style lang="scss" scoped>
 @import "src/assets/css/_color.scss";
 @import "src/assets/css/_fonts.scss";
-.login-dis{
-    #login-regster-btn{
+.login-dis {
+    #login-regster-btn {
         border: 1px solid #06c152;
         line-height: 25px;
         width: 60px;
@@ -436,7 +442,7 @@ body {
                 height: 95px;
             }
             .header-body-right {
-                &:last-child{
+                &:last-child {
                     display: flex;
                     align-items: center;
                 }
@@ -494,7 +500,7 @@ body {
                     font-size: 16px;
                     border: 1px solid rgb(224, 224, 224);
                     border-left: none;
-                    &:hover{
+                    &:hover {
                         background-color: #78aa37;
                     }
                 }
