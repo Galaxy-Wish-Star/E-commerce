@@ -74,7 +74,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 ## 贡献者
 
-<!-- <a href="https://github.com/liusxs"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/101164913?v=4" /></a> -->
+<a href="https://github.com/liusxs"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/101164913?v=4" /></a>
 
 <a href="https://github.com/mason369"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/93964390?s=96&v=4" /></a>
 
@@ -85,7 +85,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 **当前进度**：
 
 - [x] 人员招募
-- [ ] 方案设计
+- [x] 方案设计
 - [ ] 编码
 - [ ] Debug 测试
 - [ ] 完成！
