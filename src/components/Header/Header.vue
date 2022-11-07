@@ -415,7 +415,7 @@ body {
             justify-content: space-between;
             align-items: center;
             .logo {
-                height: 100%;
+                height: 90px;
             }
             .header-body-right {
                 span {
