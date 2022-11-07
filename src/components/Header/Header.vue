@@ -139,10 +139,10 @@
         <div class="header-nav header">
             <div class="header-box contain">
                 <div class="header-body">
-                   <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
+                    <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
                     <div class="search">
                         <input class="search search-input" type="text" placeholder="请输入内容" />
-                        <button class="search-btn">搜索</button>
+                        <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
                             <span style="float: left; margin-right: 4px;">热门搜索：</span>
                             <span class="hot_search_box"
@@ -176,7 +176,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: "",
+    methods: {
+        //搜索按钮回调
+        getSearch() {
+            this.$router.push("search");
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -410,12 +418,12 @@ body {
             }
         }
         .header-body {
-            height: 95px;
+            height: 125px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             .logo {
-                height: 90px;
+                height: 95px;
             }
             .header-body-right {
                 span {
@@ -438,7 +446,8 @@ body {
                         color: #999;
                     }
                     font-size: 12px;
-                    margin-top: 5px;
+                    position: absolute;
+                    top: 55px;
                     span {
                         a {
                             margin: 0 6px;
@@ -471,6 +480,9 @@ body {
                     font-size: 16px;
                     border: 1px solid rgb(224, 224, 224);
                     border-left: none;
+                    &:hover{
+                        background-color: #78aa37;
+                    }
                 }
                 .camera {
                     color: rgb(200, 200, 200);
