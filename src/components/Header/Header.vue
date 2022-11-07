@@ -143,7 +143,10 @@
                     <div class="search">
                         <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn">搜索</button>
-                        <ul id="ul"></ul>
+                        <ul id="ul">
+                            <span style="float: left;margin-right: 4px;">热门搜索：</span>
+                            <span class="hot_search_box"><a style="color: #F40000;" href="javascript:;">北京仓优选</a><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a><a style="" href="javascript:;">832福油</a></span>
+                        </ul>
                     </div>
 
                     <div class="header-body-right">
@@ -198,7 +201,8 @@ body {
         }
     }
     .header-top {
-        .fa,.fa-user-friends {
+        .fa,
+        .fa-user-friends {
             color: #06c152;
         }
     }
@@ -212,7 +216,7 @@ body {
     }
     .header-nav {
         border-bottom: 1px solid rgb(220, 220, 220);
-        background-color: #f5f5f5;
+        background-color: #fff;
     }
     .head {
         background: #c8c8c8;
@@ -406,8 +410,8 @@ body {
                 height: 100%;
             }
             .header-body-right {
-                span{
-                    color: #999;
+                span {
+                    color: #06c152;
                 }
                 width: 270px;
                 display: flex;
@@ -416,9 +420,23 @@ body {
                     &:hover {
                         color: $bule-color;
                     }
+
+                    color: #06c152;
                 }
             }
             .search {
+                ul{
+                    span{
+                        color: #999;
+                    }
+                    font-size: 12px;
+                    margin-top: 5px;
+                    span{
+                        a{
+                            margin: 0 6px;
+                        }
+                    }
+                }
                 z-index: 9999;
                 position: relative;
                 .search {
