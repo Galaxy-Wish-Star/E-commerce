@@ -1766,11 +1766,13 @@ export default {
                         z-index: 9999 !important;
 
                         .subitem {
+                            
                             float: left;
                             width: 650px;
                             padding: 0 4px 0 8px;
 
                             dl {
+                                font-size: 14px;
                                 border-top: 1px solid #eee;
                                 padding: 6px 0;
                                 overflow: hidden;
@@ -1782,7 +1784,7 @@ export default {
 
                                 dt {
                                     float: left;
-                                    width: 54px;
+                                    width: 70px;
                                     line-height: 22px;
                                     text-align: right;
                                     padding: 3px 6px 0 0;
@@ -1790,8 +1792,8 @@ export default {
                                 }
 
                                 dd {
-                                    float: left;
-                                    width: 415px;
+                                    display: flex;
+                                    width: 455px;
                                     padding: 3px 0 0;
                                     overflow: hidden;
 

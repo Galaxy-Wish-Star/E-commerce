@@ -8,7 +8,7 @@
                         <div class="swiper-slide">
                             <img src="./images/banner1.jpg" />
                         </div>
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <img src="./images/banner2.jpg" />
                         </div>
                         <div class="swiper-slide">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/banner4.jpg" />
-                        </div>
+                        </div> -->
                     </div>
                     <!-- 如果需要分页器 -->
                     <div class="swiper-pagination"></div>
@@ -105,7 +105,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>  
 .list-container {
     width: 1200px;
     margin: 0 auto;
@@ -152,7 +152,8 @@ export default {
                 .news-list {
                     padding: 5px 15px;
                     line-height: 26px;
-
+                    
+                    font-size: 14px;
                     .bold {
                         font-weight: 700;
                     }
