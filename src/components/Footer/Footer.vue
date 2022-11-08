@@ -23,6 +23,7 @@
                 </div>
             </div>
         </div>
+        <Brand></Brand>
         <!-- 底部 -->
         <div class="footer">
             <div class="footer-container">
@@ -129,7 +130,13 @@
 </template>
 
 <script>
-export default {};
+import Brand from "@/components/Footer/Brand";
+export default {
+    name: "",
+    components: {
+        Brand,
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -224,14 +231,15 @@ export default {};
     }
 }
 body {
-    background: #f5f5f5;
+    background: #f7f7f7;
 }
 .footer-head {
     .footer-header {
         /* 固定容器的宽度 */
         width: 1226px;
         /* 设置容器居中 */
-        margin: 0 auto;
+    background: #fff;
+    margin: 35px auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -266,7 +274,6 @@ body {
                 width: 65px;
                 left: 30px;
                 color: #616161;
-                
             }
         }
     }
