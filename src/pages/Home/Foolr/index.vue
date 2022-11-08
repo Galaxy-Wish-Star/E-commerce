@@ -44,7 +44,7 @@
                             <div class="img1-activity-box">
                                 <span>福建蜜薯</span>
                                 <p>抽奖送好礼</p>
-                                <img data-lazy-src="./images/福建蜜薯.jpg" alt="" />
+                                <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
                         <li class="w329">
@@ -52,17 +52,17 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
@@ -77,14 +77,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/湖南有机黄瓜.jpg" alt="" />
+                                    <img src="./images/湖南有机黄瓜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/新疆哈密瓜.jpg" alt="" />
+                                    <img src="./images/新疆哈密瓜.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -102,14 +102,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/四川韭菜.jpg" alt="" />
+                                    <img src="./images/四川韭菜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/新鲜脐橙.jpg" alt="" />
+                                    <img src="./images/新鲜脐橙.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -166,7 +166,7 @@
                             <div class="img1-activity-box">
                                 <span>福建蜜薯</span>
                                 <p>抽奖送好礼</p>
-                                <img data-lazy-src="./images/福建蜜薯.jpg" alt="" />
+                                <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
                         <li class="w329">
@@ -174,17 +174,17 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
@@ -199,14 +199,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/湖南有机黄瓜.jpg" alt="" />
+                                    <img src="./images/湖南有机黄瓜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/新疆哈密瓜.jpg" alt="" />
+                                    <img src="./images/新疆哈密瓜.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -224,14 +224,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/四川韭菜.jpg" alt="" />
+                                    <img src="./images/四川韭菜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/新鲜脐橙.jpg" alt="" />
+                                    <img src="./images/新鲜脐橙.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -288,7 +288,7 @@
                             <div class="img1-activity-box">
                                 <span>福建蜜薯</span>
                                 <p>抽奖送好礼</p>
-                                <img data-lazy-src="./images/福建蜜薯.jpg" alt="" />
+                                <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
                         <li class="w329">
@@ -296,17 +296,17 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
@@ -321,14 +321,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/湖南有机黄瓜.jpg" alt="" />
+                                    <img src="./images/湖南有机黄瓜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/新疆哈密瓜.jpg" alt="" />
+                                    <img src="./images/新疆哈密瓜.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -346,14 +346,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/四川韭菜.jpg" alt="" />
+                                    <img src="./images/四川韭菜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/新鲜脐橙.jpg" alt="" />
+                                    <img src="./images/新鲜脐橙.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -410,7 +410,7 @@
                             <div class="img1-activity-box">
                                 <span>福建蜜薯</span>
                                 <p>抽奖送好礼</p>
-                                <img data-lazy-src="./images/福建蜜薯.jpg" alt="" />
+                                <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
                         <li class="w329">
@@ -418,17 +418,17 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img data-lazy-src="./images/兴城多宝鱼.jpg" alt="" />
+                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
                                         <span>美味兴城多宝鱼</span>
                                         <p>满299减40</p>
                                     </div>
@@ -443,14 +443,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/湖南有机黄瓜.jpg" alt="" />
+                                    <img src="./images/湖南有机黄瓜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>美食节一分钱抢购！</p>
-                                    <img data-lazy-src="./images/新疆哈密瓜.jpg" alt="" />
+                                    <img src="./images/新疆哈密瓜.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
@@ -468,14 +468,14 @@
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/四川韭菜.jpg" alt="" />
+                                    <img src="./images/四川韭菜.jpg" alt="" />
                                 </a>
                             </div>
                             <div class="tab-con-item">
                                 <a href="#">
                                     <span>满299减299！</span>
                                     <p>云南雪莲果</p>
-                                    <img data-lazy-src="./images/新鲜脐橙.jpg" alt="" />
+                                    <img src="./images/新鲜脐橙.jpg" alt="" />
                                 </a>
                             </div>
                         </li>
