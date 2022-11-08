@@ -6,7 +6,7 @@ import App from "./App.vue";
 import router from "@/router";
 
 //三级联动全局组件
-import TypeNav from "@/pages/Home/TypeNav/TypeNav.vue";
+import TypeNav from "@/pages/Home/TypeNav/index.vue";
 Vue.component(TypeNav.name, TypeNav);
 
 //使用element ui插件

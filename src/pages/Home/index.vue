@@ -4,18 +4,24 @@
         <TypeNav></TypeNav>
         <ListContainer></ListContainer>
         <Recommend></Recommend>
+        <Rank></Rank>
+        <Like></Like>
     </div>
 </template>
 
 <script>
 // 引入其他的组件
 import ListContainer from "@/pages/Home/ListContainer";
-import Recommend from "@/pages/Home/Recommend/Recommend";
+import Recommend from "@/pages/Home/Recommend";
+import Rank from "@/pages/Home/Rank";
+import Like from "@/pages/Home/Like";
 export default {
     name: "",
     components: {
         ListContainer,
         Recommend,
+        Rank,
+        Like,
     },
 };
 </script>
