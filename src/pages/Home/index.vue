@@ -6,6 +6,7 @@
         <Recommend></Recommend>
         <Rank></Rank>
         <Like></Like>
+        <Foolr></Foolr>
     </div>
 </template>
 
@@ -15,6 +16,7 @@ import ListContainer from "@/pages/Home/ListContainer";
 import Recommend from "@/pages/Home/Recommend";
 import Rank from "@/pages/Home/Rank";
 import Like from "@/pages/Home/Like";
+import Foolr from "@/pages/Home/Foolr";
 export default {
     name: "",
     components: {
@@ -22,6 +24,7 @@ export default {
         Recommend,
         Rank,
         Like,
+        Foolr,
     },
 };
 </script>
