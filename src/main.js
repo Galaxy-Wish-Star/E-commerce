@@ -5,8 +5,6 @@ import App from './App.vue'
 //引入router
 import router from '@/router'
 
-//使用路由插件
-// Vue.use(VueRouter)
 
 //使用element ui插件
 // import ElementUI from 'element-ui';

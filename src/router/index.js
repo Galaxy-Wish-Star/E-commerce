@@ -13,18 +13,22 @@ export default new VueRouter({
         {
             path: "/home",
             component: Home,
+            name: "home",
         },
         {
             path: "/search",
             component: Search,
+            name: "search",
         },
         {
             path: "/register",
             component: Register,
+            name: "register",
         },
         {
             path: "/login",
             component: Login,
+            name: "login",
         },
         {
             path: "*",
