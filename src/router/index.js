@@ -7,6 +7,25 @@ import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import Register from "@/pages/Regster";
 import Search from "@/pages/Search";
+
+//重写push、replace防止控制台报错
+let originPush = VueRouter.prototype.push;
+let originReplace =VueRouter.prototype.replace 
+VueRouter.prototype.push = function (location,resolve,reject) {
+    if(reject&&resolve){
+        originPush.call(this,location,resolve,reject);
+    }else{
+        originPush.call(this,location,()=>{},()=>{});
+    }
+};
+VueRouter.prototype.replace = function (location,resolve,reject) {
+    if(reject&&resolve){
+        originReplace.call(this,location,resolve,reject);
+    }else{
+        originReplace.call(this,location,()=>{},()=>{});
+    }
+};
+
 //配置路由
 export default new VueRouter({
     routes: [
