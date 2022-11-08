@@ -167,6 +167,7 @@ export default {
                 flex-wrap: wrap;
 
                 .life-item {
+                    background-color: #fff;
                     border-left: 1px solid #e4e4e4;
                     border-bottom: 1px solid #e4e4e4;
                     margin-right: -1px;

@@ -155,7 +155,7 @@ export default {
 
         .footerList {
             padding: 20px;
-            border-bottom: 1px solid #e4e1e1;
+            border-bottom: 1px solid #ccc;
             border-top: 1px solid #e4e1e1;
             overflow: hidden;
             padding-left: 40px;
@@ -238,8 +238,8 @@ body {
         /* 固定容器的宽度 */
         width: 1226px;
         /* 设置容器居中 */
-    background: #fff;
-    margin: 35px auto;
+        background: #fff;
+        margin: 35px auto;
         display: flex;
         justify-content: space-around;
         align-items: center;

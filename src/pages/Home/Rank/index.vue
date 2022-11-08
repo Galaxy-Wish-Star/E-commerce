@@ -92,7 +92,7 @@ export default {
 
 <style lang="scss" scoped>
 .rank {
-    width: 1200px;
+    width: 1226px;
     margin: 0 auto;
 
     .tab {
