@@ -154,12 +154,7 @@
                         </ul>
                     </div>
 
-                    <div
-                        class="header-body-right"
-                        v-show="
-                            !($route.path == '/search') && !($route.path == '/register') && !($route.path == '/login')
-                        "
-                    >
+                    <div class="header-body-right" v-show="loginHide">
                         <div class="login-dis">
                             <!-- <a id="login-regster-btn" href="javascript:void(0)"
                                 ><i class="fa fa-user"></i>登录
@@ -180,7 +175,6 @@
 </template>
 
 <script>
-
 export default {
     name: "",
     methods: {
@@ -191,12 +185,26 @@ export default {
     },
 
     computed: {
-        searchHide(){
-           return !(this.$router.path == '/register') && !(this.$router.path == '/login')
-        }
+        //搜索框显示与隐藏
+        searchHide() {
+            return (
+                !(this.$router.path == "/register") &&
+                !(this.$router.path == "/login") &&
+                !(this.$route.path == "/register") &&
+                !(this.$route.path == "/login")
+            );
+        },
+        //登录按钮显示与隐藏
+        loginHide() {
+            return (
+                !(this.$route.path == "/search") &&
+                !(this.$route.path == "/register") &&
+                !(this.$route.path == "/login")
+            );
+        },
     },
-    mounted(){
-        // this.searchHide()
+    mounted() {
+        
     },
 };
 </script>

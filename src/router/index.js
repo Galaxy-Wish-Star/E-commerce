@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import Register from "@/pages/Regster";
-import Search from "@/pages/Search";	
+import Search from "@/pages/Search";
 //配置路由
 export default new VueRouter({
     routes: [
