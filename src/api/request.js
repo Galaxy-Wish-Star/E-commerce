@@ -14,7 +14,7 @@ import "/node_modules/nprogress/nprogress.css";
 export const requests = axios.create({
     timeout: 7000, // 请求超时时间
     baseURL: "/api",
-    method: "post",
+    method: "get",
     headers: {
         "Content-Type": "application/json;charset=UTF-8",
     },
