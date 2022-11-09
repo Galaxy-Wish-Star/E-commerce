@@ -60,7 +60,7 @@
                         </p>
                         <div class="tab-info">
                             <div class="info-title">
-                                <a href="#">【官网价直降1100】Apple iPhone 8 Plus 256GB 银色 移动联通电信4G手机</a>
+                                <a href="#">【官网价直降1100】Apple iPhone 8  256GB 银色 移动联通电信4G手机</a>
                             </div>
                             <p class="info-price">定金：¥100.00</p>
                         </div>
