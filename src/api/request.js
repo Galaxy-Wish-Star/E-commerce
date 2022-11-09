@@ -25,8 +25,6 @@ requests.interceptors.request.use((config) => {
     //进度条开始
     nprogress.start();
     return config;
-
-    sd;
 });
 
 //响应拦截器
