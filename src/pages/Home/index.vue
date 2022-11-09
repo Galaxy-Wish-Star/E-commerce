@@ -18,7 +18,6 @@ import Rank from "@/pages/Home/Rank";
 import Like from "@/pages/Home/Like";
 import Foolr from "@/pages/Home/Foolr";
 export default {
-    name: "",
     components: {
         ListContainer,
         Recommend,

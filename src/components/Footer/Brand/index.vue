@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
     <!--商标-->
     <div class="brand">

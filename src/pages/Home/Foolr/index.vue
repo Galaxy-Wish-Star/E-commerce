@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
     <div>
         <div class="floor contain">

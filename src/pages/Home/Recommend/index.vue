@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <!--今日推荐-->
     <div class="today-recommend">

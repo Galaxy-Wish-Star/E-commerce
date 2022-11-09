@@ -1,5 +1,5 @@
 //home模块仓库
-
+/* eslint-disable */
 import { reqCategoryList } from "@/api";
 
 // //创建actions(本质就是对象) 用于响应组件中的动作
@@ -14,7 +14,7 @@ const actions = {
 
 // //创建mutations(本质也是对象) 用于修改数据(state)
 const mutations = {};
-
+/* eslint-disable */
 // //准备getters用于加工state，将其共享于各个组件当中
 const getters = {};
 
