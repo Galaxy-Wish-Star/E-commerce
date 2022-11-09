@@ -1,9 +1,8 @@
 // vue.config.js
-module.exports = {
-    lintOnSave: false,
-};
+
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
+    lintOnSave: false,
     transpileDependencies: true,
 });
 
@@ -11,6 +10,7 @@ module.exports = defineConfig({
 const { VantResolver } = require("unplugin-vue-components/resolvers");
 const ComponentsPlugin = require("unplugin-vue-components/webpack");
 module.exports = {
+    lintOnSave: false,
     configureWebpack: {
         plugins: [
             ComponentsPlugin({
@@ -18,10 +18,7 @@ module.exports = {
             }),
         ],
     },
-};
-
-// //代理服务器
-module.exports = {
+    // //代理服务器
     devServer: {
         proxy: {
             "/api": {

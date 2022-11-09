@@ -7,7 +7,7 @@ const actions = {
     //收到上下文对象(包含commit)和dispatch过来的值
     // 获取服务器数据
     categoryList() {
-        let result = reqcategoryList();
+        let result = reqCategoryList();
         console.log(result);
     },
 };
