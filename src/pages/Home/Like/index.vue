@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <!-- 猜你喜欢 -->
     <div class="like">

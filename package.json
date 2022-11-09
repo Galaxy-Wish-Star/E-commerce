@@ -16,6 +16,7 @@
     "element-ui": "^2.15.10",
     "jquery": "^3.6.1",
     "nanoid": "^4.0.0",
+    "nprogress": "^0.2.0",
     "pubsub-js": "^1.9.4",
     "swiper": "^8.4.4",
     "vant": "^2.12.51",
@@ -55,7 +56,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "eslint-disable-next-line":0
+    }
   },
   "browserslist": [
     "> 1%",

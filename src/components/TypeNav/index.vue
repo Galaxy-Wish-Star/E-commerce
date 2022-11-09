@@ -1460,6 +1460,9 @@
 <script>
 export default {
     name: "TypeNav",
+    mounted() {
+        this.$store.dispatch("categoryList");
+    },
 };
 </script>
 
@@ -1531,7 +1534,6 @@ export default {
                         z-index: 9999 !important;
 
                         .subitem {
-                            
                             float: left;
                             width: 650px;
                             padding: 0 4px 0 8px;

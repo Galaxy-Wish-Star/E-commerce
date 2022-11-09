@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div>
         <!-- /*---------------- 脚部---------------- */ -->
@@ -132,7 +133,6 @@
 <script>
 import Brand from "@/components/Footer/Brand";
 export default {
-    name: "",
     components: {
         Brand,
     },
