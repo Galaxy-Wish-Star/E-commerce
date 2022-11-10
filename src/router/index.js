@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import Register from "@/pages/Regster";
 import Search from "@/pages/Search";
+import Personal from "@/pages/Personal"
 
 //重写push、replace防止控制台报错
 let originPush = VueRouter.prototype.push;
@@ -43,6 +44,11 @@ export default new VueRouter({
             path: "/register",
             component: Register,
             name: "register",
+        },
+        {
+            path:"/personal",
+            component:Personal,
+            name:"personal",
         },
         {
             path: "/login",
