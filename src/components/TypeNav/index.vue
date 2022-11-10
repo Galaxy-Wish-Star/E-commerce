@@ -2,7 +2,34 @@
     <!-- 商品分类导航 -->
     <div class="type-nav">
         <div class="container">
-            <h2 class="all">全部商品分类</h2>
+            <div @mouseleave="leaveShow" @mouseenter="enterShow">
+                <h2 class="all">全部商品分类</h2>
+                <transition name="sort">
+                    <div class="sort" v-show="show">
+                    <div class="all-sort-list2">
+                        <di class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
+                            <h3>
+                                <a href="">{{ c1.categoryName }}</a>
+                            </h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
+                                    <dl class="fore">
+                                        <dt>
+                                            <a href="">{{ c2.categoryName }}</a>
+                                        </dt>
+                                        <dd>
+                                            <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
+                                                <a href="">{{ c3.categoryName }}</a>
+                                            </em>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </di>
+                    </div>
+                </div>
+                </transition>
+            </div>
             <nav class="nav">
                 <a href="###">服装城</a>
                 <a href="###">美妆馆</a>
@@ -13,46 +40,44 @@
                 <a href="###">有趣</a>
                 <a href="###">秒杀</a>
             </nav>
-            <div class="sort">
-                <div class="all-sort-list2">
-                    <di class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
-                        <h3>
-                            <a href="">{{ c1.categoryName }}</a>
-                        </h3>
-                        <div class="item-list clearfix">
-                            <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
-                                <dl class="fore">
-                                    <dt>
-                                        <a href="">{{ c2.categoryName }}</a>
-                                    </dt>
-                                    <dd>
-                                        <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
-                                            <a href="">{{ c3.categoryName }}</a>
-                                        </em>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </di>
-                </div>
-            </div>
         </div>
     </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import methods from "methods";
 
 export default {
     name: "TypeNav",
+    data() {
+        return {
+            show: true,
+        };
+    },
     mounted() {
         //通知Vuex发请求,获取数据,存储于仓库当中
         this.$store.dispatch("categoryList");
+        //如果不是home组件，将typenav组件隐藏
+        if (this.$route.path != "/home") {
+            this.show = false;
+        }
     },
     computed: {
         ...mapState({
             categoryList: (state) => state.home.categoryList,
         }),
+    },
+    methods: {
+        enterShow() {
+            this.show = true;
+        },
+        leaveShow() {
+            //判断如果是Search路由组件的时候才会执行
+            if (this.$route.path != "/home") {
+                this.show = false;
+            }
+        },
     },
 };
 </script>
@@ -89,11 +114,12 @@ export default {
         }
 
         .sort {
+            overflow: hidden;
             position: absolute;
             left: 0;
             top: 45px;
             width: 210px;
-            height: 461px;
+            height: 480px;
             position: absolute;
             background: #fafafa;
             z-index: 999;
@@ -101,7 +127,7 @@ export default {
             .all-sort-list2 {
                 .item {
                     h3 {
-                        &:hover{
+                        &:hover {
                             background: #ccc;
                         }
                         line-height: 30px;
@@ -112,8 +138,8 @@ export default {
                         margin: 0;
 
                         a {
-                            &:hover{
-                                color: #000
+                            &:hover {
+                                color: #000;
                             }
                             color: #333;
                         }
@@ -188,6 +214,19 @@ export default {
                     }
                 }
             }
+        }
+        //过渡动画样式
+        //开始阶段
+        .sort-enter{
+            height: 0;
+        }
+        //结束阶段（进入）
+        .sort-enter-to{
+            height: 461px;
+        }
+        //定义动画时间速率
+        .sort-enter-active{
+            transition: all .5s linear;
         }
     }
 }
