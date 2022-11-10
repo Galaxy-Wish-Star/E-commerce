@@ -1,36 +1,32 @@
 <template>
     <div>
         <div class="floor contain">
-<div class="column-list">
-    <div class="column-title">
-        <h3>消费帮扶 产业振兴</h3>
-    </div>
-<div class="list-box">
-    <div class="list-five">
-        <div class="list-pic">
-            <ul class="list-box">
-                <img src="./images/消费1.png">
-                
-            </ul>
-            <ul class="list-box">
-                <img src="./images/消费2.png">
-                
-            </ul>
-            <ul class="list-box">
-                <img src="./images/消费3.png">
-                
-            </ul>
-            <ul class="list-box">
-                <img src="./images/消费4.png">
-                
-            </ul>
-        </div>
-    </div>
-</div>
-<ul class="list-plc">
-    <img src="./images/消费5.png">
-</ul>
-</div>
+            <div class="column-list">
+                <div class="column-title">
+                    <h3>消费帮扶 产业振兴</h3>
+                </div>
+                <div class="list-box">
+                    <div class="list-five">
+                        <div class="list-pic">
+                            <ul class="list-box">
+                                <img src="./images/消费1.png" />
+                            </ul>
+                            <ul class="list-box">
+                                <img src="./images/消费2.png" />
+                            </ul>
+                            <ul class="list-box">
+                                <img src="./images/消费3.png" />
+                            </ul>
+                            <ul class="list-box">
+                                <img src="./images/消费4.png" />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-plc">
+                    <img src="./images/消费5.png" />
+                </ul>
+            </div>
             <div class="jiadian w navigation">
                 <div class="box-hd">
                     <h3>精品水果</h3>
@@ -536,7 +532,9 @@
                             </li>
                             <li>
                                 <a href=""
-                                    ><span>湖南省隆回县大力开展“扶贫助耕”活动，抽调部门专家、科技干部成立“科技助农服务队”</span>
+                                    ><span
+                                        >湖南省隆回县大力开展“扶贫助耕”活动，抽调部门专家、科技干部成立“科技助农服务队”</span
+                                    >
                                     <span class="date">2022-11-10</span>
                                 </a>
                             </li>
@@ -565,13 +563,17 @@
                             </li>
                             <li>
                                 <a href=""
-                                    ><span>新时代更要深入实施科技特派员制度，紧紧围绕创新驱动发展、乡村振兴和脱贫攻坚，把创新的动能扩散到田间地头</span>
+                                    ><span
+                                        >新时代更要深入实施科技特派员制度，紧紧围绕创新驱动发展、乡村振兴和脱贫攻坚，把创新的动能扩散到田间地头</span
+                                    >
                                     <span class="date">2022-10-25</span>
                                 </a>
                             </li>
                             <li>
                                 <a href=""
-                                    ><span>近年来，江西省赣州市兴国县积极推进农业供给侧结构性改革，调整优化产业结构和布局，促进蔬菜产业提质增效，夯实乡村振兴基础。目前，该县已建成蔬菜基地70余个，种植面积达16.2万余亩，年产蔬菜约30.5万吨，使蔬菜产业成为富民产业。</span>
+                                    ><span
+                                        >近年来，江西省赣州市兴国县积极推进农业供给侧结构性改革，调整优化产业结构和布局，促进蔬菜产业提质增效，夯实乡村振兴基础。目前，该县已建成蔬菜基地70余个，种植面积达16.2万余亩，年产蔬菜约30.5万吨，使蔬菜产业成为富民产业。</span
+                                    >
                                     <span class="date">2022-11-10</span>
                                 </a>
                             </li>
@@ -588,13 +590,17 @@
                         <ul class="zn-news-lits">
                             <li>
                                 <a href=""
-                                    ><span>在湖北省，1.75万名第一书记、1.26万支驻村工作队、4.04万名驻村干部投入乡村振兴战场，助农兴农办实事;</span>
+                                    ><span
+                                        >在湖北省，1.75万名第一书记、1.26万支驻村工作队、4.04万名驻村干部投入乡村振兴战场，助农兴农办实事;</span
+                                    >
                                     <span class="date">2022-10-22</span>
                                 </a>
                             </li>
                             <li>
                                 <a href=""
-                                    ><span>党的十九届六中全会强调，全党必须永远保持同人民群众的血肉联系，践行以人民为中心的发展思想，不断实现好、维护好、发展好最广大人民根本利益，团结带领全国各族人民不断为美好生活而奋斗。</span>
+                                    ><span
+                                        >党的十九届六中全会强调，全党必须永远保持同人民群众的血肉联系，践行以人民为中心的发展思想，不断实现好、维护好、发展好最广大人民根本利益，团结带领全国各族人民不断为美好生活而奋斗。</span
+                                    >
                                     <span class="date">2022-10-20</span>
                                 </a>
                             </li>
@@ -611,11 +617,11 @@
                     <div class="new-list-title gzh">
                         <span>了解我们</span>
                         <div class="weixin">
-                            <img src="./images/weixin.png">
-                             <span>关注官方公众号：助农平台</span>
+                            <img src="./images/weixin.png" />
+                            <span>关注官方公众号：助农平台</span>
                         </div>
                         <div class="weixin-link">
-                            <img src="./images/微信.jpg">
+                            <img src="./images/微信.jpg" />
                             <p>打开微信“扫一扫”</p>
                         </div>
                     </div>
@@ -962,7 +968,7 @@ export default {};
 }
 .new-list-title a {
     float: right;
-    color:#c81623;
+    color: #c81623;
     font-size: 14px;
 }
 .new-list-title {
@@ -977,35 +983,35 @@ export default {};
     display: flex;
     flex-direction: column;
 }
-.weixin-link img{
+.weixin-link img {
     width: 150px;
     height: 150px;
 }
-.weixin img{
+.weixin img {
     width: 24px;
     height: 24px;
 }
-.gzh{
-    margin-top:-100px ;
+.gzh {
+    margin-top: -100px;
 }
-.column-title{
-   text-align: center;
-   font-weight: bolder;
-  color: #bd676c;
-  font-size: 35px;
+.column-title {
+    text-align: center;
+    font-weight: bolder;
+    color: #bd676c;
+    font-size: 35px;
 }
-.list-pic{
+.list-pic {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     height: 300px;
-    ul{
+    ul {
         margin: 0 15px 0 0;
     }
 }
-.list-plc img{
- margin: 0 auto;
-width: 1210px;
-margin-top: 10px;
+.list-plc img {
+    margin: 0 auto;
+    width: 1210px;
+    margin-top: 10px;
 }
 </style>
