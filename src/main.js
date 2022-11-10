@@ -12,10 +12,12 @@ Vue.component(TypeNav.name, TypeNav);
 //引入vuex仓库
 import store from "@/store";
 
+//引入MockServer.js----mock数据
+import '@/mock/mockServe'
 //使用element ui插件
-// import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
-// Vue.use(ElementUI);
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 new Vue({
     render: (h) => h(App),
