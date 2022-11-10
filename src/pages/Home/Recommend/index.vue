@@ -46,7 +46,7 @@ export default {
             display: flex;
 
             .clock {
-                width: 16.67%;
+                width: 17.73%;
                 background-color: #5c5251;
                 color: #fff;
                 font-size: 18px;
