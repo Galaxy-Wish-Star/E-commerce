@@ -1,6 +1,36 @@
 <template>
     <div>
         <div class="floor contain">
+<div class="column-list">
+    <div class="column-title">
+        <h3>消费帮扶 产业振兴</h3>
+    </div>
+<div class="list-box">
+    <div class="list-five">
+        <div class="list-pic">
+            <ul class="list-box">
+                <img src="./images/消费1.png">
+                
+            </ul>
+            <ul class="list-box">
+                <img src="./images/消费2.png">
+                
+            </ul>
+            <ul class="list-box">
+                <img src="./images/消费3.png">
+                
+            </ul>
+            <ul class="list-box">
+                <img src="./images/消费4.png">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<ul class="list-plc">
+    <img src="./images/消费5.png">
+</ul>
+</div>
             <div class="jiadian w navigation">
                 <div class="box-hd">
                     <h3>精品水果</h3>
@@ -601,6 +631,7 @@ export default {};
 
 <style lang="scss" scoped>
 @import "./src/assets/css/_color.scss";
+
 .contain {
     width: 1226px;
     margin: 0 auto;
@@ -886,6 +917,7 @@ export default {};
     height: 100%;
     object-fit: cover;
 }
+<<<<<<< Updated upstream
 .zn-new-box {
     display: flex;
     justify-content: space-between;
@@ -956,5 +988,26 @@ export default {};
 }
 .gzh{
     margin-top:-100px ;
+=======
+.column-title{
+   text-align: center;
+   font-weight: bolder;
+  color: #bd676c;
+  font-size: 35px;
+}
+.list-pic{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 300px;
+    ul{
+        margin: 0 15px 0 0;
+    }
+}
+.list-plc img{
+ margin: 0 auto;
+width: 1210px;
+margin-top: 10px;
+>>>>>>> Stashed changes
 }
 </style>
