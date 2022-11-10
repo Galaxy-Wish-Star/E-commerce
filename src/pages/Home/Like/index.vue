@@ -10,31 +10,31 @@
             <div class="bd">
                 <ul class="favourate">
                     <li>
-                        <img src="./images/东北新鲜大白菜.jpg" alt="" />
+                        <img src="./images/哈密瓜.jpg" alt="" />
                         <div class="like-text">
-                            <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
+                            <p>【原产地】 新疆哈密瓜西州蜜25号包邮</p>
+                            <h3>¥69.00</h3>
                         </div>
                     </li>
                     <li>
-                        <img src="./images/东北新鲜大白菜.jpg" alt="" />
+                        <img src="./images/干杏.jpg" alt="" />
                         <div class="like-text">
-                            <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
+                            <p>【原产地】新疆阿克苏四团树上干杏</p>
+                            <h3>¥68.00</h3>
                         </div>
                     </li>
                     <li>
-                        <img src="./images/东北新鲜大白菜.jpg" alt="" />
+                        <img src="./images/纸皮核桃.jpg" alt="" />
                         <div class="like-text">
-                            <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
+                            <p>【原产地】新疆阿克苏185纸皮核桃</p>
+                            <h3>¥78.00</h3>
                         </div>
                     </li>
                     <li>
-                        <img src="./images/东北新鲜大白菜.jpg" alt="" />
+                        <img src="./images/无核葡萄.jpg" alt="" />
                         <div class="like-text">
-                            <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
+                            <p>【原产地】新疆吐鲁番无核葡萄实惠家庭装</p>
+                            <h3>¥79.00</h3>
                         </div>
                     </li>
                     <li>

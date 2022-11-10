@@ -489,6 +489,108 @@
 						</ul> -->
                 </div>
             </div>
+            <div class="zn-new-box">
+                <div class="new-list-box">
+                    <div class="new-list-title">
+                        <span>资讯</span>
+                        <span class="gd"><a>更多>></a></span>
+                        <img src="./images/助农.jpeg" />
+                    </div>
+                    <div class="zn-newss">
+                        <ul class="zn-news-lits">
+                            <li>
+                                <a href=""
+                                    ><span>直播助农“金扁担” 担起致富小康梦</span>
+                                    <span class="date">2022-11-10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>湖南省隆回县大力开展“扶贫助耕”活动，抽调部门专家、科技干部成立“科技助农服务队”</span>
+                                    <span class="date">2022-11-10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>科技培训下沉田间地头，为农业发展插上“科技”翅膀，为乡村振兴提供科技支撑</span>
+                                    <span class="date">2022-11-10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="new-list-box">
+                    <div class="new-list-title">
+                        <span>资讯</span>
+                        <span class="gd"><a>更多>></a></span>
+                        <img src="./images/助农2.jpeg" />
+                    </div>
+                    <div class="zn-newss">
+                        <ul class="zn-news-lits">
+                            <li>
+                                <a href=""
+                                    ><span>授人以渔，以科技培训增强“造血能力</span>
+                                    <span class="date">2022-10-15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>新时代更要深入实施科技特派员制度，紧紧围绕创新驱动发展、乡村振兴和脱贫攻坚，把创新的动能扩散到田间地头</span>
+                                    <span class="date">2022-10-25</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>近年来，江西省赣州市兴国县积极推进农业供给侧结构性改革，调整优化产业结构和布局，促进蔬菜产业提质增效，夯实乡村振兴基础。目前，该县已建成蔬菜基地70余个，种植面积达16.2万余亩，年产蔬菜约30.5万吨，使蔬菜产业成为富民产业。</span>
+                                    <span class="date">2022-11-10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="new-list-box">
+                    <div class="new-list-title">
+                        <span>资讯</span>
+                        <span class="gd"><a>更多>></a></span>
+                        <img src="./images/助农3.jpeg" />
+                    </div>
+                    <div class="zn-newss">
+                        <ul class="zn-news-lits">
+                            <li>
+                                <a href=""
+                                    ><span>在湖北省，1.75万名第一书记、1.26万支驻村工作队、4.04万名驻村干部投入乡村振兴战场，助农兴农办实事;</span>
+                                    <span class="date">2022-10-22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>党的十九届六中全会强调，全党必须永远保持同人民群众的血肉联系，践行以人民为中心的发展思想，不断实现好、维护好、发展好最广大人民根本利益，团结带领全国各族人民不断为美好生活而奋斗。</span>
+                                    <span class="date">2022-10-20</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    ><span>【在希望的田野上】国家科技强力助农 秋粮生产有序推进</span>
+                                    <span class="date">2022-10-10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="new-list-box">
+                    <div class="new-list-title gzh">
+                        <span>了解我们</span>
+                        <div class="weixin">
+                            <img src="./images/weixin.png">
+                             <span>关注官方公众号：助农平台</span>
+                        </div>
+                        <div class="weixin-link">
+                            <img src="./images/微信.jpg">
+                            <p>打开微信“扫一扫”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -783,5 +885,76 @@ export default {};
     width: 97%;
     height: 100%;
     object-fit: cover;
+}
+.zn-new-box {
+    display: flex;
+    justify-content: space-between;
+}
+.new-list-box {
+    height: 290px;
+    width: 250px;
+    background-color: #fff;
+    padding: 0px 26px;
+    line-height: 25px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.zn-news-lits span {
+    font-size: 16px;
+    color: #666;
+    display: inline-block;
+    width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.date {
+    font-size: 16px;
+    color: #666;
+    display: inline-block;
+    width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.zn-news-lits a {
+    width: 290px;
+    display: flex;
+    float: right;
+    float: left;
+    span {
+        right: 0;
+        float: right;
+    }
+}
+.new-list-title a {
+    float: right;
+    color:#c81623;
+    font-size: 14px;
+}
+.new-list-title {
+    height: 160px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.new-list-title img {
+    padding-top: 10px;
+}
+.zn-news-lits {
+    display: flex;
+    flex-direction: column;
+}
+.weixin-link img{
+    width: 150px;
+    height: 150px;
+}
+.weixin img{
+    width: 24px;
+    height: 24px;
+}
+.gzh{
+    margin-top:-100px ;
 }
 </style>
