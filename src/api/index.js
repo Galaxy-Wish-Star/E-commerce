@@ -9,3 +9,4 @@ export const reqCategoryList = () => requests({ url: "/product/getBaseCategoryLi
 export const reqGetBannerList = () => mockRequest({url:"/banner",method: "get"});
 
 //获取搜索模块数据
+// export const regGetSearchInfo = (params) => mockRequest({url:"/search",method: "post"})
