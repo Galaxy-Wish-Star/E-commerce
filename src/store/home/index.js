@@ -1,6 +1,6 @@
 //home模块仓库
 /* eslint-disable */
-import { reqCategoryList } from "@/api";
+import { reqCategoryList, reqGetBannerList } from "@/api";
 
 // //创建actions(本质就是对象) 用于响应组件中的动作
 const actions = {
@@ -12,12 +12,22 @@ const actions = {
             commit("CATEGORYLIST", result.data);
         }
     },
+    //获取首页轮播图的数据
+    async getBannerList({ commit }) {
+        let result = await reqGetBannerList();
+        if (result.code == 200) {
+            commit("GETBANNERLIST", result.data);
+        }
+    },
 };
 
 // //创建mutations(本质也是对象) 用于修改数据(state)
 const mutations = {
     CATEGORYLIST(state, categoryList) {
         state.categoryList = categoryList;
+    },
+    GETBANNERLIST(state, bannerList) {
+        state.bannerList = bannerList;
     },
 };
 /* eslint-disable */
@@ -28,6 +38,8 @@ const getters = {};
 // //类似于各个组件里的computed(计算属性),只不过它是共享的
 const state = {
     categoryList: [],
+    //轮播图数据
+    bannerList: [],
 };
 
 // //创建并暴露store

@@ -1,0 +1,69 @@
+<template>
+    <div class="order" id="order">
+        <div class="order-left">
+            <div class="order-left-list">
+                <ul>
+                <h3>订单中心</h3>
+                <li><a href="">我的订单</a></li>
+                <li><a href="">我的活动</a></li>
+                <li><a href="">评价晒单</a></li>
+                <li><a href="">我的常购商品<span>NEW</span></a></li>
+                <li><a href="">代下单</a></li>
+            </ul>
+            <ul>
+                <h3>关注中心</h3>
+                <li><a href="">关注的商品</a></li>
+                <li><a href="">关注的店铺</a></li>
+                <li><a href="">关注的活动</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+        #order{
+            // 此处是整个商品区域距离hader部分的距离
+            margin-top: 30px;
+        }
+        .order{
+            //这里是设置页面通用宽度以及居中
+            // margin: 0 auto;
+            // width: 1230px;
+            // display: flex;
+            .order-left{
+                width: 150px;               
+                .order-left-list{
+                    font-size: 16px;
+                    ul:nth-child(1){
+                        margin-bottom: 40px;
+                    }
+                    ul{
+                        li{
+                            margin: 16px 0;
+                            a{
+                                color: rgb(159, 159, 159);
+                            }
+                            span{
+                                background-color: red;
+                                color: white;
+                                font-size: 10px;
+                            }
+                        }
+                        li{
+                            a:hover{
+                                color: red;
+                                border-bottom: 1px red solid;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+</style>

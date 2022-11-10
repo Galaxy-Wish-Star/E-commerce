@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
     <!-- /*---------------- head部分---------------- */ -->
     <div class="head" id="translation">
@@ -32,7 +31,9 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <a href="javascript:;"><i class="fa fa-user"></i>用户中心</a>
+                            <div>
+                                <router-link to="/personal"><i class="fa fa-user"></i>用户中心</router-link>                               
+                            </div>
                         </li>
                         <span>|</span>
                         <li class="user-sever-box">
@@ -145,9 +146,9 @@
                         <input class="search search-input" type="text" placeholder="请输入内容" />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
-                            <span style="float: left; margin-right: 4px">热门搜索：</span>
+                            <span style="float: left; margin-right: 4px;">热门搜索：</span>
                             <span class="hot_search_box"
-                                ><a style="color: #f40000" href="javascript:;">北京仓优选</a
+                                ><a style="color: #f40000;" href="javascript:;">北京仓优选</a
                                 ><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a
                                 ><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a
                                 ><a style="" href="javascript:;">832福油</a></span
@@ -177,6 +178,7 @@
 
 <script>
 export default {
+    name: "",
     methods: {
         //搜索按钮回调
         getSearch() {
@@ -203,7 +205,9 @@ export default {
             );
         },
     },
-    mounted() {},
+    mounted() {
+        
+    },
 };
 </script>
 

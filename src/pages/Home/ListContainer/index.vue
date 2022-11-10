@@ -3,29 +3,13 @@
         <div class="sortList clearfix">
             <div class="center">
                 <!--banner轮播-->
-                <div class="swiper-container" id="mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./images/banner1.jpg" />
-                        </div>
-                        <!-- <div class="swiper-slide">
-                            <img src="./images/banner2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/banner3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/banner4.jpg" />
-                        </div> -->
-                    </div>
-                    <!-- 如果需要分页器 -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- 如果需要导航按钮 -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+                <el-carousel indicator-position="outside" height="440px">
+                    <el-carousel-item v-for="carousel in bannerList" :key="carousel.id">
+                        <img :src="carousel.imgUrl" style="width: 100%; height: 100%;" />
+                    </el-carousel-item>
+                </el-carousel>
             </div>
+
             <div class="right">
                 <div class="news">
                     <h4>
@@ -100,12 +84,24 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
-    name:"ListContainer"
+    name: "ListContainer",
+    mounted() {
+        //派发action:通过vuex发起ajax请求，将数据仓储在仓库当中
+        this.$store.dispatch("getBannerList");
+    },
+    computed: {
+        ...mapState({
+            bannerList: (state) => state.home.bannerList,
+        }),
+    },
+    updated() {},
 };
 </script>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
 .list-container {
     width: 1200px;
     margin: 0 auto;
@@ -152,8 +148,9 @@ export default {
                 .news-list {
                     padding: 5px 15px;
                     line-height: 26px;
-                    
+
                     font-size: 14px;
+
                     .bold {
                         font-weight: 700;
                     }

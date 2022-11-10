@@ -2,7 +2,7 @@
     <div>
         <!-- /*---------------- 脚部---------------- */ -->
 
-        <div class="footer-head">
+        <div class="footer-head" v-show="footer_hide">
             <div class="footer-header">
                 <div class="introduce">
                     <i class="fa fa-leaf"></i>
@@ -134,6 +134,13 @@ import Brand from "@/components/Footer/Brand";
 export default {
     components: {
         Brand,
+    },
+    computed: {
+        footer_hide() {
+          return (
+            (this.$router.path == "/register")
+          );
+        },
     },
 };
 </script>

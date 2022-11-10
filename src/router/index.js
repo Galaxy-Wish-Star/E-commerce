@@ -5,12 +5,13 @@ Vue.use(VueRouter);
 //引入路由组件
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
-import Register from "@/pages/Regster";
+import Register from "@/pages/Register";
 import Search from "@/pages/Search";
+import Personal from "@/pages/Personal"
 
 //重写push、replace防止控制台报错
 let originPush = VueRouter.prototype.push;
-let originReplace =VueRouter.prototype.replace 
+let originReplace =VueRouter.prototype.replace
 VueRouter.prototype.push = function (location,resolve,reject) {
     if(reject&&resolve){
         originPush.call(this,location,resolve,reject);
@@ -43,6 +44,11 @@ export default new VueRouter({
             path: "/register",
             component: Register,
             name: "register",
+        },
+        {
+            path:"/personal",
+            component:Personal,
+            name:"personal",
         },
         {
             path: "/login",
