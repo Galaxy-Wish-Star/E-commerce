@@ -27,7 +27,6 @@ const mutations = {
         state.categoryList = categoryList;
     },
     GETBANNERLIST(state, bannerList) {
-        console.log("kkun",bannerList)
         state.bannerList = bannerList;
     },
 };
