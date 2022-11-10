@@ -7,7 +7,7 @@
                 <transition name="sort">
                     <div class="sort" v-show="show">
                     <div class="all-sort-list2">
-                        <di class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
+                        <div class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
                             <h3>
                                 <a href="">{{ c1.categoryName }}</a>
                             </h3>
@@ -25,7 +25,7 @@
                                     </dl>
                                 </div>
                             </div>
-                        </di>
+                        </div>
                     </div>
                 </div>
                 </transition>
@@ -46,7 +46,6 @@
 
 <script>
 import { mapState } from "vuex";
-import methods from "methods";
 
 export default {
     name: "TypeNav",
@@ -56,8 +55,6 @@ export default {
         };
     },
     mounted() {
-        //通知Vuex发请求,获取数据,存储于仓库当中
-        this.$store.dispatch("categoryList");
         //如果不是home组件，将typenav组件隐藏
         if (this.$route.path != "/home") {
             this.show = false;
@@ -154,7 +151,7 @@ export default {
                         left: 210px;
                         border: 1px solid #ddd;
                         top: 0;
-                        z-index: 9999 !important;
+                        z-index: 99999 !important;
 
                         .subitem {
                             float: left;
