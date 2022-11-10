@@ -6,7 +6,7 @@
                 <div class="swiper-container" id="mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./images/banner1.jpg" />
+                            <img src="./images/banner2.jpg" />
                         </div>
                         <!-- <div class="swiper-slide">
                             <img src="./images/banner2.jpg" />
