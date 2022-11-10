@@ -7,3 +7,5 @@ export const reqCategoryList = () => requests({ url: "/product/getBaseCategoryLi
 
 //获取轮播图
 export const reqGetBannerList = () => mockRequest({url:"/banner",method: "get"});
+
+//获取搜索模块数据
