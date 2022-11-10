@@ -6,28 +6,28 @@
                 <h2 class="all">全部商品分类</h2>
                 <transition name="sort">
                     <div class="sort" v-show="show">
-                    <div class="all-sort-list2">
-                        <div class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
-                            <h3>
-                                <a href="">{{ c1.categoryName }}</a>
-                            </h3>
-                            <div class="item-list clearfix">
-                                <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
-                                    <dl class="fore">
-                                        <dt>
-                                            <a href="">{{ c2.categoryName }}</a>
-                                        </dt>
-                                        <dd>
-                                            <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
-                                                <a href="">{{ c3.categoryName }}</a>
-                                            </em>
-                                        </dd>
-                                    </dl>
+                        <div class="all-sort-list2">
+                            <div class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
+                                <h3>
+                                    <a href="">{{ c1.categoryName }}</a>
+                                </h3>
+                                <div class="item-list clearfix">
+                                    <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
+                                        <dl class="fore">
+                                            <dt>
+                                                <a href="">{{ c2.categoryName }}</a>
+                                            </dt>
+                                            <dd>
+                                                <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
+                                                    <a href="">{{ c3.categoryName }}</a>
+                                                </em>
+                                            </dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </transition>
             </div>
             <nav class="nav">
@@ -111,7 +111,6 @@ export default {
         }
 
         .sort {
-            overflow: hidden;
             position: absolute;
             left: 0;
             top: 45px;
@@ -214,16 +213,19 @@ export default {
         }
         //过渡动画样式
         //开始阶段
-        .sort-enter{
+        .sort-enter {
+            overflow: hidden;
             height: 0;
         }
         //结束阶段（进入）
-        .sort-enter-to{
+        .sort-enter-to {
+            overflow: hidden;
             height: 461px;
         }
         //定义动画时间速率
-        .sort-enter-active{
-            transition: all .5s linear;
+        .sort-enter-active {
+            overflow: hidden;
+            transition: all 0.5s linear;
         }
     }
 }
