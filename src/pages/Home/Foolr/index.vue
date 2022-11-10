@@ -917,7 +917,6 @@ export default {};
     height: 100%;
     object-fit: cover;
 }
-<<<<<<< Updated upstream
 .zn-new-box {
     display: flex;
     justify-content: space-between;
@@ -988,7 +987,7 @@ export default {};
 }
 .gzh{
     margin-top:-100px ;
-=======
+}
 .column-title{
    text-align: center;
    font-weight: bolder;
@@ -1008,6 +1007,5 @@ export default {};
  margin: 0 auto;
 width: 1210px;
 margin-top: 10px;
->>>>>>> Stashed changes
 }
 </style>
