@@ -42,6 +42,20 @@
                         <div class="card-cotent-img">
                             <img src="../Wicket/image/东北新鲜大白菜.jpg" alt="">
                         </div>
+                        <li><a href="">新鲜东北大白菜,让品质在路上</a></li>
+                        <h3>X1</h3>
+                        <div class="perple">
+                            <a href="">用户名</a>
+                            <div class="perple-q">
+                                <li>￥25.5</li>
+                                <li>在线支付</li>
+                            </div>
+                            <div class="perple-x">
+                                <li>已完成</li>
+                                <li>订单详情</li>
+                            </div>
+                            <button>立即购买</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,7 +131,7 @@ export default {
             .parti-car{
                 width: 95%;
                 margin: 0 auto;
-                border: 3px solid $words-color;
+                border: 2px solid $words-color;
                 margin-top: 20px;
                 .card-header{
                     background-color: $words-color;
@@ -134,6 +148,17 @@ export default {
                             a{
                                 font-size: 12px;
                             }
+                        }
+                    }
+                }
+                .card-content{
+                    display: flex;
+                    .card-cotent-img{
+                        height: 100px;
+                        line-height: 100px;
+                        img{
+                            widows: 70px;
+                            height: 70px;
                         }
                     }
                 }
