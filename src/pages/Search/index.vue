@@ -143,7 +143,7 @@ export default {
               // 当前第几页
               pageNo:"1",
               // 每页展示个数
-              pageSize:"",
+              pageSize:"15",
               // 平台售卖属性操作带的参数
               props:[],
               //品牌
