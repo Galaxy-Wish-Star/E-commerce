@@ -143,7 +143,13 @@
                 <div class="header-body">
                     <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
                     <div class="search" v-show="searchHide">
-                        <input class="search search-input" type="text" placeholder="请输入内容" v-model="keyword" />
+                        <input
+                            class="search search-input"
+                            type="text"
+                            placeholder="请输入内容"
+                            v-model="keyword"
+                            @keyup.enter="getSearch"
+                        />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
                             <span style="float: left; margin-right: 4px;">热门搜索：</span>
@@ -197,7 +203,6 @@ export default {
             }
         },
     },
-
     computed: {
         //搜索框显示与隐藏
         searchHide() {
