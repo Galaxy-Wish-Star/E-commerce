@@ -178,7 +178,6 @@
 
 <script>
 export default {
-    name: "",
     data() {
         return {
             keyword: "",
@@ -187,11 +186,15 @@ export default {
     methods: {
         //搜索按钮回调
         getSearch() {
-            //路由传参
-            this.$router.push({
-                name: "search",
-                params: { keyword: this.keyword || undefined },
-            });
+            //代表的是如果有query参数也带过去
+            if (this.$route.query) {
+                let loction = {
+                    name: "search",
+                    params: { keyword: this.keyword || undefined },
+                };
+                loction.query = this.$route.query;
+                this.$router.push(loction);
+            }
         },
     },
 

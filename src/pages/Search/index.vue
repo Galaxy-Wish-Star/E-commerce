@@ -143,7 +143,7 @@ export default {
               // 当前第几页
               pageNo:"1",
               // 每页展示个数
-              pageSize:"3",
+              pageSize:"",
               // 平台售卖属性操作带的参数
               props:[],
               //品牌
@@ -170,6 +170,15 @@ export default {
             this.$store.dispatch("getSearchList", this.searchParams);
         },
     },
+  //数据监听:监听组件实例身上的属性的局性值变化
+  watch: {
+      $route() {
+        //再次发请求之前整理带给服务器参数
+        console.log(Object.assign(this.searchParams, this.$route.query, this.$route.params))
+        //再次发ajax请求
+        // this.getData()
+      }
+  }
 };
 </script>
 

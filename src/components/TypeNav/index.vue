@@ -141,6 +141,7 @@ export default {
 
         .nav {
             a {
+                cursor: pointer;
                 height: 45px;
                 margin: 0 22px;
                 line-height: 45px;
@@ -173,6 +174,7 @@ export default {
                         margin: 0;
 
                         a {
+                            cursor: pointer;
                             &:hover {
                                 color: #000;
                             }
@@ -216,6 +218,7 @@ export default {
                                     padding: 3px 6px 0 0;
                                     font-weight: 700;
                                     a {
+                                        cursor: pointer;
                                         color: rgb(97, 97, 97);
                                     }
                                 }
@@ -228,6 +231,7 @@ export default {
 
                                     em {
                                         a {
+                                            cursor: pointer;
                                             font-size: 12px;
                                         }
                                         float: left;
