@@ -9,17 +9,25 @@
                         <div class="all-sort-list2" @click="goSearch">
                             <div class="item" v-for="(c1, index) in categoryList.slice(0, 16)" :key="c1.categoryId">
                                 <h3>
-                                    <a href="">{{ c1.categoryName }}</a>
+                                    <a>{{ c1.categoryName }}</a>
                                 </h3>
                                 <div class="item-list clearfix">
                                     <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
                                         <dl class="fore">
                                             <dt>
-                                                <a href="">{{ c2.categoryName }}</a>
+                                                <a
+                                                    :data-categoryName="c2.categoryName"
+                                                    :data-category2Id="c2.categoryId"
+                                                    >{{ c2.categoryName }}</a
+                                                >
                                             </dt>
                                             <dd>
                                                 <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
-                                                    <a href="">{{ c3.categoryName }}</a>
+                                                    <a
+                                                        :data-categoryName="c3.categoryName"
+                                                        :data-category3Id="c3.categoryId"
+                                                        >{{ c3.categoryName }}</a
+                                                    >
                                                 </em>
                                             </dd>
                                         </dl>
@@ -76,41 +84,36 @@ export default {
             }
         },
         goSearch(event) {
-      //event.target:获取到的是出发事件的元素(div、h3、a、em、dt、dl)
-      let node = event.target;
-      //给a标签添加自定义属性data-categoryName,全部的字标签当中只有a标签带有自定义属性，别的标签名字----dataset纯属扯淡
-      let {
-        categoryname,
-        category1id,
-        category2id,
-        category3id,
-      } = node.dataset;
-      //第二个问题解决了：点击的到底是不是a标签（只要这个标签身上带有categoryname）一定是a标签
-      //当前这个if语句：一定是a标签才会进入
-      if (categoryname) {
-        //准备路由跳转的参数对象
-        let loction = { name: "search" };
-        let query = { categoryName: categoryname };
-        //一定是a标签：一级目录
-        if (category1id) {
-          query.category1Id = category1id;
-          //一定是a标签：二级目录
-        } else if (category2id) {
-          query.category2Id = category2id;
-          //一定是a标签：三级目录
-        } else {
-          query.category3Id = category3id;
-        }
-        //判断：如果路由跳转的时候，带有params参数，捎带脚传递过去
-        if (this.$route.params) {
-          loction.params = this.$route.params;
-          //动态给location配置对象添加query属性
-          loction.query = query;
-          //路由跳转
-          this.$router.push(loction);
-        }
-      }
-    },
+            //event.target:获取到的是出发事件的元素(div、h3、a、em、dt、dl)
+            let node = event.target;
+            //给a标签添加自定义属性data-categoryName,全部的字标签当中只有a标签带有自定义属性，别的标签名字----dataset纯属扯淡
+            let { categoryname, category1id, category2id, category3id } = node.dataset;
+            //第二个问题解决了：点击的到底是不是a标签（只要这个标签身上带有categoryname）一定是a标签
+            //当前这个if语句：一定是a标签才会进入
+            if (categoryname) {
+                //准备路由跳转的参数对象
+                let loction = { name: "search" };
+                let query = { categoryName: categoryname };
+                //一定是a标签：一级目录
+                if (category1id) {
+                    query.category1Id = category1id;
+                    //一定是a标签：二级目录
+                } else if (category2id) {
+                    query.category2Id = category2id;
+                    //一定是a标签：三级目录
+                } else {
+                    query.category3Id = category3id;
+                }
+                //判断：如果路由跳转的时候，带有params参数，捎带脚传递过去
+                if (this.$route.params) {
+                    loction.params = this.$route.params;
+                    //动态给location配置对象添加query属性
+                    loction.query = query;
+                    //路由跳转
+                    this.$router.push(loction);
+                }
+            }
+        },
     },
 };
 </script>
