@@ -43,20 +43,24 @@
                             <div class="card-cotent-img">
                             <img src="../Wicket/image/东北新鲜大白菜.jpg" alt="">
                         </div>
-                        <li><a href="">新鲜东北大白菜,让品质在路上</a></li>
+                        <a href="">新鲜东北大白菜,让品质在路上</a>
                         <h3>X1</h3>
                         </div>
                         <div class="card-content-right">
                             <div><a href="">用户名</a></div>                          
                         <div class="perple-q">
-                            <li>￥25.5</li>
-                            <li>在线支付</li>
+                            <a href="">￥25.5</a>
+                            &nbsp;
+                            <a href="">在线支付</a>
                         </div>
                         <div class="perple-x">
-                            <li>已完成</li>
-                            <li>订单详情</li>
+                            <a href="">已完成</a>
+                            &nbsp;
+                            <a href="">订单详情</a>
                         </div>
-                        <button>立即购买</button>   
+                        <div class="div-btn">
+                            <button>立即购买</button>
+                        </div>   
                         </div>          
                     </div>
                 </div>
@@ -156,15 +160,29 @@ export default {
                 }
                 .card-content{
                     display: flex;
+                    height: 100px;
                     .card-content-left{
                         display: flex;
                         line-height: 100px;
+                        width: 500px;
                         .card-cotent-img{
                         img{
                             height: 70px;
                             margin: 15px;
                            }
-                        }    
+                        }
+                        a{
+                            font-size: 12px;
+                        }
+                        h3{
+                            margin: 0 0 0 30px;
+                        }
+                    }
+                    .card-content-right{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        line-height: 100px;
                     }       
                 }
             }
