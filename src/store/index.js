@@ -9,15 +9,13 @@ import Vuex from "vuex";
 // //new store的前提是必须要使用Vuex插件
 Vue.use(Vuex);
 
-
 //引入其他小模块
 import home from "./home";
-import search from "./search"
+import search from "./search";
 
-
-export default new Vuex.Store ({
-    modules:{
+export default new Vuex.Store({
+    modules: {
         home,
-        search
-    }
-})
+        search,
+    },
+});

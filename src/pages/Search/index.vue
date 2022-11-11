@@ -428,6 +428,7 @@
 
 <script>
 import SearchSelector from './SearchSelector/SearchSelector'
+import {mapGetters} from 'vuex'
 export default {
   name: 'Search',
 
@@ -436,6 +437,10 @@ export default {
   },
   mounted(){
     this.$store.dispatch('getSearchList',{})
+  },
+  computed: {
+    //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
+    ...mapGetters(['goodsList'])
   }
 }
 </script>
