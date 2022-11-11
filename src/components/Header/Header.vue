@@ -188,10 +188,9 @@ export default {
         //搜索按钮回调
         getSearch() {
             //路由传参
-            this.$route.push({
+            this.$router.push({
                 name: "search",
                 params: { keyword: this.keyword || undefined },
-                query: { big: this.keyword.toUpperCase() },
             });
         },
     },
@@ -215,13 +214,12 @@ export default {
             );
         },
     },
-    mounted() {},
 };
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/css/_color.scss";
-@import "src/assets/css/_fonts.scss";
+@import "../../assets/scss/_color.scss";
+@import "../../assets/scss/_fonts.scss";
 .login-dis {
     #login-regster-btn {
         border: 1px solid #06c152;

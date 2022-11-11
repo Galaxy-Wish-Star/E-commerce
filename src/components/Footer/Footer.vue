@@ -148,8 +148,8 @@ export default {
 <style lang="scss" scoped>
 /*---------------- 脚部---------------- */
 
-@import "src/assets/css/_color.scss";
-@import "src/assets/css/_fonts.scss";
+@import "../../assets/scss/_color.scss";
+@import "../../assets/scss/_fonts.scss";
 
 .footer {
     background-color: #eaeaea;

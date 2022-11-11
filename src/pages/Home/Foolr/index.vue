@@ -636,7 +636,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "./src/assets/css/_color.scss";
+@import "../../../assets/scss/_color.scss";
 
 .contain {
     width: 1226px;

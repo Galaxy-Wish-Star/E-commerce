@@ -47,7 +47,7 @@
                         <h3>X1</h3>
                         </div>
                         <div class="card-content-right">
-                            <div><a href="">用户名</a></div>                          
+                            <div><a href="">用户名</a></div>
                         <div class="perple-q">
                             <a href="">￥25.5</a>
                             &nbsp;
@@ -60,8 +60,8 @@
                         </div>
                         <div class="div-btn">
                             <button>立即购买</button>
-                        </div>   
-                        </div>          
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         <h3>X1</h3>
                         </div>
                         <div class="card-content-right">
-                            <div><a href="">用户名</a></div>                          
+                            <div><a href="">用户名</a></div>
                         <div class="perple-q">
                             <a href="">￥25.5</a>
                             &nbsp;
@@ -96,8 +96,8 @@
                         </div>
                         <div class="div-btn">
                             <button>立即购买</button>
-                        </div>   
-                        </div>          
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                         <h3>X1</h3>
                         </div>
                         <div class="card-content-right">
-                            <div><a href="">用户名</a></div>                          
+                            <div><a href="">用户名</a></div>
                         <div class="perple-q">
                             <a href="">￥25.5</a>
                             &nbsp;
@@ -132,8 +132,8 @@
                         </div>
                         <div class="div-btn">
                             <button>立即购买</button>
-                        </div>   
-                        </div>          
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,14 +145,14 @@
 
 export default {
     components: {
-      
+
     },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/css/_color.scss";
-@import "src/assets/css/_fonts.scss";
+@import "../../../assets/scss/_color.scss";
+@import "../../../assets/scss/_fonts.scss";
     .order-my{
         margin-top: 30px;
         margin-left: -900px;
@@ -255,7 +255,7 @@ export default {
                         display: flex;
                         justify-content: space-around;
                         line-height: 100px;
-                    }       
+                    }
                 }
             }
         }
