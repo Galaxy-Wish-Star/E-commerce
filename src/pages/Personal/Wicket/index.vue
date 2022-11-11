@@ -65,6 +65,78 @@
                     </div>
                 </div>
             </div>
+            <div class="parti-car">
+                <div class="card">
+                    <div class="card-header">
+                            <ul>
+                                <li><a>2022-09-22</a></li>
+                                <li><a href="">订单号：<span>66666666</span></a></li>
+                                <li><a href="">旗舰店</a></li>
+                            </ul>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-left">
+                            <div class="card-cotent-img">
+                            <img src="../Wicket/image/东北新鲜大白菜.jpg" alt="">
+                        </div>
+                        <a href="">新鲜东北大白菜,让品质在路上</a>
+                        <h3>X1</h3>
+                        </div>
+                        <div class="card-content-right">
+                            <div><a href="">用户名</a></div>                          
+                        <div class="perple-q">
+                            <a href="">￥25.5</a>
+                            &nbsp;
+                            <a href="">在线支付</a>
+                        </div>
+                        <div class="perple-x">
+                            <a href="">已完成</a>
+                            &nbsp;
+                            <a href="">订单详情</a>
+                        </div>
+                        <div class="div-btn">
+                            <button>立即购买</button>
+                        </div>   
+                        </div>          
+                    </div>
+                </div>
+            </div>
+            <div class="parti-car">
+                <div class="card">
+                    <div class="card-header">
+                            <ul>
+                                <li><a>2022-09-22</a></li>
+                                <li><a href="">订单号：<span>66666666</span></a></li>
+                                <li><a href="">旗舰店</a></li>
+                            </ul>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-left">
+                            <div class="card-cotent-img">
+                            <img src="../Wicket/image/东北新鲜大白菜.jpg" alt="">
+                        </div>
+                        <a href="">新鲜东北大白菜,让品质在路上</a>
+                        <h3>X1</h3>
+                        </div>
+                        <div class="card-content-right">
+                            <div><a href="">用户名</a></div>                          
+                        <div class="perple-q">
+                            <a href="">￥25.5</a>
+                            &nbsp;
+                            <a href="">在线支付</a>
+                        </div>
+                        <div class="perple-x">
+                            <a href="">已完成</a>
+                            &nbsp;
+                            <a href="">订单详情</a>
+                        </div>
+                        <div class="div-btn">
+                            <button>立即购买</button>
+                        </div>   
+                        </div>          
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
