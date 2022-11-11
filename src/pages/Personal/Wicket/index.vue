@@ -14,7 +14,7 @@
                     <li><a href="">订单回收站</a></li>
                 </ul>
                 <ul>
-                    <li><input type="text" value="商品名称/商品编号/订单号"><i class="fa fa-search"></i><a href="">高级</a></li>
+                    <li><input type="text" placeholder="商品名称/商品编号/订单号"><i class="fa fa-search"></i><a href="">高级</a></li>
                 </ul>
             </div>
             <div class="parti-header">
@@ -28,6 +28,22 @@
                     <li><a href="">全部状态</a></li>
                     <li><a>操作</a></li>
                 </ul>
+            </div>
+            <div class="parti-car">
+                <div class="card">
+                    <div class="card-header">
+                            <ul>
+                                <li><a>2022-09-22</a></li>
+                                <li><a href="">订单号：<span>66666666</span></a></li>
+                                <li><a href="">旗舰店</a></li>
+                            </ul>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-cotent-img">
+                            <img src="../Wicket/image/东北新鲜大白菜.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -94,6 +110,30 @@ export default {
                         margin: 0 100px 0 0;
                         a{
                             font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .parti-car{
+                width: 95%;
+                margin: 0 auto;
+                border: 3px solid $words-color;
+                margin-top: 20px;
+                .card-header{
+                    background-color: $words-color;
+                    margin-top: -2px;
+                    width: 100%;
+                    ul{
+                        width: 100%;
+                        height: 35px;
+                        line-height: 35px;
+                        display: flex;
+                        margin-left: 30px;
+                        li{
+                            margin: 0 100px 0 0;
+                            a{
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
