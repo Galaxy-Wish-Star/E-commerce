@@ -17,11 +17,11 @@
                         <form action="##">
                             <div class="input-text clearFix">
                                 <span></span>
-                                <input type="text" placeholder="邮箱/用户名/手机号" />
+                                <input type="text" placeholder="邮箱/用户名/手机号" v-model="userName" />
                             </div>
                             <div class="input-text clearFix">
                                 <span class="pwd"></span>
-                                <input type="text" placeholder="请输入密码" />
+                                <input type="text" placeholder="请输入密码" v-model="password" />
                             </div>
                             <div class="setting clearFix">
                                 <label class="checkbox inline">
@@ -30,7 +30,7 @@
                                 </label>
                                 <span class="forget">忘记密码？</span>
                             </div>
-                            <button class="btn">登&nbsp;&nbsp;录</button>
+                            <button class="btn" @click="getLogin">登&nbsp;&nbsp;录</button>
                         </form>
 
                         <div class="call clearFix">
@@ -50,8 +50,30 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: "Login",
+    data() {
+        return {
+            userName: "admin",
+            password: "123456",
+        };
+    },
+    methods: {
+        getLogin() {
+            // axios
+            //     .post(
+            //         "http://192.168.157.250:8080/api/login?username=" +
+            //             this.userName +
+            //             "&password=" +
+            //             this.password +
+            //             "",
+            //     )
+            //     .then(function (response) {
+            //         console.log(response.data);
+            //     });
+        },
+    },
 };
 </script>
 

@@ -32,7 +32,7 @@
                         <span>|</span>
                         <li>
                             <div>
-                                <router-link to="/personal"><i class="fa fa-user"></i>用户中心</router-link>                               
+                                <router-link to="/personal"><i class="fa fa-user"></i>用户中心</router-link>
                             </div>
                         </li>
                         <span>|</span>
@@ -143,7 +143,7 @@
                 <div class="header-body">
                     <router-link to="/home"><img class="logo" src="./images/logo.png" alt="" /></router-link>
                     <div class="search" v-show="searchHide">
-                        <input class="search search-input" type="text" placeholder="请输入内容" />
+                        <input class="search search-input" type="text" placeholder="请输入内容" v-model="keyword" />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
                             <span style="float: left; margin-right: 4px;">热门搜索：</span>
@@ -179,10 +179,20 @@
 <script>
 export default {
     name: "",
+    data() {
+        return {
+            keyword: "",
+        };
+    },
     methods: {
         //搜索按钮回调
         getSearch() {
-            this.$router.push("search");
+            //路由传参
+            this.$route.push({
+                name: "search",
+                params: { keyword: this.keyword || undefined },
+                query: { big: this.keyword.toUpperCase() },
+            });
         },
     },
 
@@ -205,9 +215,7 @@ export default {
             );
         },
     },
-    mounted() {
-        
-    },
+    mounted() {},
 };
 </script>
 
