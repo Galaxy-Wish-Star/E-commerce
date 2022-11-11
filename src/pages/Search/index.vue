@@ -57,7 +57,7 @@
                                     <div class="price">
                                         <strong>
                                             <em>¥</em>
-                                            <i>{{goods.price}}.00</i>
+                                            <i>{{ goods.price }}.00</i>
                                         </strong>
                                     </div>
                                     <div class="attr">
@@ -65,7 +65,7 @@
                                             target="_blank"
                                             href="item.html"
                                             title="促销信息，下单即赠送三个月CIBN视频会员卡！【小米电视新品4A 58 火爆预约中】"
-                                            >{{goods.title}}</a
+                                            >{{ goods.title }}</a
                                         >
                                     </div>
                                     <div class="commit">
@@ -120,22 +120,22 @@
 </template>
 
 <script>
-import SearchSelector from './SearchSelector/SearchSelector'
-import {mapGetters} from 'vuex'
+import SearchSelector from "./SearchSelector/SearchSelector";
+import { mapGetters } from "vuex";
 export default {
-  name: 'Search',
+    name: "Search",
 
-  components: {
-    SearchSelector
-  },
-  mounted(){
-    this.$store.dispatch('getSearchList',{})
-  },
-  computed: {
-    //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
-    ...mapGetters(['goodsList'])
-  }
-}
+    components: {
+        SearchSelector,
+    },
+    mounted() {
+        this.$store.dispatch("getSearchList", {});
+    },
+    computed: {
+        //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
+        ...mapGetters(["goodsList"]),
+    },
+};
 </script>
 
 <style lang="scss" scoped>
