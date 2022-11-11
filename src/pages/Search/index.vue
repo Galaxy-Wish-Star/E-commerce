@@ -1,3 +1,4 @@
+
 <template>
     <div>
         <TypeNav />
@@ -49,7 +50,7 @@
                     </div>
                     <div class="goods-list">
                         <ul class="yui3-g">
-                            <li class="yui3-u-1-5" v-for="goods in goodsList" :key="goods">
+                            <li class="yui3-u-1-5" v-for="goods in goodsList" :key="goods.length">
                                 <div class="list-wrap">
                                     <div class="p-img">
                                         <a href="item.html" target="_blank"><img :src="goods.defaultImg" /></a>
@@ -123,17 +124,51 @@
 import SearchSelector from "./SearchSelector/SearchSelector";
 import { mapGetters } from "vuex";
 export default {
-    name: "Search",
-
+    data() {
+        //带给服务器的参数
+        return {
+            searchParams: {
+              //一级分类ID
+              category1Id:"",
+              //二级分类id
+              category2Id:"",
+              //三级分类id
+              category3Id:"",
+              //分类名字
+              categoryName:"",
+              //关键字
+              keyword:"",
+              //排序方式
+              order:"",
+              // 当前第几页
+              pageNo:"1",
+              // 每页展示个数
+              pageSize:"3",
+              // 平台售卖属性操作带的参数
+              props:[],
+              //品牌
+              trademark:"",
+            },
+        };
+    },
     components: {
         SearchSelector,
     },
+    beforeMount() {
+        Object.assign(this.searchParams, this.$route.query, this.$route.params);
+        // console.log(this.searchParams, this.$route.query, this.$route.params)
+    },
     mounted() {
-        this.$store.dispatch("getSearchList", {});
+        this.getData();
     },
     computed: {
         //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
         ...mapGetters(["goodsList"]),
+    },
+    methods: {
+        getData() {
+            this.$store.dispatch("getSearchList", this.searchParams);
+        },
     },
 };
 </script>
