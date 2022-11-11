@@ -174,9 +174,9 @@ export default {
   watch: {
       $route() {
         //再次发请求之前整理带给服务器参数
-        console.log(Object.assign(this.searchParams, this.$route.query, this.$route.params))
+        Object.assign(this.searchParams, this.$route.query, this.$route.params)
         //再次发ajax请求
-        // this.getData()
+        this.getData()
       }
   }
 };
