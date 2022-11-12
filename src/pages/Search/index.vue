@@ -11,14 +11,23 @@
                         </li>
                     </ul>
                     <ul class="fl sui-tag">
+                        <!--                          分类的面包屑-->
                         <li class="with-x" v-if="searchParams.categoryName">
                             {{ searchParams.categoryName }}<i @click="removeCategoryName">x</i>
+                        </li>
+                        <!--                      关键字面包屑-->
+                        <li class="with-x" v-if="searchParams.keyword">
+                            {{ searchParams.keyword }}<i @click="removeKeyword">x</i>
+                        </li>
+                        <!--                      品牌的面包屑-->
+                        <li class="with-x" v-if="searchParams.trademark">
+                            {{ searchParams.trademark.split(":")[1] }}<i @click="removeTrademark">x</i>
                         </li>
                     </ul>
                 </div>
 
                 <!--selector-->
-                <SearchSelector />
+                <SearchSelector @trademarkInfo="trademarkInfo" />
 
                 <!--details-->
                 <div class="details clearfix">
@@ -180,6 +189,30 @@ export default {
             if (this.$route.params) {
                 this.$router.push({ name: "search", params: this.$route.params });
             }
+        },
+        //删除关键字
+        removeKeyword() {
+            //给服务器管的参数searchParams的keyword置空
+            this.searchParams.keyword = undefined;
+            //在次发请求
+            this.getData();
+            //通知兄弟组件Header清除关键字
+            this.$bus.$emit("clear");
+            //进行路由的跳转
+            if (this.$route.query) {
+                this.$router.push({ name: "search", query: this.$route.query });
+            }
+        },
+        //面包屑通信
+        trademarkInfo(trademark) {
+            this.searchParams.trademark = `${trademark.tmId}:${trademark.tmName}`;
+            this.getData();
+        },
+        //删除品牌面包屑
+        removeTrademark() {
+            //品牌信息清空
+            this.searchParams.trademark = undefined;
+            this.getData();
         },
     },
     //数据监听:监听组件实例身上的属性的局性值变化
