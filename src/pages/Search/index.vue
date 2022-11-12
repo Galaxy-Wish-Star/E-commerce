@@ -169,17 +169,17 @@ export default {
         },
         removeCategoryName() {
             //把带给服务器的参数置空了,还需要向服务器发请求
-          //带给服务器参数说明可有可无的:如果属性值为空的学符串还是会把相应的字段带给服务器
-          // 但是你把相应的字段变为undefined，当前这个字段不会带给服务髻
-          this.searchParams.categoryName = undefined;
+            //带给服务器参数说明可有可无的:如果属性值为空的学符串还是会把相应的字段带给服务器
+            // 但是你把相应的字段变为undefined，当前这个字段不会带给服务髻
+            this.searchParams.categoryName = undefined;
             this.searchParams.category1Id = undefined;
             this.searchParams.category2Id = undefined;
             this.searchParams.category3Id = undefined;
-            this.getData()
-          // 地址栏也要改,进行路由跳转
-          if(this.$route.params){
-            this.$router.push({name:'search',params:this.$route.params})
-          }
+            this.getData();
+            // 地址栏也要改,进行路由跳转
+            if (this.$route.params) {
+                this.$router.push({ name: "search", params: this.$route.params });
+            }
         },
     },
     //数据监听:监听组件实例身上的属性的局性值变化

@@ -27,128 +27,6 @@
                     <img src="./images/消费5.png" />
                 </ul>
             </div>
-            <div class="jiadian w navigation">
-                <div class="box-hd">
-                    <h3>精品水果</h3>
-                    <div class="tab-list">
-                        <ul>
-                            <li><a href="#" class="style-red">热门</a>|</li>
-                            <li><a href="#">脐橙</a>|</li>
-                            <li><a href="#">土豆</a>|</li>
-                            <li><a href="#">蜜饯</a>|</li>
-                            <li><a href="#">香蕉</a>|</li>
-                            <li><a href="#">雪莲果</a>|</li>
-                            <li><a href="#">哈密瓜</a>|</li>
-                            <li><a href="#">新奇特</a>|</li>
-                            <li><a href="#">高端蔬菜</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="box-bd">
-                    <ul class="tab-con">
-                        <li class="w209">
-                            <ul class="tab-con-list">
-                                <li>
-                                    <a href="#">节能补贴</a>
-                                </li>
-                                <li>
-                                    <a href="#">4K电视</a>
-                                </li>
-                                <li>
-                                    <a href="#">空气净化器</a>
-                                </li>
-                                <li>
-                                    <a href="#">IH电饭煲</a>
-                                </li>
-                                <li>
-                                    <a href="#">滚筒洗衣机</a>
-                                </li>
-                                <li>
-                                    <a href="#">电热水器</a>
-                                </li>
-                            </ul>
-                            <div class="img1-activity-box">
-                                <span>福建蜜薯</span>
-                                <p>抽奖送好礼</p>
-                                <img src="./images/福建蜜薯.jpg" alt="" />
-                            </div>
-                        </li>
-                        <li class="w329">
-                            <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </li>
-                        <li class="w219">
-                            <div class="tab-con-item">
-                                <a href="#">
-                                    <span>满299减299！</span>
-                                    <p>美食节一分钱抢购！</p>
-                                    <img src="./images/湖南有机黄瓜.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div class="tab-con-item">
-                                <a href="#">
-                                    <span>满299减299！</span>
-                                    <p>美食节一分钱抢购！</p>
-                                    <img src="./images/新疆哈密瓜.jpg" alt="" />
-                                </a>
-                            </div>
-                        </li>
-                        <li class="w220">
-                            <div class="tab-con-item">
-                                <a href="#">
-                                    <span>满299减299！</span>
-                                    <p>云南雪莲果</p>
-                                    <img class="yunnanxuelianguo" src="./images/云南雪莲果.jpg" alt="" />
-                                </a>
-                            </div>
-                        </li>
-                        <li class="w220">
-                            <div class="tab-con-item">
-                                <a href="#">
-                                    <span>满299减299！</span>
-                                    <p>云南雪莲果</p>
-                                    <img src="./images/四川韭菜.jpg" alt="" />
-                                </a>
-                            </div>
-                            <div class="tab-con-item">
-                                <a href="#">
-                                    <span>满299减299！</span>
-                                    <p>云南雪莲果</p>
-                                    <img src="./images/新鲜脐橙.jpg" alt="" />
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- <ul class="tab-con">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul> -->
-                </div>
-            </div>
             <div class="shouji w navigation">
                 <div class="box-hd">
                     <h3>地方特产</h3>
@@ -196,29 +74,13 @@
                             </div>
                         </li>
                         <li class="w329">
-                            <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
-                            </div>
+                            <el-carousel interval="2000" trigger="click" height="340px">
+                                <el-carousel-item v-for="item in floorBannerList" :key="item.id">
+                                    <img :src="item.imgUrl" />
+                                    <span>{{ item.name }}</span>
+                                    <p>{{ item.activity }}</p>
+                                </el-carousel-item>
+                            </el-carousel>
                         </li>
                         <li class="w219">
                             <div class="tab-con-item">
@@ -317,31 +179,15 @@
                                 <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
-                        <li class="w329">
-                            <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </li>
+                      <li class="w329">
+                        <el-carousel trigger="click" height="340px">
+                          <el-carousel-item v-for="item in floorBannerList" :key="item.id">
+                            <img :src="item.imgUrl" />
+                            <span>{{ item.name }}</span>
+                            <p>{{ item.activity }}</p>
+                          </el-carousel-item>
+                        </el-carousel>
+                      </li>
                         <li class="w219">
                             <div class="tab-con-item">
                                 <a href="#">
@@ -439,31 +285,15 @@
                                 <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
-                        <li class="w329">
-                            <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./images/兴城多宝鱼.jpg" alt="" />
-                                        <span>美味兴城多宝鱼</span>
-                                        <p>满299减40</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </li>
+                      <li class="w329">
+                        <el-carousel trigger="click" interval="1500" height="340px">
+                          <el-carousel-item v-for="item in floorBannerList" :key="item.id">
+                            <img :src="item.imgUrl" />
+                            <span>{{ item.name }}</span>
+                            <p>{{ item.activity }}</p>
+                          </el-carousel-item>
+                        </el-carousel>
+                      </li>
                         <li class="w219">
                             <div class="tab-con-item">
                                 <a href="#">
@@ -632,12 +462,46 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+    mounted() {
+        //派发action:通过vuex发起ajax请求，将数据仓储在仓库当中
+        this.$store.dispatch("getFloorBannerList");
+    },
+    computed: {
+        ...mapState({
+            floorBannerList: (state) => state.home.floorBannerList,
+        }),
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 @import "../../../assets/scss/_color.scss";
 
+//轮播图
+
+.el-carousel__container {
+    .el-carousel__item {
+        img {
+            width: 252px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span {
+            margin: 10px;
+            font-size: 24px;
+            font-family: "myfont";
+            color: #d1343e;
+        }
+        p {
+            font-size: 12px;
+            color: #d1343e;
+        }
+    }
+}
 .contain {
     width: 1226px;
     margin: 0 auto;
@@ -688,26 +552,27 @@ export default {};
 }
 
 .w209 {
-    width: 209px;
+    width: 208px;
     background-color: #f9f9f9;
 }
 
 .w329 {
-    .swiper-slide {
-        border-right: 1px solid #c5c5c5;
-    }
-    width: 329px;
+    border-right: 1px solid #ccc;
+    width: 320px;
 }
 
 .w219 {
-    width: 219px;
+    width: 218px;
     border-right: 1px solid #ccc;
 }
 
 .w220 {
     padding-right: 12.5px;
-    width: 220px;
+    width: 219px;
     border-right: 1px solid #ccc;
+    &:last-child {
+        border-right: none;
+    }
 }
 
 .tab-con li {
@@ -776,7 +641,6 @@ export default {};
     color: #fff;
 }
 .floor {
-    .jiadian,
     .shouji,
     .diannao,
     .jiaju {
@@ -809,29 +673,7 @@ export default {};
                         }
                     }
                 }
-                .swiper-button-next,
-                .swiper-button-prev,
-                .swiper-pagination-bullet {
-                    color: #1d99e3;
-                }
-                .swiper-slide {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    span {
-                        font-size: 24px;
-                        font-family: "myfont";
-                        color: #d1343e;
-                    }
-                    img {
-                        height: 70%;
-                    }
-                    p {
-                        font-size: 12px;
-                        color: #d1343e;
-                    }
-                }
+
                 .w219 {
                     .tab-con-item {
                         a {
@@ -892,37 +734,7 @@ export default {};
         }
     }
 }
-.swiper {
-    width: 100%;
-    height: 100%;
-}
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 97%;
-    height: 100%;
-    object-fit: cover;
-}
 .zn-new-box {
     display: flex;
     justify-content: space-between;
