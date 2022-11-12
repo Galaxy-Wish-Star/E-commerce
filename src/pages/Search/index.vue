@@ -23,34 +23,26 @@
                         <li class="with-x" v-if="searchParams.trademark">
                             {{ searchParams.trademark.split(":")[1] }}<i @click="removeTrademark">x</i>
                         </li>
+                        <!--                      平台售卖属性值展示-->
+                        <li class="with-x" v-for="(attrValue, index) in searchParams.props" :key="index">
+                            {{ attrValue.split(":")[1] }}<i @click="removeAttr(index)">x</i>
+                        </li>
                     </ul>
                 </div>
 
                 <!--selector-->
-                <SearchSelector @trademarkInfo="trademarkInfo" />
+                <SearchSelector @trademarkInfo="trademarkInfo" @attrInfo="attrInfo" />
 
                 <!--details-->
                 <div class="details clearfix">
                     <div class="sui-navbar">
                         <div class="navbar-inner filter">
                             <ul class="sui-nav">
-                                <li class="active">
+                                <li :class="{active: isOne}">
                                     <a href="#">综合</a>
                                 </li>
-                                <li>
-                                    <a href="#">销量</a>
-                                </li>
-                                <li>
-                                    <a href="#">新品</a>
-                                </li>
-                                <li>
-                                    <a href="#">评价</a>
-                                </li>
-                                <li>
-                                    <a href="#">价格⬆</a>
-                                </li>
-                                <li>
-                                    <a href="#">价格⬇</a>
+                                <li :class="{active: isTwo}">
+                                    <a href="#">价格</a>
                                 </li>
                             </ul>
                         </div>
@@ -145,8 +137,8 @@ export default {
                 categoryName: "",
                 //关键字
                 keyword: "",
-                //排序方式
-                order: "",
+                //排序方式，初始状态是综合|降序
+                order: "1:desc",
                 // 当前第几页
                 pageNo: "1",
                 // 每页展示个数
@@ -171,6 +163,13 @@ export default {
     computed: {
         //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
         ...mapGetters(["goodsList"]),
+        
+        isOne(){
+            return this.searchParams.order.indexOf('1')!=-1
+        },
+        isTwo(){
+            return this.searchParams.order.indexOf('2')!=-1
+        }
     },
     methods: {
         getData() {
@@ -212,6 +211,22 @@ export default {
         removeTrademark() {
             //品牌信息清空
             this.searchParams.trademark = undefined;
+            this.getData();
+        },
+        //收集十台属性地方回调函数（自定义事件)
+        attrInfo(attr, attrValue) {
+            //属性ID：属性值：属性名
+            let props = `${attr.attrId}:${attrValue}:${attr.attrName}`;
+            //数组去重
+            if (this.searchParams.props.indexOf(props) == -1) this.searchParams.props.push(props);
+            //再次发请求
+            this.getData();
+        },
+        //删除选择的属性
+        removeAttr(index) {
+            //再次整理参数
+            this.searchParams.props.splice(index, 1);
+            //发送请求
             this.getData();
         },
     },
