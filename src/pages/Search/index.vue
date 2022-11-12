@@ -11,10 +11,9 @@
                         </li>
                     </ul>
                     <ul class="fl sui-tag">
-                        <li class="with-x">手机</li>
-                        <li class="with-x">iphone<i>×</i></li>
-                        <li class="with-x">华为<i>×</i></li>
-                        <li class="with-x">OPPO<i>×</i></li>
+                        <li class="with-x" v-if="searchParams.categoryName">
+                            {{ searchParams.categoryName }}<i @click="removeCategoryName">x</i>
+                        </li>
                     </ul>
                 </div>
 
@@ -168,21 +167,35 @@ export default {
         getData() {
             this.$store.dispatch("getSearchList", this.searchParams);
         },
+        removeCategoryName() {
+            //把带给服务器的参数置空了,还需要向服务器发请求
+          //带给服务器参数说明可有可无的:如果属性值为空的学符串还是会把相应的字段带给服务器
+          // 但是你把相应的字段变为undefined，当前这个字段不会带给服务髻
+          this.searchParams.categoryName = undefined;
+            this.searchParams.category1Id = undefined;
+            this.searchParams.category2Id = undefined;
+            this.searchParams.category3Id = undefined;
+            this.getData()
+          // 地址栏也要改,进行路由跳转
+          if(this.$route.params){
+            this.$router.push({name:'search',params:this.$route.params})
+          }
+        },
     },
     //数据监听:监听组件实例身上的属性的局性值变化
     watch: {
-      //监听路由的信息是否发生变化，如果发生变化，再次发起请求
-      $route(newValue, oldValue) {
-        //每一次请求完毕，应该把相应的1、2、3级分类的id置空的，让他接受下一次的相应1、2、3
-        //再次发请求之前整理带给服务器参数
-        Object.assign(this.searchParams, this.$route.query, this.$route.params);
-        //再次发起ajax请求
-        this.getData();
-        //分类名字与关键字不用清理：因为每一次路由发生变化的时候，都会给他赋予新的数据
-        this.searchParams.category1Id = undefined;
-        this.searchParams.category2Id = undefined;
-        this.searchParams.category3Id = undefined;
-      },
+        //监听路由的信息是否发生变化，如果发生变化，再次发起请求
+        $route() {
+            //每一次请求完毕，应该把相应的1、2、3级分类的id置空的，让他接受下一次的相应1、2、3
+            //再次发请求之前整理带给服务器参数
+            Object.assign(this.searchParams, this.$route.query, this.$route.params);
+            //再次发起ajax请求
+            this.getData();
+            //分类名字与关键字不用清理：因为每一次路由发生变化的时候，都会给他赋予新的数据
+            this.searchParams.category1Id = undefined;
+            this.searchParams.category2Id = undefined;
+            this.searchParams.category3Id = undefined;
+        },
     },
 };
 </script>
