@@ -39,10 +39,10 @@
                         <div class="navbar-inner filter">
                             <ul class="sui-nav">
                                 <li :class="{active: isOne}">
-                                    <a href="#">综合</a>
+                                    <a href="#">综合 <i class="fa fa-car" v-show="isOne":class="['fa',isAsc? 'fa-car':'fa-search']"></i></a>
                                 </li>
                                 <li :class="{active: isTwo}">
-                                    <a href="#">价格</a>
+                                    <a href="#">价格 <i v-show="isTwo" :class="['fa',isAsc? 'fa-car':'fa-search']"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -138,7 +138,7 @@ export default {
                 //关键字
                 keyword: "",
                 //排序方式，初始状态是综合|降序
-                order: "1:desc",
+                order: "2:desc",
                 // 当前第几页
                 pageNo: "1",
                 // 每页展示个数
@@ -163,13 +163,19 @@ export default {
     computed: {
         //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
         ...mapGetters(["goodsList"]),
-        
+
         isOne(){
             return this.searchParams.order.indexOf('1')!=-1
         },
         isTwo(){
             return this.searchParams.order.indexOf('2')!=-1
-        }
+        },
+      isAsc(){
+          return this.searchParams.order.indexOf('asc')!=-1
+      },
+      isDesc(){
+          return this.searchParams.order.indexOf('desc')!=-1
+      }
     },
     methods: {
         getData() {
