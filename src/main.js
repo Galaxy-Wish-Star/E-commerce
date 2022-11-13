@@ -8,6 +8,9 @@ import router from "@/router";
 //三级联动全局组件
 import TypeNav from "@/components/TypeNav";
 Vue.component(TypeNav.name, TypeNav);
+//分液器全局组件
+import Pagination from "@/components/Pagination";
+Vue.component(Pagination.name, Pagination);
 
 //引入vuex仓库
 import store from "@/store";

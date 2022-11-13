@@ -120,7 +120,7 @@
                     </ul>
                     <p>版权所有 脱贫地区农副产品网络销售平台 | 京ICP备15050565号-10 | 京ICP证151138号</p>
                     <p>支持媒体： 中华合作时报 中国政府采购新闻网 友情链接： 供销e家 采购人管理系统</p>
-                    <p>本网站由<a href="javascript:;">Galaxy-Wish-Star团队</a>运营维护</p>
+                    <p>本网站由<a href="https://github.com/Galaxy-Wish-Star/E-commerce">Galaxy-Wish-Star团队</a>运营维护</p>
                     <img src="./images/s-footerImg.png" alt="" />
                     <p><img src="./images/国徽.png" alt="" />京ICP备19006430号</p>
                 </div>
