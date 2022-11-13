@@ -40,7 +40,8 @@
                             <ul class="sui-nav">
                                 <li :class="{ active: isOne }" @click="changeOder('1')">
                                     <a
-                                        >综合<font-awesome-icon
+                                        >综合
+                                        <font-awesome-icon
                                             :icon="['fa', isAsc ? 'fa-arrow-up' : 'fa-arrow-down']"
                                             v-show="isOne"
                                         />
@@ -52,7 +53,8 @@
                                         <font-awesome-icon
                                             :icon="['fa', isAsc ? 'fa-arrow-up' : 'fa-arrow-down']"
                                             v-show="isTwo"
-                                    /></a>
+                                        />
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -95,7 +97,13 @@
                         </ul>
                     </div>
                     <!-- 分页器 -->
-                    <Pagination :pageNp="1" :pageSize="3" :total="91" :continues="5" />
+                    <Pagination
+                        :pageNo="searchParams.pageNo"
+                        :pageSize="searchParams.pageSize"
+                        :total="total"
+                        :continues="5"
+                        @getPageNo="getPageNo"
+                    />
                 </div>
             </div>
         </div>
@@ -104,8 +112,8 @@
 
 <script>
 import SearchSelector from "./SearchSelector/SearchSelector";
-import { mapGetters } from "vuex";
-import { Pagination } from "element-ui";
+import { mapGetters, mapState } from "vuex";
+
 export default {
     data() {
         //带给服务器的参数
@@ -126,7 +134,7 @@ export default {
                 // 当前第几页
                 pageNo: "1",
                 // 每页展示个数
-                pageSize: "10",
+                pageSize: "2",
                 // 平台售卖属性操作带的参数
                 props: [],
                 //品牌
@@ -136,7 +144,6 @@ export default {
     },
     components: {
         SearchSelector,
-        Pagination,
     },
     beforeMount() {
         Object.assign(this.searchParams, this.$route.query, this.$route.params);
@@ -161,6 +168,10 @@ export default {
         isDesc() {
             return this.searchParams.order.indexOf("desc") != -1;
         },
+        //获取search模块展示产品一共多少数据
+        ...mapState({
+            total: (state) => state.search.searchList.total,
+        }),
     },
     methods: {
         getData() {
@@ -239,6 +250,13 @@ export default {
             }
             //将新的order赋予searchParams
             this.searchParams.order = newOrder;
+            this.getData();
+        },
+
+        //自定义事件
+        getPageNo(pageNo) {
+            //整理带给服务器参数
+            this.searchParams.pageNo = pageNo;
             this.getData();
         },
     },
