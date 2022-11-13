@@ -33,7 +33,7 @@
                 <!--selector-->
                 <SearchSelector @trademarkInfo="trademarkInfo" @attrInfo="attrInfo" />
 
-                <!--details-->
+                <!--detail-->
                 <div class="details clearfix">
                     <div class="sui-navbar">
                         <div class="navbar-inner filter">

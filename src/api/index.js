@@ -14,3 +14,6 @@ export const reqGetSearchInfo = (params) => requests({ url: "/list", method: "po
 
 //获取floor模块轮播图
 export const reqGetFloorBannerList = () => mockRequest({ url: "/floorBanner", method: "get" });
+
+//获取商品详情
+export const reqGoodsInfo = (skuId) => requests({ url: `/item/${skuId}`,method: "get"})
