@@ -155,7 +155,7 @@ export default {
         this.getData();
     },
     computed: {
-        //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
+        //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , search】
         ...mapGetters(["goodsList"]),
 
         isOne() {

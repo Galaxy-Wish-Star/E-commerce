@@ -44,7 +44,6 @@ new Vue({
     beforeCreate() {
         Vue.prototype.$bus = this;
     },
-    // store,
     //注册路由
     router,
     //注册vuex仓库
