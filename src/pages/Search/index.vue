@@ -38,11 +38,21 @@
                     <div class="sui-navbar">
                         <div class="navbar-inner filter">
                             <ul class="sui-nav">
-                                <li :class="{active: isOne}">
-                                    <a href="#">综合 <i class="fa fa-car" v-show="isOne":class="['fa',isAsc? 'fa-car':'fa-search']"></i></a>
+                                <li :class="{ active: isOne }" @click="changeOder('1')">
+                                    <a
+                                        >综合<font-awesome-icon
+                                            :icon="['fa', isAsc ? 'fa-arrow-up' : 'fa-arrow-down']"
+                                            v-show="isOne"
+                                        />
+                                    </a>
                                 </li>
-                                <li :class="{active: isTwo}">
-                                    <a href="#">价格 <i v-show="isTwo" :class="['fa',isAsc? 'fa-car':'fa-search']"></i></a>
+                                <li :class="{ active: isTwo }" @click="changeOder('2')">
+                                    <a
+                                        >价格
+                                        <font-awesome-icon
+                                            :icon="['fa', isAsc ? 'fa-arrow-up' : 'fa-arrow-down']"
+                                            v-show="isTwo"
+                                    /></a>
                                 </li>
                             </ul>
                         </div>
@@ -164,18 +174,18 @@ export default {
         //mapGetters里面的写法:传递的数组，因为getters计算是没有划分模块【home , searnch】
         ...mapGetters(["goodsList"]),
 
-        isOne(){
-            return this.searchParams.order.indexOf('1')!=-1
+        isOne() {
+            return this.searchParams.order.indexOf("1") != -1;
         },
-        isTwo(){
-            return this.searchParams.order.indexOf('2')!=-1
+        isTwo() {
+            return this.searchParams.order.indexOf("2") != -1;
         },
-      isAsc(){
-          return this.searchParams.order.indexOf('asc')!=-1
-      },
-      isDesc(){
-          return this.searchParams.order.indexOf('desc')!=-1
-      }
+        isAsc() {
+            return this.searchParams.order.indexOf("asc") != -1;
+        },
+        isDesc() {
+            return this.searchParams.order.indexOf("desc") != -1;
+        },
     },
     methods: {
         getData() {
@@ -233,6 +243,27 @@ export default {
             //再次整理参数
             this.searchParams.props.splice(index, 1);
             //发送请求
+            this.getData();
+        },
+        //排序
+        changeOder(flag) {
+            //flag形参:它是一个标记，代表用户点击的是综合（1）价格（2)[用户点击的时候传递进来的]
+            //这里获取到的是最开始的状态
+
+            let originFlag = this.searchParams.order.split(":")[0];
+            let originSort = this.searchParams.order.split(":")[1];
+            //准备一个新的order属性值
+            let newOrder = "";
+            //这个语句能确定点击的一定是综合
+            if (flag == originFlag) {
+                //点击综合
+                newOrder = `${originFlag}:${originSort == "desc" ? "asc" : "desc"}`;
+            } else {
+                //点击价格
+                newOrder = `${flag}:${"desc"}`;
+            }
+            //将新的order赋予searchParams
+            this.searchParams.order = newOrder;
             this.getData();
         },
     },

@@ -13,19 +13,34 @@ Vue.component(TypeNav.name, TypeNav);
 import store from "@/store";
 
 //引入MockServer.js----mock数据
-import '@/mock/mockServe'
+import "@/mock/mockServe";
 
 //使用element ui插件
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
+
+//引入并注册图标字体库
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+//按需引入图标字体
+//fas风格
+import { faUser ,faArrowUp,faArrowDown} from "@fortawesome/free-solid-svg-icons";
+// fab风格
+import { faWeixin } from "@fortawesome/free-brands-svg-icons";
+
+//在核心依赖中加入这个引入的图标
+library.add(faUser, faWeixin,faArrowUp,faArrowDown);
+
+//关闭生产提示
+Vue.config.productionTip = false;
 
 new Vue({
     render: (h) => h(App),
     //全局事件总线$bus配置
     beforeCreate() {
-        Vue.prototype.$bus=this
+        Vue.prototype.$bus = this;
     },
     // store,
     //注册路由
