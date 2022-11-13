@@ -94,7 +94,8 @@
                             </li>
                         </ul>
                     </div>
-                    <Pagination />
+                    <!-- 分页器 -->
+                    <Pagination :pageNp="1" :pageSize="3" :total="91" :continues="5" />
                 </div>
             </div>
         </div>
@@ -125,7 +126,7 @@ export default {
                 // 当前第几页
                 pageNo: "1",
                 // 每页展示个数
-                pageSize: "15",
+                pageSize: "10",
                 // 平台售卖属性操作带的参数
                 props: [],
                 //品牌
