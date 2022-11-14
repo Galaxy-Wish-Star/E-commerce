@@ -826,4 +826,7 @@ export default {
     width: 1210px;
     margin-top: 10px;
 }
+.weixin-link{
+    text-align: center;
+}
 </style>
