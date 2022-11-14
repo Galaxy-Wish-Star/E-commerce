@@ -32,11 +32,22 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 //按需引入图标字体
 //fas风格
-import { faUser ,faArrowUp,faArrowDown} from "@fortawesome/free-solid-svg-icons";
+import { faUser ,
+        faArrowUp,
+        faArrowDown,
+        faCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 // fab风格
-import { faWeixin } from "@fortawesome/free-brands-svg-icons";
+import { faWeixin,
+
+} from "@fortawesome/free-brands-svg-icons";
 //在核心依赖中加入这个引入的图标
-library.add(faUser, faWeixin,faArrowUp,faArrowDown);
+library.add(faUser,
+            faWeixin,
+            faArrowUp,
+            faArrowDown,
+            faCircleCheck,
+);
 
 //关闭生产提示
 Vue.config.productionTip = false;
