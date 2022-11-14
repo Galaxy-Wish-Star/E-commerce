@@ -92,12 +92,13 @@
                         </div>
                         <div class="cartWrap">
                             <div class="controls">
-                                <input autocomplete="off" class="itxt" />
-                                <a href="javascript:" class="plus">+</a>
-                                <a href="javascript:" class="mins">-</a>
+                                <input autocomplete="off" class="itxt" v-model="skuNum" @change="changeSkuSum" />
+                                <a href="javascript:" class="plus" @click="skuNum++">+</a>
+                                <a href="javascript:" class="mins" @click="skuNum > 1 ? skuNum-- : (skuNum = 1)">-</a>
                             </div>
                             <div class="add">
-                                <a href="javascript:">加入购物车</a>
+                                <!--以前咱们的路由跳转:从A路由跳转到B路由，这里在加入购物车，进行路由跳转之前，发请求把你购买的产品的信息通过请求的形式通知服务器，服务器进行相应的存储-->
+                                <a href="javascript:" @click="addShopcar">加入购物车</a>
                             </div>
                         </div>
                     </div>
@@ -342,6 +343,26 @@ import { mapGetters } from "vuex";
 
 export default {
     name: "Detail",
+    data() {
+        //购买产品的个数
+        return { skuNum: 1 };
+    },
+    methods: {
+        changeSkuSum(event) {
+            //用户输入进来的文本*1
+            let value = event.target.value * 1;
+            //如果用户输入进来的非法
+            if (isNaN(value) || value < 1) {
+                this.skuNum = 1;
+            } else {
+                this.skuNum = parseInt(value);
+            }
+        },
+        addShopcar() {
+            //发请求
+            this.$route.dispatch("addOrUpdateShopCart", { skuId: this.$route.params.skuId });
+        },
+    },
     components: {
         ImageList,
         Zoom,

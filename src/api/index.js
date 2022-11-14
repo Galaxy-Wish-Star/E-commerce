@@ -17,3 +17,6 @@ export const reqGetFloorBannerList = () => mockRequest({ url: "/floorBanner", me
 
 //获取商品详情
 export const reqGoodsInfo = (skuId) => requests({ url: `/item/${skuId}`,method: "get"})
+
+//将产品添加到购物车中（获取更新某一个产品的个数)
+export const reqAddOrUpdateShopCart = (skuId,skuNum)=>requests({url:`/cart/addYoCart/${skuId}/${skuNum}`,method: "post"})
