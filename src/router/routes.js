@@ -6,9 +6,15 @@ import Register from "@/pages/Register";
 import Personal from "@/pages/Personal";
 import Login from "@/pages/Login";
 import News from "@/pages/News"
+import AddCartSuccess from '@/pages/AddCartSuccess'
 
 //配置路由
 export default [
+    {
+        path: "/addcartsuccess",
+        component: AddCartSuccess,
+        name: "addcartsuccess",
+    },
     {
         path: "/news",
         component: News,
