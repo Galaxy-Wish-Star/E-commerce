@@ -3,7 +3,7 @@
     <div class="type-nav">
         <div class="container">
             <div @mouseleave="leaveShow" @mouseenter="enterShow">
-                <Nav></Nav>
+                <div class="mask"></div>
                 <transition name="sort">
                     <div class="sort" v-show="show">
                         <div class="all-sort-list2" @click="goSearch">
@@ -39,6 +39,7 @@
                 </transition>
             </div>
         </div>
+        <Nav></Nav>
     </div>
 </template>
 
@@ -109,6 +110,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.mask {
+    width: 200px;
+    height: 45px;
+    position: absolute;
+}
+
 .type-nav {
     border-bottom: 2px solid #8dc742;
 
@@ -145,6 +152,7 @@ export default {
                         &:hover {
                             background: #ccc;
                         }
+
                         line-height: 30px;
                         font-size: 14px;
                         font-weight: 400;
@@ -154,9 +162,11 @@ export default {
 
                         a {
                             cursor: pointer;
+
                             &:hover {
                                 color: #000;
                             }
+
                             color: #333;
                         }
                     }
@@ -196,6 +206,7 @@ export default {
                                     text-align: right;
                                     padding: 3px 6px 0 0;
                                     font-weight: 700;
+
                                     a {
                                         cursor: pointer;
                                         color: rgb(97, 97, 97);
@@ -213,6 +224,7 @@ export default {
                                             cursor: pointer;
                                             font-size: 12px;
                                         }
+
                                         float: left;
                                         height: 16px;
                                         line-height: 14px;
@@ -233,17 +245,20 @@ export default {
                 }
             }
         }
+
         //过渡动画样式
         //开始阶段
         .sort-enter {
             overflow: hidden;
             height: 0;
         }
+
         //结束阶段（进入）
         .sort-enter-to {
             overflow: hidden;
             height: 461px;
         }
+
         //定义动画时间速率
         .sort-enter-active {
             overflow: hidden;
