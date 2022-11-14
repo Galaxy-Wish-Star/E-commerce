@@ -17,7 +17,7 @@ const actions = {
 
         if (result.code == 200) {
             //代表服务器加入购物车成功
-            return "ok";
+            return alert('ok');
         } else {
             // 加入成功
             return Promise.reject(new Error("faile"));

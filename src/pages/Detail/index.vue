@@ -362,11 +362,12 @@ export default {
             //发请求
             try {
                 await this.$store.dispatch("addOrUpdateShopCart", {
-                    skuId: this.$route.params.skuId,
+                    skuId: this.$route.params.skuid,
                     skuNum: this.skuNum,
                 });
             } catch (error) {
                 alert(error.message);
+                console.log(this.$route.params.skuid,this.skuNum,);
             }
         },
     },
