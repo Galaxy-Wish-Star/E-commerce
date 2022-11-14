@@ -2,7 +2,9 @@
     <!--    <nav class="nav">-->
 
     <div class="nav">
-        <router-link to="/search" active-class="active" :class="active()">全部商品分类</router-link>
+
+        <router-link to="/search" active-class="active" >全部商品分类</router-link>
+      <router-link to="/home" active-class="active">首页</router-link>
         <router-link to="/news" active-class="active">农业新闻</router-link>
         <a>美妆馆</a>
         <a>全球购</a>
@@ -16,11 +18,6 @@
 <script>
 export default {
     name: "Nav",
-    methods: {
-        active() {
-            return this.$route.path == "/home" ? "active" : "";
-        },
-    },
 };
 </script>
 
@@ -33,7 +30,7 @@ export default {
     a,
     router-link {
         display: inline-block;
-        width: 200px;
+        width: 171px;
         line-height: 45px;
         cursor: pointer;
         height: 45px;
