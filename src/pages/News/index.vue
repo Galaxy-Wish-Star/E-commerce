@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Nav></Nav>
+        <Nav></Nav>
         <Right />
         <Left />
     </div>
@@ -9,6 +9,7 @@
 <script>
 import Right from "./Right/Right";
 import Left from "./Left/Left";
+
 export default {
     name: "news",
     components: {
