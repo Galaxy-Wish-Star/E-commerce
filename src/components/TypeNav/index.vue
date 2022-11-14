@@ -124,22 +124,12 @@ export default {
         display: flex;
         position: relative;
 
-        .all {
-            width: 210px;
-            height: 45px;
-            background-color: #8dc742;
-            line-height: 45px;
-            text-align: center;
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-        }
 
         .sort {
             position: absolute;
             left: 0;
             top: 47px;
-            width: 200px;
+            width: 172px;
             height: 480px;
             position: absolute;
             background: #fafafa;
@@ -176,7 +166,7 @@ export default {
                         width: 734px;
                         min-height: 478px;
                         background: #f7f7f7;
-                        left: 200px;
+                        left: 172px;
                         border: 1px solid #ddd;
                         top: 0;
                         z-index: 99999 !important;
