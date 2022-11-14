@@ -1,11 +1,11 @@
 <template>
     <div class="spec-preview">
         <img :src="imgObj.imgUrl" />
-        <div class="event"></div>
+        <div class="event" @mousemove="handle"></div>
         <div class="big">
-            <img :src="imgObj.imgUrl"/>
+            <img :src="imgObj.imgUrl" ref="big"/>
         </div>
-        <div class="mask"></div>
+        <div class="mask" ref="mark"></div>
     </div>
 </template>
 
@@ -15,10 +15,35 @@ export default {
     props: ["skuImageList"],
     computed: {
         imgObj() {
-            return this.skuImageList[0]|| {}; //如果服务器数据没有回来，skuInfo这个对象是空对象
+            return this.skuImageList[0] || {}; //如果服务器数据没有回来，skuInfo这个对象是空对象
         },
     },
-
+    methods: {
+        // 放大镜效果
+        handle(e) {
+            let mark = this.$refs.mark;
+            let big = this.$refs.big;
+            let left = e.offsetX - mark.offsetWidth / 2;
+            let top = e.offsetY - mark.offsetHeight / 2;
+            // 约束范围
+            if (left <= 0) {
+                left = 0;
+            }
+            if (left >= mark.offsetWidth) {
+                left = mark.offsetWidth;
+            }
+            if (top <= 0) {
+                top = 0;
+            }
+            if (top >= mark.offsetHeight) {
+                top = mark.offsetHeight;
+            }
+            mark.style.left = left + "px";
+            mark.style.top = top + "px";
+            big.style.left = -2 * left + "px";
+            big.style.top = -2 * top + "px";
+        },
+    },
 };
 </script>
 

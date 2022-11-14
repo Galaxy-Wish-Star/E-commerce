@@ -1,7 +1,7 @@
 <template>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(slide) in skuImageList" :key="slide.id">
+            <div class="swiper-slide" v-for="slide in skuImageList" :key="slide.id">
                 <img :src="slide.imgUrl" />
             </div>
         </div>
@@ -13,7 +13,7 @@
 <script>
 export default {
     name: "ImageList",
-  props:['skuImageList']
+    props: ["skuImageList"],
 };
 </script>
 
@@ -38,11 +38,6 @@ export default {
             display: block;
 
             &.active {
-                border: 2px solid #f60;
-                padding: 1px;
-            }
-
-            &:hover {
                 border: 2px solid #f60;
                 padding: 1px;
             }
