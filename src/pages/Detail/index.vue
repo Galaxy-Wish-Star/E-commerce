@@ -358,9 +358,16 @@ export default {
                 this.skuNum = parseInt(value);
             }
         },
-        addShopcar() {
+        async addShopcar() {
             //发请求
-            this.$route.dispatch("addOrUpdateShopCart", { skuId: this.$route.params.skuId });
+            try {
+                await this.$store.dispatch("addOrUpdateShopCart", {
+                    skuId: this.$route.params.skuId,
+                    skuNum: this.skuNum,
+                });
+            } catch (error) {
+                alert(error.message);
+            }
         },
     },
     components: {
