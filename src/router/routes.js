@@ -5,9 +5,15 @@ import Search from "@/pages/Search";
 import Register from "@/pages/Register";
 import Personal from "@/pages/Personal";
 import Login from "@/pages/Login";
+import News from "@/pages/News"
 
 //配置路由
 export default [
+    {
+        path: "/news",
+        component: News,
+        name: "news",
+    },
     {
         path: "/detail/:skuid",
         component: Detail,

@@ -39,7 +39,7 @@
                 </transition>
             </div>
             <nav class="nav">
-                <a href="###">服装城</a>
+                <router-link to="/news">农业新闻</router-link>
                 <a href="###">美妆馆</a>
                 <a href="###">尚品汇超市</a>
                 <a href="###">全球购</a>
