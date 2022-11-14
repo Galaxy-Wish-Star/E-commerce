@@ -17,13 +17,13 @@
                     </ul>
                     <ul class="header-right">
                         <li>
-                            <a class="loc-an-box" href="javascript:;"
-                                ><div class="loc-mc-box">
+                            <a class="loc-an-box" href="javascript:;">
+                                <div class="loc-mc-box">
                                     <p class="loc-mc-box__text"><i class="fa fa-comments"></i>一条未读</p>
                                     <p class="loc-mc-box__text"><i class="fa fa-bell"></i>我的消息</p>
                                     <p class="loc-mc-box__text"><i class="fa fa-comments"></i>一条未读</p>
-                                </div></a
-                            >
+                                </div>
+                            </a>
                         </li>
                         <span>|</span>
                         <li>
@@ -152,9 +152,9 @@
                         />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
-                            <span style="float: left; margin-right: 4px;">热门搜索：</span>
+                            <span style="float: left; margin-right: 4px">热门搜索：</span>
                             <span class="hot_search_box"
-                                ><a style="color: #f40000;" href="javascript:;">北京仓优选</a
+                                ><a style="color: #f40000" href="javascript:;">北京仓优选</a
                                 ><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a
                                 ><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a
                                 ><a style="" href="javascript:;">832福油</a></span
@@ -165,10 +165,10 @@
                     <div class="header-body-right" v-show="loginHide">
                         <div class="login-dis">
                             <!-- <a id="login-regster-btn" href="javascript:void(0)"
-                                ><i class="fa fa-user"></i>登录
-                                <span>/</span>
-                                注册</a
-                            > -->
+                  ><i class="fa fa-user"></i>登录
+                  <span>/</span>
+                  注册</a
+              > -->
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
@@ -207,8 +207,8 @@ export default {
         //搜索框显示与隐藏
         searchHide() {
             return (
-                !(this.$router.path == "/register") &&
-                !(this.$router.path == "/login") &&
+                !(this.$route.path == "/register") &&
+                !(this.$route.path == "/login") &&
                 !(this.$route.path == "/register") &&
                 !(this.$route.path == "/login")
             );
@@ -234,6 +234,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/scss/_color.scss";
 @import "../../assets/scss/_fonts.scss";
+
 .login-dis {
     #login-regster-btn {
         border: 1px solid #06c152;
@@ -241,10 +242,12 @@ export default {
         width: 60px;
         text-align: center;
     }
+
     width: 120px;
     display: flex;
     justify-content: space-between;
 }
+
 body {
     $width: 1226px;
     $width-contain: 1400px;
@@ -261,22 +264,27 @@ body {
         display: table;
         clear: both;
     }
+
     i {
         padding: 0 4px;
     }
+
     a {
         color: #999;
         text-decoration: none;
+
         &:hover {
             color: rgb(131, 131, 131);
         }
     }
+
     .header-top {
         .fa,
         .fa-user-friends {
             color: #06c152;
         }
     }
+
     /*---------------- head部分---------------- */
     .contain {
         /* 固定容器的宽度 */
@@ -285,16 +293,19 @@ body {
         margin: 0 auto;
         box-sizing: border-box; //IE盒模型
     }
+
     .header-nav {
         border-bottom: 1px solid rgb(220, 220, 220);
         background-color: #fff;
     }
+
     .head {
         background-color: #f5f5f5;
     }
 
     .header-box {
         color: #f3f3f3;
+
         .header-top {
             height: 24px;
             display: flex;
@@ -303,6 +314,7 @@ body {
             position: relative;
             font-size: 14px;
             color: #f3f3f3;
+
             .header-left {
                 color: #999;
                 width: 450px;
@@ -311,10 +323,13 @@ body {
                 justify-content: space-between;
                 align-items: center;
             }
+
             .header-right {
                 color: #999;
+
                 li:nth-child(9) {
                     position: relative;
+
                     .show_z {
                         display: none;
                         position: absolute;
@@ -322,11 +337,13 @@ body {
                         right: -140px;
                         width: 500px;
                         z-index: 99999;
+
                         tbody {
                             display: flex;
                             justify-content: flex-start;
                             flex-direction: column;
                             font-size: 12px;
+
                             th {
                                 padding-left: 5px;
                                 width: 75px;
@@ -334,9 +351,11 @@ body {
                                 font-weight: bold;
                                 color: $words-color;
                             }
+
                             tr {
                                 height: 30px;
                             }
+
                             padding: 16px;
                             top: 40px;
                             width: 470px;
@@ -350,11 +369,14 @@ body {
                         }
                     }
                 }
+
                 li:nth-child(7) {
                     position: relative;
+
                     a {
                         padding: 5px 0;
                     }
+
                     .user-sever {
                         display: none;
                         position: absolute;
@@ -364,20 +386,25 @@ body {
                         width: 155px;
                         right: -43px;
                         box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 20%);
+
                         ul {
                             li {
                                 i {
                                     margin-right: 6px;
                                 }
+
                                 height: 20px;
+
                                 &:last-child {
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
                                 }
+
                                 a {
                                     cursor: pointer;
                                 }
+
                                 &:last-child {
                                     padding: 5px;
                                     margin-top: 10px;
@@ -387,16 +414,19 @@ body {
                         }
                     }
                 }
+
                 a {
                     &:hover {
                         color: rgb(117, 117, 117);
                     }
                 }
+
                 .loc-an-box {
                     height: 64px;
                     line-height: 64px;
                     cursor: pointer;
                 }
+
                 .loc-an-box {
                     position: relative;
                     top: 0;
@@ -407,16 +437,19 @@ body {
                     display: block;
                     color: #e6560e;
                 }
+
                 .loc-mc-box {
                     .fa {
                         color: #e6560e;
                     }
+
                     width: 90px;
                     height: 160px;
                     overflow: hidden;
                     position: relative;
                     animation: locmoveclipslider 6s infinite ease-out;
                     animation-delay: 1s;
+
                     .loc-mc-box__text {
                         &:nth-child(1) {
                             position: absolute;
@@ -426,6 +459,7 @@ body {
                             line-height: 36px;
                             text-align: center;
                         }
+
                         &:nth-child(2) {
                             position: absolute;
                             top: 50px;
@@ -434,6 +468,7 @@ body {
                             line-height: 36px;
                             text-align: center;
                         }
+
                         &:nth-child(3) {
                             position: absolute;
                             top: 103px;
@@ -444,6 +479,7 @@ body {
                         }
                     }
                 }
+
                 @keyframes locmoveclipslider {
                     0% {
                         transform: translateY(0);
@@ -472,25 +508,31 @@ body {
                 align-items: center;
             }
         }
+
         .header-body {
             height: 125px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .logo {
                 height: 95px;
             }
+
             .header-body-right {
                 &:last-child {
                     display: flex;
                     align-items: center;
                 }
+
                 span {
                     color: #06c152;
                 }
+
                 width: 270px;
                 display: flex;
                 justify-content: space-between;
+
                 a {
                     &:hover {
                         color: $bule-color;
@@ -499,22 +541,27 @@ body {
                     color: #06c152;
                 }
             }
+
             .search {
                 ul {
                     span {
                         color: #999;
                     }
+
                     font-size: 12px;
                     position: absolute;
                     top: 55px;
+
                     span {
                         a {
                             margin: 0 6px;
                         }
                     }
                 }
+
                 z-index: 9999;
                 position: relative;
+
                 .search {
                     box-sizing: border-box;
                     width: 540px;
@@ -528,6 +575,7 @@ body {
                     border-right-color: rgb(134, 191, 50);
                     border: 3px solid #8dc742;
                 }
+
                 .search-btn {
                     cursor: pointer;
                     height: 44px;
@@ -539,10 +587,12 @@ body {
                     font-size: 16px;
                     border: 1px solid rgb(224, 224, 224);
                     border-left: none;
+
                     &:hover {
                         background-color: #78aa37;
                     }
                 }
+
                 .camera {
                     color: rgb(200, 200, 200);
                     position: absolute;

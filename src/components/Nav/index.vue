@@ -2,12 +2,12 @@
     <!--    <nav class="nav">-->
 
     <div class="nav">
-        <a href="###" class="active">全部商品分类</a>
-        <router-link to="/news">农业新闻</router-link>
-        <a href="###">美妆馆</a>
-        <a href="###">全球购</a>
-        <a href="###">闪购</a>
-        <a href="###">全球购</a>
+        <router-link to="/search" active-class="active" :class="active()">全部商品分类</router-link>
+        <router-link to="/news" active-class="active">农业新闻</router-link>
+        <a>美妆馆</a>
+        <a>全球购</a>
+        <a>闪购</a>
+        <a>全球购</a>
     </div>
 
     <!--    </nav>-->
@@ -16,6 +16,11 @@
 <script>
 export default {
     name: "Nav",
+    methods: {
+        active() {
+            return this.$route.path == "/home" ? "active" : "";
+        },
+    },
 };
 </script>
 
@@ -23,8 +28,10 @@ export default {
 .nav {
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid #8dc742;
 
-    a {
+    a,
+    router-link {
         display: inline-block;
         width: 200px;
         line-height: 45px;

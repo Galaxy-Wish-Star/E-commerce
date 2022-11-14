@@ -117,7 +117,6 @@ export default {
 }
 
 .type-nav {
-    border-bottom: 2px solid #8dc742;
 
     .container {
         width: 1200px;
