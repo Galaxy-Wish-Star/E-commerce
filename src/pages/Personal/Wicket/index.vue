@@ -50,12 +50,10 @@
                             <div><a href="">用户名</a></div>
                         <div class="perple-q">
                             <a href="">￥25.5</a>
-                            &nbsp;
                             <a href="">在线支付</a>
                         </div>
                         <div class="perple-x">
                             <a href="">已完成</a>
-                            &nbsp;
                             <a href="">订单详情</a>
                         </div>
                         <div class="div-btn">
@@ -84,14 +82,12 @@
                         </div>
                         <div class="card-content-right">
                             <div><a href="">用户名</a></div>
-                        <div class="perple-q">
+                            <div class="perple-q">
                             <a href="">￥25.5</a>
-                            &nbsp;
                             <a href="">在线支付</a>
                         </div>
                         <div class="perple-x">
                             <a href="">已完成</a>
-                            &nbsp;
                             <a href="">订单详情</a>
                         </div>
                         <div class="div-btn">
@@ -120,14 +116,12 @@
                         </div>
                         <div class="card-content-right">
                             <div><a href="">用户名</a></div>
-                        <div class="perple-q">
+                            <div class="perple-q">
                             <a href="">￥25.5</a>
-                            &nbsp;
                             <a href="">在线支付</a>
                         </div>
                         <div class="perple-x">
                             <a href="">已完成</a>
-                            &nbsp;
                             <a href="">订单详情</a>
                         </div>
                         <div class="div-btn">
@@ -264,10 +258,19 @@ export default {
                         }
                     }
                     .card-content-right{
-                        width: 100%;
+                        width: 562px;
                         display: flex;
                         justify-content: space-around;
                         line-height: 100px;
+                        .perple-q,.perple-x{
+                            display: flex;
+                            flex-direction: column;
+                            a{
+                                height: 25px;
+                                line-height: 80px;
+                                text-align: center;
+                            }
+                        }
                     }
                 }
             }
