@@ -137,15 +137,28 @@
                     </div>
                 </div>
             </div>
+            <div class="pagenumber">
+                <ul>
+                    <li><a href="">上一页</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="glike">
+            <Glike></Glike>
+            <Adver></Adver>
         </div>
     </div>
 </template>
 
 <script>
-
+import Glike from "@/pages/Personal/Glike";
+import Adver from "@/pages/Personal/Adver";
 export default {
     components: {
-
+        Glike,
+        Adver,
     },
 };
 </script>
@@ -255,6 +268,19 @@ export default {
                         display: flex;
                         justify-content: space-around;
                         line-height: 100px;
+                    }
+                }
+            }
+            .pagenumber{
+                width: 200px;
+                margin: 0 auto;
+                height: 50px;
+                line-height: 50px;
+                ul{
+                    display: flex;
+                    
+                    li{
+                        margin: 0 25px 0 0;
                     }
                 }
             }
