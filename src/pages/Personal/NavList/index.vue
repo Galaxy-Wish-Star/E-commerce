@@ -16,6 +16,11 @@
                 <li><a href="">关注的店铺</a></li>
                 <li><a href="">关注的活动</a></li>
             </ul>
+            <ul>
+                <h3>设置</h3>
+                <li><a href="">个人信息</a></li>
+                <li><a href="">收货地址</a></li>
+            </ul>
             </div>
         </div>
     </div>
