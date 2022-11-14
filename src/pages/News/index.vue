@@ -1,6 +1,5 @@
 <template>
     <div>
-      <Nav></Nav>
         <Right />
         <Left />
     </div>
