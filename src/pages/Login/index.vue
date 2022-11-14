@@ -5,9 +5,13 @@
             <div class="login">
                 <div class="loginform">
                     <ul class="tab clearFix">
-                        <li>
+                        <!-- <li>
                             <a href="##" style="border-right: 0;">扫描登录</a>
-                        </li>
+                            <div class="lllsz" style="display:none">
+                                <img src="../Login/images/wx_cz.jpg" alt="">
+                            </div>
+                        </li> -->
+
                         <li>
                             <a href="##" class="current">账户登录</a>
                         </li>
@@ -16,11 +20,9 @@
                     <div class="content">
                         <form action="##">
                             <div class="input-text clearFix">
-                                <span></span>
                                 <input type="text" placeholder="邮箱/用户名/手机号" v-model="userName" />
                             </div>
                             <div class="input-text clearFix">
-                                <span class="pwd"></span>
                                 <input type="text" placeholder="请输入密码" v-model="password" />
                             </div>
                             <div class="setting clearFix">
@@ -80,23 +82,22 @@ export default {
 <style lang="scss" scoped>
 .login-container {
     .login-wrap {
-        height: 487px;
+        height: 600px;
         background-color: #e93854;
 
         .login {
             width: 1200px;
             height: 487px;
-            margin: 0 auto;
-            background: url(./images/loginbg.png) no-repeat;
+            margin: 60 auto;
         }
 
         .loginform {
             width: 420px;
-            height: 406px;
+            height: 500px;
             box-sizing: border-box;
-            background: #fff;
+            background: rgb(199, 194, 194);
             float: right;
-            top: 45px;
+            top: 60px;
             position: relative;
             padding: 20px;
 
@@ -120,7 +121,7 @@ export default {
                     }
 
                     .current {
-                        border-bottom: none;
+                        width: 380px;
                         border-top-color: #28a3ef;
                         color: #e1251b;
                     }
@@ -129,7 +130,7 @@ export default {
 
             .content {
                 width: 380px;
-                height: 316px;
+                height: 450px;
                 box-sizing: border-box;
                 border: 1px solid #ddd;
                 border-top: none;
@@ -141,14 +142,16 @@ export default {
                     line-height: 18px;
 
                     .input-text {
-                        margin-bottom: 16px;
+                        padding-top: 48px;
+                        height: 20px;
+                        width: 342px;
 
                         span {
                             float: left;
                             width: 37px;
                             height: 32px;
                             border: 1px solid #ccc;
-                            background: url(../../assets/img/icons.png) no-repeat -10px -201px;
+                            // background: url(../../assets/img/icons.png) no-repeat -10px -201px;
                             box-sizing: border-box;
                             border-radius: 2px 0 0 2px;
                         }
@@ -158,8 +161,8 @@ export default {
                         }
 
                         input {
-                            width: 302px;
-                            height: 32px;
+                            width: 342px;
+                            height: 40px;
                             box-sizing: border-box;
                             border: 1px solid #ccc;
                             border-left: none;
@@ -179,10 +182,14 @@ export default {
                     .setting {
                         label {
                             float: left;
+                            font-size: 18px;
+                            padding-top: 28px;
                         }
 
                         .forget {
                             float: right;
+                            font-size: 18px;
+                            padding-top: 28px;
                         }
                     }
 
@@ -196,8 +203,8 @@ export default {
                         border: 1px solid #e1251b;
                         color: #fff;
                         width: 100%;
-                        height: 36px;
-                        margin-top: 25px;
+                        height: 45px;
+                        margin-top: 30px;
                         outline: none;
                     }
                 }
@@ -218,6 +225,7 @@ export default {
                         float: right;
                         font-size: 15px;
                         line-height: 38px;
+                        font-size: 18px;
                     }
 
                     .register:hover {
