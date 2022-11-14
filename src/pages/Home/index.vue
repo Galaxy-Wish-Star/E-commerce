@@ -17,6 +17,7 @@ import Recommend from "@/pages/Home/Recommend";
 import Rank from "@/pages/Home/Rank";
 import Like from "@/pages/Home/Like";
 import Foolr from "@/pages/Home/Foolr";
+
 export default {
     components: {
         ListContainer,

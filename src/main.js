@@ -11,6 +11,9 @@ Vue.component(TypeNav.name, TypeNav);
 //分液器全局组件
 import Pagination from "@/components/Pagination";
 Vue.component(Pagination.name, Pagination);
+//导航栏
+import Nav from '@/components/Nav';
+Vue.component(Nav.name, Nav);
 
 //引入vuex仓库
 import store from "@/store";

@@ -3,7 +3,7 @@
     <div class="type-nav">
         <div class="container">
             <div @mouseleave="leaveShow" @mouseenter="enterShow">
-                <h2 class="all">全部商品分类</h2>
+                <Nav></Nav>
                 <transition name="sort">
                     <div class="sort" v-show="show">
                         <div class="all-sort-list2" @click="goSearch">
@@ -38,16 +38,6 @@
                     </div>
                 </transition>
             </div>
-            <nav class="nav">
-                <router-link to="/news">农业新闻</router-link>
-                <a href="###">美妆馆</a>
-                <a href="###">尚品汇超市</a>
-                <a href="###">全球购</a>
-                <a href="###">闪购</a>
-                <a href="###">团购</a>
-                <a href="###">有趣</a>
-                <a href="###">秒杀</a>
-            </nav>
         </div>
     </div>
 </template>
@@ -139,22 +129,11 @@ export default {
             font-weight: bold;
         }
 
-        .nav {
-            a {
-                cursor: pointer;
-                height: 45px;
-                margin: 0 22px;
-                line-height: 45px;
-                font-size: 16px;
-                color: #333;
-            }
-        }
-
         .sort {
             position: absolute;
             left: 0;
-            top: 45px;
-            width: 210px;
+            top: 47px;
+            width: 200px;
             height: 480px;
             position: absolute;
             background: #fafafa;
@@ -188,7 +167,7 @@ export default {
                         width: 734px;
                         min-height: 478px;
                         background: #f7f7f7;
-                        left: 210px;
+                        left: 200px;
                         border: 1px solid #ddd;
                         top: 0;
                         z-index: 99999 !important;

@@ -74,7 +74,7 @@
                             </div>
                         </li>
                         <li class="w329">
-                            <el-carousel interval="2000" trigger="click" height="340px">
+                            <el-carousel :interval="2000" trigger="click" height="340px">
                                 <el-carousel-item v-for="item in floorBannerList" :key="item.id">
                                     <img :src="item.imgUrl" />
                                     <span>{{ item.name }}</span>
@@ -286,7 +286,7 @@
                             </div>
                         </li>
                       <li class="w329">
-                        <el-carousel trigger="click" interval="1500" height="340px">
+                        <el-carousel trigger="click" :interval="1500" height="340px">
                           <el-carousel-item v-for="item in floorBannerList" :key="item.id">
                             <img :src="item.imgUrl" />
                             <span>{{ item.name }}</span>
