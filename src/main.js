@@ -33,20 +33,30 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 //按需引入图标字体
 //fas风格
 import { faUser ,
-        faArrowUp,
-        faArrowDown,
-        faCircleCheck,
+  faArrowUp,
+  faArrowDown,
+  faCircleCheck,
+  faEyeSlash,
+  faPhone
 } from "@fortawesome/free-solid-svg-icons";
 // fab风格
 import { faWeixin,
+  faWeibo,
+  faQq,
+  faGithub,
 
 } from "@fortawesome/free-brands-svg-icons";
 //在核心依赖中加入这个引入的图标
 library.add(faUser,
-            faWeixin,
-            faArrowUp,
-            faArrowDown,
-            faCircleCheck,
+  faWeixin,
+  faArrowUp,
+  faArrowDown,
+  faCircleCheck,
+  faEyeSlash,
+  faWeibo,
+  faQq,
+  faGithub,
+  faPhone
 );
 
 //关闭生产提示

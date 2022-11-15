@@ -11,7 +11,7 @@
                                 <img src="../Login/images/wx_cz.jpg" alt="">
                             </div>
                         </li> -->
-
+                        <div class="phone"><font-awesome-icon icon="fa-solid fa-phone" />客服中心电话：<span>400-1188-832</span></div>
                         <li>
                             <a href="##" class="current">账户登录</a>
                         </li>
@@ -20,10 +20,16 @@
                     <div class="content">
                         <form action="##">
                             <div class="input-text clearFix">
-                                <input type="text" placeholder="邮箱/用户名/手机号" v-model="userName" />
+                                <input
+                                    type="text"
+                                    placeholder="邮箱/用户名/手机号"
+                                    v-model="userName"
+                                /><font-awesome-icon icon="fas fa-user" />
                             </div>
                             <div class="input-text clearFix">
-                                <input type="text" placeholder="请输入密码" v-model="password" />
+                                <input type="text" placeholder="请输入密码" v-model="password" /><font-awesome-icon
+                                    icon="fa-solid fa-eye-slash"
+                                />
                             </div>
                             <div class="setting clearFix">
                                 <label class="checkbox inline">
@@ -37,10 +43,16 @@
 
                         <div class="call clearFix">
                             <ul>
-                                <li><img src="./images/qq.png" alt="" /></li>
-                                <li><img src="./images/sina.png" alt="" /></li>
-                                <li><img src="./images/ali.png" alt="" /></li>
-                                <li><img src="./images/weixin.png" alt="" /></li>
+                                <li>
+                                    <font-awesome-icon icon="fa-brands fa-weibo" />
+                                </li>
+                                <li>
+                                    <font-awesome-icon icon="fa-brands fa-qq" />
+                                </li>
+                                <li>
+                                    <font-awesome-icon icon="fa-brands fa-weixin" />
+                                </li>
+                                <li><font-awesome-icon icon="fa-brands fa-github" /></li>
                             </ul>
                             <router-link class="register" to="/register">立即注册</router-link>
                         </div>
@@ -80,26 +92,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.phone {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    color: rgb(110, 110, 110);
+    top: -45px;
+    right: 50px;
+    span {
+        color: rgb(31, 31, 31);
+    }
+    .fa-phone{
+        margin-right: 5px;
+    }
+}
 .login-container {
     .login-wrap {
-        height: 600px;
-        background-color: #e93854;
+        height: 450px;
 
         .login {
-            width: 1200px;
-            height: 487px;
-            margin: 60 auto;
+            background-image: url("https://res.fupin832.com/1667469081617.jpg");
+            background-size: 100% 427px;
+            background-repeat: no-repeat;
+            width: 1326px;
+            height: 427px;
+            margin: 0px auto;
+            background-position: 1px 3px;
         }
 
         .loginform {
             width: 420px;
-            height: 500px;
+            height: 427px;
             box-sizing: border-box;
-            background: rgb(199, 194, 194);
             float: right;
-            top: 60px;
-            position: relative;
             padding: 20px;
+            margin-right: 40px;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: 10;
 
             .tab {
                 li {
@@ -129,8 +159,10 @@ export default {
             }
 
             .content {
+                position: relative;
+                z-index: 99999999;
                 width: 380px;
-                height: 450px;
+                height: 390px;
                 box-sizing: border-box;
                 border: 1px solid #ddd;
                 border-top: none;
@@ -145,7 +177,20 @@ export default {
                         padding-top: 48px;
                         height: 20px;
                         width: 342px;
-
+                        .fa-user {
+                            position: absolute;
+                            top: 90px;
+                            right: 30px;
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                        .fa-eye-slash {
+                            position: absolute;
+                            top: 160px;
+                            right: 28px;
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
                         span {
                             float: left;
                             width: 37px;
@@ -190,6 +235,10 @@ export default {
                             float: right;
                             font-size: 18px;
                             padding-top: 28px;
+                            cursor: pointer;
+                            &:hover {
+                                color: #000000;
+                            }
                         }
                     }
 
@@ -206,18 +255,40 @@ export default {
                         height: 45px;
                         margin-top: 30px;
                         outline: none;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #c41f16;
+                        }
                     }
                 }
 
                 .call {
-                    margin-top: 30px;
+                    margin-top: 20px;
 
                     ul {
                         float: left;
-
+                        margin-top: 2px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
                         li {
                             float: left;
-                            margin-right: 5px;
+                            margin-right: 8px;
+                            font-size: 25px;
+                            cursor: pointer;
+                            &:nth-child(1) {
+                                color: #ea6e2f;
+                            }
+                            &:nth-child(2) {
+                                color: #1090f2;
+                            }
+                            &:nth-child(3) {
+                                color: #00a818;
+                            }
+                            &:nth-child(4) {
+                                color: #24292f;
+                            }
                         }
                     }
 
@@ -229,8 +300,7 @@ export default {
                     }
 
                     .register:hover {
-                        color: #4cb9fc;
-                        text-decoration: underline;
+                        color: #000000;
                     }
                 }
             }
