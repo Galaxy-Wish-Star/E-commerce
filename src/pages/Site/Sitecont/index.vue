@@ -11,13 +11,21 @@
                     </div>
                 </div>
                 <div v-for="book in books" class="title">
+                    <div class="text1">
+                    <h2> 张三 四川省</h2>
+                </div>
                     <td>收货人:<div>{{book.id}}</div></td>
+                    <td>所在地区:<div>{{book.szdq}}</div></td>
                     <td>地址:<div>{{book.name}}</div></td>
                     <td>手机号:<div>{{book.number}}</div></td>
                     <div>{{book.date | deteformat}}</div>
-                    <td>操作:
-                        <a href="#" @click='edit(book)'>修改</a>
-                        <a href="#" @click='deletebook(book)'>删除</a>
+                    <td>固定电话:
+                        <!-- <a href="#" @click='edit(book)'>固定电话</a>
+                        <a href="#" @click='deletebook(book)'>电子邮箱</a> -->
+                    </td>
+                    <td>电子邮箱:
+                        <!-- <a href="#" @click='edit(book)'>固定电话</a>
+                        <a href="#" @click='deletebook(book)'>电子邮箱</a> -->
                     </td>
                 </div>
             </div>
@@ -26,6 +34,8 @@
 </template>
 
 <script>
+import { any } from 'async';
+
 
 export default {
     data:function() {
@@ -38,17 +48,20 @@ export default {
         books:[
             {
                 id:'张三',
-                name:'四川',
+                szdq:'四川省 成都市 龙泉驿区 十陵街道',
+                name:'成洛路828号四川长江职业学院',
                 number:'15688888888',
             },
             {
-                id:'李四',
-                name:'重庆',
+                id:'张三',
+                szdq:'四川省 绵阳市 江油市',
+                name:'宝耳路向龙小区 ',
                 number:'15688888888',
             },
             {
-                id:'王五',
-                name:'湖南',
+                id:'张三',
+                szdq:'四川省 成都市 成华区',
+                name:'成康路段成康雅筑',
                 number:'15688888888',
             },
         ]
@@ -107,12 +120,13 @@ export default {
             margin: 0 auto;
             .title{
             width: 500px;
+            // height: 250px;
             display: flex;
             flex-direction: column;
             margin-top: 15px;
             border: 1px solid $black-color;
             td{
-                margin: 5px;
+                margin: 10px;
                 display: flex;
                 a{
                     margin: 0 5px;
@@ -121,13 +135,25 @@ export default {
         }
         .titlehead{
             width: 500px;
+            // height: 200px;
             display: flex;
+            text-align: center;
+            color: rgb(9, 86, 219);
             flex-direction: column;
             padding-top: 10px;
             input{
-                margin: 5px 0;
+                margin: 8px 0;
+                color: crimson;
+              
             }
         }
         }
+    }
+    .text1{
+        font-weight: bolder;
+        color: rgb(14, 13, 13);
+        // margin: auto;
+        height: 30px;
+        transform: translate(20px);
     }
 </style>
