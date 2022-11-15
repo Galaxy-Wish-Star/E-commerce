@@ -27,7 +27,8 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <a href="../www/shop_car.html"><i class="fa fa-shopping-cart"></i>购物车</a>
+                          <router-link to="/shopcart">
+                            <a ><i class="fa fa-shopping-cart"></i>购物车</a></router-link>
                         </li>
                         <span>|</span>
                         <li>
