@@ -1,5 +1,6 @@
 import { reqAddOrUpdateShopCart, reqGoodsInfo } from "@/api";
-
+//封装临时身份的模块
+import {getUUID} from '@/utils/uuid_token'
 const actions = {
     //获取产品信息
     async getGoodsInfo({ commit }, skuId) {
@@ -17,7 +18,7 @@ const actions = {
 
         if (result.code == 200) {
             //代表服务器加入购物车成功
-            return 'ok';
+            return "ok";
         } else {
             // 加入成功
             return Promise.reject(new Error("faile"));
@@ -31,6 +32,8 @@ const mutations = {
 };
 const state = {
     goodsInfo: {},
+    //游客的临时身份
+    uuid_token: getUUID(),
 };
 const getters = {
     //state.goodInfo初始状态空对象，空对象的categoryView属性值undefined
