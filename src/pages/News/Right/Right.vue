@@ -1,4 +1,5 @@
 <template>
+
     <div>
         <div class="zxzn">助农行动｜共筑乡村振兴梦</div>
         <div class="xw">
@@ -38,6 +39,10 @@
             
         </div>
     </div>
+
+
+   
+
 </template>
 
 <script>
