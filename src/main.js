@@ -37,7 +37,7 @@ import { faUser ,
   faArrowDown,
   faCircleCheck,
   faEyeSlash,
-  faPhone
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 // fab风格
 import { faWeixin,
