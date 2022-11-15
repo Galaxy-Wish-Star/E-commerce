@@ -13,42 +13,50 @@
                         <img src="./images/哈密瓜.jpg" alt="" />
                         <div class="like-text">
                             <p>【原产地】 新疆哈密瓜西州蜜25号包邮</p>
+                        </div>
+                        <div class="price-label">
+                            <span>到手价</span>
                             <h3>¥69.00</h3>
                         </div>
                     </li>
                     <li>
                         <img src="./images/干杏.jpg" alt="" />
                         <div class="like-text">
-                            <p>【原产地】新疆阿克苏四团树上干杏</p>
-                            <h3>¥68.00</h3>
+                            <p>【原产地】新疆阿克苏四团树上干杏干杏</p>
+                        </div>
+                        <div class="price-label">
+                            <span>到手价</span>
+                            <h3>¥69.00</h3>
                         </div>
                     </li>
                     <li>
                         <img src="./images/纸皮核桃.jpg" alt="" />
                         <div class="like-text">
-                            <p>【原产地】新疆阿克苏185纸皮核桃</p>
-                            <h3>¥78.00</h3>
+                            <p>【原产地】新疆阿克苏185纸皮核桃干杏</p>
+                        </div>
+                        <div class="price-label">
+                            <span>到手价</span>
+                            <h3>¥69.00</h3>
                         </div>
                     </li>
                     <li>
                         <img src="./images/无核葡萄.jpg" alt="" />
                         <div class="like-text">
                             <p>【原产地】新疆吐鲁番无核葡萄实惠家庭装</p>
-                            <h3>¥79.00</h3>
+                        </div>
+                        <div class="price-label">
+                            <span>到手价</span>
+                            <h3>¥69.00</h3>
                         </div>
                     </li>
                     <li>
                         <img src="./images/东北新鲜大白菜.jpg" alt="" />
                         <div class="like-text">
                             <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
                         </div>
-                    </li>
-                    <li>
-                        <img src="./images/东北新鲜大白菜.jpg" alt="" />
-                        <div class="like-text">
-                            <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-                            <h3>¥116.00</h3>
+                        <div class="price-label">
+                            <span>到手价</span>
+                            <h3>¥69.00</h3>
                         </div>
                     </li>
                 </ul>
@@ -71,11 +79,15 @@ export default {};
         background: #fff;
         .title {
             overflow: hidden;
-
             .fl {
+                font-family: PingFangSC-Medium;
+                font-weight: 500;
+                font-size: 18px;
+                color: #333;
+                line-height: 22px;
                 float: left;
-                font-size: 20px;
-                line-height: 30px;
+                margin-left: 20px;
+                line-height: 35px;
             }
 
             .fr {
@@ -89,22 +101,25 @@ export default {};
                 font-weight: 400;
                 color: #666;
                 text-decoration: none;
+                margin-right: 20px;
+                line-height: 35px;
             }
         }
 
         .bd {
             .favourate {
                 background: #fff;
-                border: 1px solid #e4e4e4;
+                border-top: 1px solid rgb(134, 191, 50);
                 overflow: hidden;
-                padding: 0 10px;
+                padding: 30px 10px;
                 box-sizing: border-box;
                 display: flex;
                 justify-content: space-between;
 
                 li {
-                    height: 250px;
-                    margin: 0 -1px;
+                    height: 260px;
+                    padding: 15px 0 0 0;
+                    margin: 0px -1px;
                     overflow: hidden;
                     background: #fff;
                     position: relative;
@@ -113,6 +128,9 @@ export default {};
                     flex-direction: column;
                     align-items: center;
                     cursor: pointer;
+                    &:hover{
+                        box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+                    }
 
                     img {
                         width: 142px;
@@ -124,21 +142,38 @@ export default {};
                             transform: scale(1.1);
                         }
                     }
-
-                    .like-text {
-                        padding: 0;
-                        width: 142px;
-
-                        p {
-                            margin: 5px 0;
-                        }
-
+                    .price-label {
+                        float: left;
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: center;
                         h3 {
                             color: #df3033;
                             font-size: 20px;
                             line-height: 30px;
                             margin: 9px 0;
                             font-weight: 700;
+                        }
+                        span {
+                            text-align: center;
+                            color: #666;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 48px;
+                            margin-right: 8px;
+                        }
+                    }
+
+                    .like-text {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        width: 142px;
+                        margin: 10px 0;
+                        p {
+                            margin: 8px 0;
                         }
                     }
                 }

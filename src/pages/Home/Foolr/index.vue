@@ -3,7 +3,21 @@
         <div class="floor contain">
             <div class="column-list">
                 <div class="column-title">
-                    <h3>消费帮扶 产业振兴</h3>
+                    <div class="louceng-title">
+                        <img
+                            src="https://res.fupin832.com/icon/title-left.png"
+                            alt=""
+                            class="t-left"
+                            onerror="javascript:this.src='/webpage/gxs/images/wutu.png'"
+                        />
+                        <h3>热门供应</h3>
+                        <img
+                            src="https://res.fupin832.com/icon/title-right.png"
+                            alt=""
+                            class="t-right"
+                            onerror="javascript:this.src='/webpage/gxs/images/wutu.png'"
+                        />
+                    </div>
                 </div>
                 <div class="list-box">
                     <div class="list-five">
@@ -179,15 +193,15 @@
                                 <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
-                      <li class="w329">
-                        <el-carousel trigger="click" height="340px">
-                          <el-carousel-item v-for="item in floorBannerList" :key="item.id">
-                            <img :src="item.imgUrl" />
-                            <span>{{ item.name }}</span>
-                            <p>{{ item.activity }}</p>
-                          </el-carousel-item>
-                        </el-carousel>
-                      </li>
+                        <li class="w329">
+                            <el-carousel trigger="click" height="340px">
+                                <el-carousel-item v-for="item in floorBannerList" :key="item.id">
+                                    <img :src="item.imgUrl" />
+                                    <span>{{ item.name }}</span>
+                                    <p>{{ item.activity }}</p>
+                                </el-carousel-item>
+                            </el-carousel>
+                        </li>
                         <li class="w219">
                             <div class="tab-con-item">
                                 <a href="#">
@@ -285,15 +299,15 @@
                                 <img src="./images/福建蜜薯.jpg" alt="" />
                             </div>
                         </li>
-                      <li class="w329">
-                        <el-carousel trigger="click" :interval="1500" height="340px">
-                          <el-carousel-item v-for="item in floorBannerList" :key="item.id">
-                            <img :src="item.imgUrl" />
-                            <span>{{ item.name }}</span>
-                            <p>{{ item.activity }}</p>
-                          </el-carousel-item>
-                        </el-carousel>
-                      </li>
+                        <li class="w329">
+                            <el-carousel trigger="click" :interval="1500" height="340px">
+                                <el-carousel-item v-for="item in floorBannerList" :key="item.id">
+                                    <img :src="item.imgUrl" />
+                                    <span>{{ item.name }}</span>
+                                    <p>{{ item.activity }}</p>
+                                </el-carousel-item>
+                            </el-carousel>
+                        </li>
                         <li class="w219">
                             <div class="tab-con-item">
                                 <a href="#">
@@ -479,8 +493,19 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/scss/_color.scss";
 
+.column-title{
+    .louceng-title{
+        h3{
+            margin: 0 25px;
+            color: #f8523c;
+        }
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 //轮播图
-
 .el-carousel__container {
     .el-carousel__item {
         img {
@@ -826,7 +851,7 @@ export default {
     width: 1210px;
     margin-top: 10px;
 }
-.weixin-link{
+.weixin-link {
     text-align: center;
 }
 </style>
