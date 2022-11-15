@@ -30,7 +30,7 @@
                             minnum="1"
                             class="itxt"
                             :value="cart.skuNum"
-                            @click="handler('change', $event.target.value * 1, cart)"
+                            @change="handler('change', $event.target.value * 1, cart)"
                         />
                         <a href="javascript:void(0)" class="plus" @click="handler('add', 1, cart)">+</a>
                     </li>
@@ -83,10 +83,36 @@ export default {
             this.$store.dispatch("getCartList");
         },
         //修改购物车商品个数
-        handler(type, disNum, cart) {
+        async handler(type, disNum, cart) {
             //type:为了区分这三个元素
             //disNum形参:+变化量（1) -变化量（-1)input最终的个数（并不是变化量)
-            //cart:哪一个产品【身上有id】
+            //cart:哪一个产品【身 上有id】
+            switch (type) {
+                case "add":
+                    //带给服务器的变量
+                    disNum = 1;
+                    break;
+                case "minus":
+                    // 判断产品的个数大于1，才可以传递给服务器-1
+                    disNum = cart.skuNum > 1 ? -1 : 0;
+                    break;
+                case "change":
+                    //用户输入进来的最终量，非法的（带有汉字),带给服务器数字
+                    // if (isNaN(disNum) || disNum < 1) {
+                    //     disNum = 1;
+                    // } else {
+                    //   //属于正常情况（小数:取正），带给服务器变化的量用户输入进来的–产品的起始个数
+                    //   disNum = parseInt(disNum) - cart.skuNum;
+                    // }
+                    disNum = isNaN(disNum) || disNum < 1 ? 1 : parseInt(disNum) - cart.skuNum;
+                    break;
+            }
+            //派发action
+            try {
+                await this.$store.dispatch("addOrUpdateShopCart", { skuId: cart.skuId, skuNum: disNum });
+                //再一次获取服务器最新的数据进行展示
+                this.getData();
+            } catch (error) {}
         },
     },
     computed: {
