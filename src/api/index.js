@@ -22,4 +22,7 @@ export const reqGoodsInfo = (skuId) => requests({ url: `/item/${skuId}`,method: 
 export const reqAddOrUpdateShopCart = (skuId,skuNum)=>requests({url:`/cart/addToCart/${skuId}/${skuNum}`,method: "post"})
 
 //获取购物车列表
-export const reqCartList = () => requests({ url:'/cart/cartlist', method:'get'})
+export const reqCartList = () => requests({ url:'/cart/cartList', method:'get'})
+
+//删除操作
+export const reqDeleteCartById = (skuId) =>requests({ url:`/cart/deleteCart/${skuId}`,method:'delete'})

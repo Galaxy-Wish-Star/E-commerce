@@ -2,6 +2,7 @@
     <div class="order">
         <div class="grid">
             <div>
+                <h3>添加收货地址</h3>
                 <div  class="titleup">
                     <div class="titlehead">
                         收货人: <input type="text" v-model="code">
@@ -118,6 +119,11 @@ export default {
         background-color: $white-card;
         .grid{
             margin: 0 auto;
+            h3{
+                width: 100px;
+                margin: 0 auto;
+                padding-top: 10px;
+            }
             .title{
             width: 500px;
             // height: 250px;
