@@ -109,7 +109,7 @@ export default {
             h3{
                 width: 100px;
                 margin: 0 auto;
-                padding-top: 10px;
+                padding-top: 15px;
             }
             .title{
             width: 500px;
