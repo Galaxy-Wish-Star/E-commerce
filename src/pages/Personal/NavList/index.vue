@@ -19,7 +19,7 @@
             <ul>
                 <h3>设置</h3>
                 <li><a href="">个人信息</a></li>
-                <li><a href="">收货地址</a></li>
+                <router-link to="/site" id="shipping"><a href="">收货地址</a></router-link>
             </ul>
             </div>
         </div>
@@ -46,6 +46,11 @@
                 width: 150px;               
                 .order-left-list{
                     font-size: 16px;
+                    #shipping{
+                        a{
+                            color: rgb(159, 159, 159);
+                        }
+                    }
                     ul:nth-child(1){
                         margin-bottom: 40px;
                     }
