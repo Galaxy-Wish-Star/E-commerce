@@ -1,7 +1,10 @@
 <template>
     <div class="cart-complete-wrap">
         <div class="cart-complete">
-            <h3><font-awesome-icon icon="fa-solid fa-circle-check" />商品已成功加入购物车！</h3>
+            <h3>
+                <font-awesome-icon icon="fa-solid fa-circle-check" />
+                商品已成功加入购物车！
+            </h3>
             <div class="goods">
                 <div class="left-good">
                     <div class="left-pic">
@@ -9,14 +12,16 @@
                     </div>
                     <div class="right-info">
                         <p class="title">{{ skuInfo.skuName }}</p>
-                        <p class="attr">{{ skuInfo.skuDesc }} <span class="color">数量：{{ $route.query.skuNum }}</span></p>
+                        <p class="attr">
+                            {{ skuInfo.skuDesc }} <span class="color">数量：{{ $route.query.skuNum }}</span>
+                        </p>
                     </div>
                 </div>
                 <div class="right-gocart">
-<!--                    <a href="javascript:" class="sui-btn btn-xlarge">查看商品详情</a>-->
-                  <router-link class="sui-btn btn-xlarge " :to="`/detail/${skuInfo.id}`">查看商品详情</router-link>
-<!--                    <a href="javascript:">去购物车结算 > </a>-->
-                  <router-link to="/shopcart">去购物车结算 > </router-link>
+                    <!--                    <a href="javascript:" class="sui-btn btn-xlarge">查看商品详情</a>-->
+                    <router-link class="sui-btn btn-xlarge" :to="`/detail/${skuInfo.id}`">查看商品详情</router-link>
+                    <!--                    <a href="javascript:">去购物车结算 > </a>-->
+                    <router-link to="/shopcart">去购物车结算 ></router-link>
                 </div>
             </div>
         </div>
@@ -38,12 +43,14 @@ export default {
 .fa-circle-check {
     margin-right: 6px;
 }
+
 .cart-complete-wrap {
     background-color: #f4f4f4;
 
     .cart-complete {
         width: 1200px;
         margin: 0 auto;
+
         h3 {
             line-height: 30px;
             font-weight: bold;
@@ -69,6 +76,7 @@ export default {
             padding: 10px 0;
 
             .left-good {
+                margin-left: 10px;
                 float: left;
 
                 .left-pic {
@@ -98,17 +106,20 @@ export default {
 
                     .attr {
                         color: #aaa;
-                        .color{
-                          margin-left: 20px;
-                          font-weight: bold;
-                          color: #e1251b;
+
+                        .color {
+                            margin-left: 20px;
+                            font-weight: bold;
+                            color: #e1251b;
                         }
                     }
                 }
             }
 
             .right-gocart {
+                margin-right: 10px;
                 float: right;
+                margin-top: 36px;
 
                 a {
                     padding: 7px 36px;
