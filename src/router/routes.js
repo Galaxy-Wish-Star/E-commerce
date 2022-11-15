@@ -5,8 +5,9 @@ import Search from "@/pages/Search";
 import Register from "@/pages/Register";
 import Personal from "@/pages/Personal";
 import Login from "@/pages/Login";
-import News from "@/pages/News"
-import AddCartSuccess from '@/pages/AddCartSuccess'
+import News from "@/pages/News";
+import AddCartSuccess from '@/pages/AddCartSuccess';
+import Site from "@/pages/Site";
 import ShopCart from '@/pages/ShopCart'
 
 //配置路由
@@ -20,6 +21,11 @@ export default [
         path: "/addcartsuccess",
         component: AddCartSuccess,
         name: "addcartsuccess",
+    },
+    {
+        path: "/site",
+        component: Site,
+        name: "site",
     },
     {
         path: "/news",
