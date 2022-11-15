@@ -5,20 +5,20 @@
         <div class="footer-head" v-show="footer_hide">
             <div class="footer-header">
                 <div class="introduce">
-                    <i class="fa fa-leaf"></i>
+                    <font-awesome-icon icon="fa-solid fa-hand-holding-hand" />
                     <div class="foolter-header-title">精准帮扶</div>
                 </div>
 
                 <div class="introduce">
-                    <i class="fa fa-phone"></i>
+                    <font-awesome-icon icon="fa-solid fa-headset" />
                     <div class="foolter-header-title">售后无忧</div>
                 </div>
                 <div class="introduce">
-                    <i class="fa fa-tags"></i>
+                    <font-awesome-icon icon="fa-solid fa-warehouse" />
                     <div class="foolter-header-title">产地保证</div>
                 </div>
                 <div class="introduce">
-                    <i class="fa fa-paper-plane"></i>
+                    <font-awesome-icon icon="fa-solid fa-credit-card" />
                     <div class="foolter-header-title">双向信用</div>
                 </div>
             </div>
@@ -141,8 +141,7 @@ export default {
     },
     computed: {
         footer_hide() {
-            return  !(this.$route.path == "/register") &&
-              !(this.$route.path == "/login")
+            return !(this.$route.path == "/register") && !(this.$route.path == "/login");
         },
     },
 };
@@ -155,6 +154,8 @@ export default {
 @import "../../assets/scss/_fonts.scss";
 
 .footer {
+
+  border-top: 1px solid #8dc742;
     background-color: #eaeaea;
 
     .footer-container {
@@ -265,6 +266,13 @@ body {
         height: 140px;
 
         .introduce {
+            svg {
+                position: relative;
+                top: 25px;
+                left: 33px;
+                font-size: 50px;
+            }
+
             &:nth-child(1) {
                 color: #e64e2b;
             }

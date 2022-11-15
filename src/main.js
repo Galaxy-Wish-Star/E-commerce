@@ -47,6 +47,10 @@ import { faUser ,
   faGlobe,
   faChevronDown,
   faRankingStar,
+  faHandHoldingHand,
+  faHeadset,
+  faWarehouse,
+  faCreditCard,
 } from "@fortawesome/free-solid-svg-icons";
 // fab风格
 import { faWeixin,
@@ -75,6 +79,10 @@ library.add(faUser,
   faGlobe,
   faChevronDown,
   faRankingStar,
+  faHandHoldingHand,
+  faHeadset,
+  faWarehouse,
+  faCreditCard,
 );
 
 //关闭生产提示
