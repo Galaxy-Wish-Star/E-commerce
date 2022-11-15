@@ -38,6 +38,15 @@ import { faUser ,
   faCircleCheck,
   faEyeSlash,
   faPhone,
+  faMobile,
+  faUsers,
+  faComments,
+  faBell,
+  faCartShopping,
+  faCommentDots,
+  faGlobe,
+  faChevronDown,
+  faRankingStar,
 } from "@fortawesome/free-solid-svg-icons";
 // fab风格
 import { faWeixin,
@@ -56,7 +65,16 @@ library.add(faUser,
   faWeibo,
   faQq,
   faGithub,
-  faPhone
+  faPhone,
+  faMobile,
+  faUsers,
+  faComments,
+  faBell,
+  faCartShopping,
+  faCommentDots,
+  faGlobe,
+  faChevronDown,
+  faRankingStar,
 );
 
 //关闭生产提示

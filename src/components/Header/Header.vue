@@ -8,39 +8,55 @@
                         <li>欢迎来到脱贫地区农副产品网络销售平台！</li>
                         <span>|</span>
                         <li>
-                            <a href="../www/mobile_index.html"><i class="fa fa-mobile-alt"></i>手机版</a>
+                            <a href="../www/mobile_index.html">
+                                <font-awesome-icon icon="fa-solid fa-mobile" />
+                                手机版</a
+                            >
                         </li>
                         <span>|</span>
                         <li>
-                            <a href="javascript:;"><i class="fas fa-user-friends"></i>商家入驻</a>
+                            <a href="javascript:;">
+                                <font-awesome-icon icon="fa-solid fa-users" />
+                                商家入驻</a
+                            >
                         </li>
                     </ul>
                     <ul class="header-right">
                         <li>
                             <a class="loc-an-box" href="javascript:;">
                                 <div class="loc-mc-box">
-                                    <p class="loc-mc-box__text"><i class="fa fa-comments"></i>一条未读</p>
-                                    <p class="loc-mc-box__text"><i class="fa fa-bell"></i>我的消息</p>
-                                    <p class="loc-mc-box__text"><i class="fa fa-comments"></i>一条未读</p>
+                                    <p class="loc-mc-box__text">
+                                        <font-awesome-icon icon="fa-solid fa-comments" />
+                                        一条未读
+                                    </p>
+                                    <p class="loc-mc-box__text">
+                                        <font-awesome-icon icon="fa-solid fa-bell" />
+                                        我的消息
+                                    </p>
+                                    <p class="loc-mc-box__text">
+                                        <font-awesome-icon icon="fa-solid fa-comments" />
+                                        一条未读
+                                    </p>
                                 </div>
                             </a>
                         </li>
                         <span>|</span>
                         <li>
-                          <router-link to="/shopcart">
-                            <a ><i class="fa fa-shopping-cart"></i>购物车</a></router-link>
+                            <router-link to="/shopcart">
+                                <a><font-awesome-icon icon="fa-solid fa-cart-shopping" />购物车</a></router-link
+                            >
                         </li>
                         <span>|</span>
                         <li>
                             <div>
-                                <router-link to="/personal"><i class="fa fa-user"></i>用户中心</router-link>
+                                <router-link to="/personal"
+                                    ><font-awesome-icon icon="fa-solid fa-user" />用户中心</router-link
+                                >
                             </div>
                         </li>
                         <span>|</span>
                         <li class="user-sever-box">
-                            <a href="javascript:;"
-                                ><i class="fa fa-comment-dots"></i>客户服务<i class="fa fa-angle-down"></i
-                            ></a>
+                            <a href="javascript:;"><font-awesome-icon icon="fa-solid fa-comment-dots" />客户服务</a>
                             <div class="user-sever">
                                 <ul>
                                     <li><i class="fa fa-clock"></i> (08:30-22:00)</li>
@@ -55,8 +71,9 @@
                         <span>|</span>
                         <li class="daohang-box">
                             <a href="javascript:;"
-                                ><i class="fa fa-globe"></i>网站导航<i class="fa fa-angle-down"></i
-                            ></a>
+                                ><font-awesome-icon icon="fa-solid fa-globe" />网站导航<font-awesome-icon
+                                    icon="fa-solid fa-chevron-down"
+                            /></a>
                             <div class="wdzhc show_z">
                                 <table>
                                     <tbody>
@@ -153,9 +170,9 @@
                         />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
-                            <span style="float: left; margin-right: 4px">热门搜索：</span>
+                            <span style="float: left; margin-right: 4px;">热门搜索：</span>
                             <span class="hot_search_box"
-                                ><a style="color: #f40000" href="javascript:;">北京仓优选</a
+                                ><a style="color: #f40000;" href="javascript:;">北京仓优选</a
                                 ><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a
                                 ><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a
                                 ><a style="" href="javascript:;">832福油</a></span
@@ -166,16 +183,16 @@
                     <div class="header-body-right" v-show="loginHide">
                         <div class="login-dis">
                             <!-- <a id="login-regster-btn" href="javascript:void(0)"
-                  ><i class="fa fa-user"></i>登录
-                  <span>/</span>
-                  注册</a
-              > -->
+><i class="fa fa-user"></i>登录
+<span>/</span>
+注册</a
+> -->
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
 
                         <span>|</span>
-                        <a href="javascript:;"><i class="fa fa-industry"></i>排行榜</a>
+                        <a href="javascript:;"><font-awesome-icon icon="fa-solid fa-ranking-star" />排行榜</a>
                     </div>
                 </div>
             </div>
@@ -207,10 +224,7 @@ export default {
     computed: {
         //搜索框显示与隐藏
         searchHide() {
-            return (
-                !(this.$route.path == "/register") &&
-                !(this.$route.path == "/login")
-            );
+            return !(this.$route.path == "/register") && !(this.$route.path == "/login");
         },
         //登录按钮显示与隐藏
         loginHide() {
@@ -234,6 +248,9 @@ export default {
 @import "../../assets/scss/_color.scss";
 @import "../../assets/scss/_fonts.scss";
 
+svg {
+    margin: 0 4px;
+}
 .login-dis {
     #login-regster-btn {
         border: 1px solid #06c152;
@@ -278,8 +295,7 @@ body {
     }
 
     .header-top {
-        .fa,
-        .fa-user-friends {
+        svg {
             color: #06c152;
         }
     }
@@ -315,6 +331,9 @@ body {
             color: #f3f3f3;
 
             .header-left {
+                svg {
+                    color: #999;
+                }
                 color: #999;
                 width: 450px;
                 height: 100%;
@@ -415,7 +434,7 @@ body {
                 }
 
                 a {
-                    &:hover {
+                    &:not(.loc-an-box):hover {
                         color: rgb(117, 117, 117);
                     }
                 }
@@ -427,10 +446,13 @@ body {
                 }
 
                 .loc-an-box {
+                    svg {
+                        color: #e6560e;
+                    }
                     position: relative;
                     top: 0;
                     left: 0;
-                    width: 90px;
+                    width: 100px;
                     height: 22px;
                     overflow: hidden;
                     display: block;
@@ -442,7 +464,7 @@ body {
                         color: #e6560e;
                     }
 
-                    width: 90px;
+                    width: 100px;
                     height: 160px;
                     overflow: hidden;
                     position: relative;
