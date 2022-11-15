@@ -23,9 +23,16 @@
                         <span class="price">{{ cart.skuPrice }}.00</span>
                     </li>
                     <li class="cart-list-con5">
-                        <a href="javascript:void(0)" class="mins">-</a>
-                        <input autocomplete="off" type="text" minnum="1" class="itxt" :value="cart.skuNum" />
-                        <a href="javascript:void(0)" class="plus">+</a>
+                        <a href="javascript:void(0)" class="mins" @click="handler('minus', -1, cart)">-</a>
+                        <input
+                            autocomplete="off"
+                            type="text"
+                            minnum="1"
+                            class="itxt"
+                            :value="cart.skuNum"
+                            @click="handler('change', $event.target.value * 1, cart)"
+                        />
+                        <a href="javascript:void(0)" class="plus" @click="handler('add', 1, cart)">+</a>
                     </li>
                     <li class="cart-list-con6">
                         <span class="sum">{{ cart.skuNum * cart.skuPrice }}</span>
@@ -74,6 +81,12 @@ export default {
     methods: {
         getData() {
             this.$store.dispatch("getCartList");
+        },
+        //修改购物车商品个数
+        handler(type, disNum, cart) {
+            //type:为了区分这三个元素
+            //disNum形参:+变化量（1) -变化量（-1)input最终的个数（并不是变化量)
+            //cart:哪一个产品【身上有id】
         },
     },
     computed: {
