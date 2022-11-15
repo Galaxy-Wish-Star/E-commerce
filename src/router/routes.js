@@ -7,9 +7,15 @@ import Personal from "@/pages/Personal";
 import Login from "@/pages/Login";
 import News from "@/pages/News"
 import AddCartSuccess from '@/pages/AddCartSuccess'
+import ShopCart from '@/pages/ShopCart'
 
 //配置路由
 export default [
+    {
+        path: "/Shopcart",
+        component: ShopCart,
+        name: "Shopcart",
+    },
     {
         path: "/addcartsuccess",
         component: AddCartSuccess,
