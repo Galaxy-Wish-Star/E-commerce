@@ -359,6 +359,7 @@
 						</ul> -->
                 </div>
             </div>
+            <How></How>
             <div class="zn-new-box">
                 <div class="new-list-box">
                     <div class="new-list-title">
@@ -476,6 +477,7 @@
 </template>
 
 <script>
+import How from "@/pages/Home/How"
 import { mapState } from "vuex";
 export default {
     mounted() {
@@ -487,15 +489,18 @@ export default {
             floorBannerList: (state) => state.home.floorBannerList,
         }),
     },
+    components:{
+        How
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../../assets/scss/_color.scss";
 
-.column-title{
-    .louceng-title{
-        h3{
+.column-title {
+    .louceng-title {
+        h3 {
             margin: 0 25px;
             color: #f8523c;
         }
@@ -813,7 +818,7 @@ export default {
     font-size: 18px;
     font-weight: 600;
 }
-.new-list-title img {
+.new-list-title img :not(.weixin){
     padding-top: 10px;
 }
 .zn-news-lits {
@@ -826,7 +831,12 @@ export default {
 }
 .weixin img {
     width: 24px;
-    height: 24px;
+}
+.weixin{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .gzh {
     margin-top: -100px;
