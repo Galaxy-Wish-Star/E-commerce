@@ -11,11 +11,11 @@
                     </div>
                 </div>
                 <div v-for="book in books" class="title">
-                    <td>收货人:</td><div>{{book.id}}</div>
-                    <td>地址:</td><div>{{book.name}}</div>
-                    <td>手机号:</td><div>{{book.number}}</div>
-                    <td>操作:</td><div>{{book.date | deteformat}}</div>
-                    <td>
+                    <td>收货人:<div>{{book.id}}</div></td>
+                    <td>地址:<div>{{book.name}}</div></td>
+                    <td>手机号:<div>{{book.number}}</div></td>
+                    <div>{{book.date | deteformat}}</div>
+                    <td>操作:
                         <a href="#" @click='edit(book)'>修改</a>
                         <a href="#" @click='deletebook(book)'>删除</a>
                     </td>
@@ -102,20 +102,31 @@ export default {
 @import "../../../assets/scss/_fonts.scss";
     .order{
         margin-top: 30px;
+        background-color: $white-card;
         .grid{
-            // width: 100%;
             margin: 0 auto;
             .title{
             width: 500px;
             display: flex;
             flex-direction: column;
             margin-top: 15px;
-            border: 1px red solid;
+            border: 1px solid $black-color;
+            td{
+                margin: 5px;
+                display: flex;
+                a{
+                    margin: 0 5px;
+                }
+            }
         }
         .titlehead{
             width: 500px;
             display: flex;
             flex-direction: column;
+            padding-top: 10px;
+            input{
+                margin: 5px 0;
+            }
         }
         }
     }
