@@ -208,8 +208,6 @@ export default {
         searchHide() {
             return (
                 !(this.$route.path == "/register") &&
-                !(this.$route.path == "/login") &&
-                !(this.$route.path == "/register") &&
                 !(this.$route.path == "/login")
             );
         },

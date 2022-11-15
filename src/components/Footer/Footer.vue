@@ -120,7 +120,10 @@
                     </ul>
                     <p>版权所有 脱贫地区农副产品网络销售平台 | 京ICP备15050565号-10 | 京ICP证151138号</p>
                     <p>支持媒体： 中华合作时报 中国政府采购新闻网 友情链接： 供销e家 采购人管理系统</p>
-                    <p>本网站由<a href="https://github.com/Galaxy-Wish-Star/E-commerce">Galaxy-Wish-Star团队</a>运营维护</p>
+                    <p>
+                        本网站由<a href="https://github.com/Galaxy-Wish-Star/E-commerce">Galaxy-Wish-Star团队</a
+                        >运营维护
+                    </p>
                     <img src="./images/s-footerImg.png" alt="" />
                     <p><img src="./images/国徽.png" alt="" />京ICP备19006430号</p>
                 </div>
@@ -131,15 +134,15 @@
 
 <script>
 import Brand from "@/components/Footer/Brand";
+
 export default {
     components: {
         Brand,
     },
     computed: {
         footer_hide() {
-          return (
-            (this.$router.path == "/register")
-          );
+            return  !(this.$route.path == "/register") &&
+              !(this.$route.path == "/login")
         },
     },
 };
@@ -165,11 +168,14 @@ export default {
             border-top: 1px solid #e4e1e1;
             overflow: hidden;
             padding-left: 40px;
+
             .footerItem {
                 border-right: 1px solid #616161;
+
                 &:last-child {
                     border-right: none;
                 }
+
                 text-align: center;
                 width: 15.6666667%;
                 float: left;
@@ -198,6 +204,7 @@ export default {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
             .helpLink {
                 text-align: center;
 
@@ -205,6 +212,7 @@ export default {
                     color: #616161;
                     font-size: 13px;
                     display: inline;
+
                     .space {
                         border-left: 1px solid #666;
                         width: 1px;
@@ -221,13 +229,16 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
                 img {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
+
                 margin: 15px 0;
                 text-align: center;
+
                 a {
                     color: #999;
                     margin: 0 5px;
@@ -236,9 +247,11 @@ export default {
         }
     }
 }
+
 body {
     background: #f7f7f7;
 }
+
 .footer-head {
     .footer-header {
         /* 固定容器的宽度 */
@@ -250,29 +263,36 @@ body {
         justify-content: space-around;
         align-items: center;
         height: 140px;
+
         .introduce {
             &:nth-child(1) {
                 color: #e64e2b;
             }
+
             &:nth-child(2) {
                 color: #66cde5;
             }
+
             &:nth-child(3) {
                 color: #eda327;
             }
+
             &:nth-child(4) {
                 color: #eda327;
             }
+
             position: relative;
             top: -40px;
             width: 60px;
             height: 60px;
+
             i {
                 scale: 2.5;
                 position: absolute;
                 top: 50px;
                 left: 50px;
             }
+
             .foolter-header-title {
                 font-family: "myfont";
                 position: absolute;
@@ -284,6 +304,7 @@ body {
         }
     }
 }
+
 .container {
     /* 固定容器的宽度 */
     width: 1200px;
@@ -291,15 +312,18 @@ body {
     margin: 25px auto;
     box-sizing: border-box; //IE盒模型
 }
+
 .shar-to {
     .shar-to-one {
         .shar-one {
             background-color: #f3f3f3;
+
             i {
                 padding: 12px 16px;
                 scale: 1.5;
                 color: #494949;
             }
+
             color: #494949;
             display: inline-block;
             width: 46px;
@@ -311,19 +335,23 @@ body {
             box-shadow: 0 0 6px rgb(0 0 0 / 30%);
             cursor: pointer;
             border-radius: 6px;
+
             p {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+
             &:hover {
                 background-color: #e3e5e7;
             }
         }
     }
 }
+
 .shar-to {
     display: block;
+
     .shar-to-two {
         background-color: #f3f3f3;
         position: fixed;
@@ -336,35 +364,42 @@ body {
         box-shadow: 0 0 6px rgb(0 0 0 / 30%);
         cursor: pointer;
         border-radius: 6px;
+
         .shar-two {
             i {
                 padding: 12px 16px;
                 scale: 1.5;
                 color: #494949;
             }
+
             color: #494949;
             display: inline-block;
             width: 46px;
             height: 60px;
             font-size: 12px;
             border-radius: 6px;
+
             p {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+
             &:hover {
                 background-color: #e3e5e7;
             }
+
             overflow: hidden;
             position: relative;
             animation: locmoveclipslider 6s infinite ease-out;
             animation-delay: 1.5s;
+
             &:nth-child(1) {
                 position: relative;
                 top: -2px;
                 height: 55px;
             }
+
             &:nth-child(2) {
                 scale: 1.2;
                 position: relative;
@@ -372,6 +407,7 @@ body {
                 height: 55px;
                 margin-top: 25px;
             }
+
             &:nth-child(3) {
                 position: relative;
                 top: -32px;
@@ -379,16 +415,20 @@ body {
         }
     }
 }
+
 .shar-to {
     .shar-to-three {
         display: none;
+
         .shar-three {
             background-color: #f3f3f3;
+
             i {
                 padding: 9px 16px;
                 scale: 1.5;
                 color: #494949;
             }
+
             color: #494949;
             display: inline-block;
             width: 46px;
@@ -400,6 +440,7 @@ body {
             box-shadow: 0 0 6px rgb(0 0 0 / 30%);
             cursor: pointer;
             border-radius: 6px;
+
             p {
                 display: flex;
                 justify-content: center;
@@ -408,12 +449,14 @@ body {
                 position: absolute;
                 left: 11px;
             }
+
             &:hover {
                 background-color: #e3e5e7;
             }
         }
     }
 }
+
 #ul {
     border: 1px solid #ddd;
     border-top: 0;
@@ -422,6 +465,7 @@ body {
     position: absolute;
     z-index: 99999999;
     width: 100%;
+
     li {
         a {
             color: #333;
@@ -429,9 +473,11 @@ body {
             width: 579px;
             height: 100%;
             padding: 10px 0 3px 14px;
+
             &:last-child {
                 padding-bottom: 10px;
             }
+
             &:hover {
                 background-color: #1d99e3;
                 color: #f3f3f3;

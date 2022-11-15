@@ -275,7 +275,7 @@ export default {
                         li {
                             float: left;
                             margin-right: 8px;
-                            font-size: 25px;
+                            font-size: 20px;
                             cursor: pointer;
                             &:nth-child(1) {
                                 color: #ea6e2f;
