@@ -38,7 +38,7 @@
                         <span class="sum">{{ cart.skuNum * cart.skuPrice }}</span>
                     </li>
                     <li class="cart-list-con7">
-                        <a href="#none" class="sindelet">删除</a>
+                        <a class="sindelet" @click="deleteCartById(cart)">删除</a>
                         <br />
                         <a href="#none">移到收藏</a>
                     </li>
@@ -71,6 +71,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import throttle from "lodash/throttle";
 
 export default {
     name: "ShopCart",
@@ -82,8 +83,8 @@ export default {
         getData() {
             this.$store.dispatch("getCartList");
         },
-        //修改购物车商品个数
-        async handler(type, disNum, cart) {
+        //修改购物车商品个数(节流)
+        handler: throttle(async function (type, disNum, cart) {
             //type:为了区分这三个元素
             //disNum形参:+变化量（1) -变化量（-1)input最终的个数（并不是变化量)
             //cart:哪一个产品【身 上有id】
@@ -112,7 +113,19 @@ export default {
                 await this.$store.dispatch("addOrUpdateShopCart", { skuId: cart.skuId, skuNum: disNum });
                 //再一次获取服务器最新的数据进行展示
                 this.getData();
-            } catch (error) {}
+            } catch (error) {
+                return error;
+            }
+        },1000),
+        //删除购物车商品操作
+        async deleteCartById(cart) {
+            try {
+                //如果删除成功再次发请求获取新的数据进行展示
+                await this.$store.dispatch("deleteCartListBySkuId", cart.skuId);
+                this.getData();
+            } catch (error) {
+                console.log("删除商品失败!");
+            }
         },
     },
     computed: {
