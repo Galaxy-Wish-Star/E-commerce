@@ -40,6 +40,16 @@ const actions = {
         // 如果有一个失败,返回即为失败结果
         return Promise.all(PromiseAll);
     },
+    //修改全部商品的选中状态
+    updateAllCartIsChecked({ dispatch, state }, isChecked) {
+        let promiseAll = [];
+        state.cartList[0].cartInfoList.forEach((item) => {
+            let promise = dispatch("updateCheckedById", { skuId: item.skuId, isChecked });
+            promiseAll.push(promise);
+        });
+        //最终返回结果
+return Promise.all(promiseAll);
+    },
 };
 const mutations = {
     GETCARTLIST(state, cartList) {
