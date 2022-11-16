@@ -56,7 +56,7 @@
                 <span>全选</span>
             </div>
             <div class="option">
-                <a href="#none">删除选中的商品</a>
+                <a @click="deleteAllCheckCart">删除选中的商品</a>
                 <a href="#none">移到我的关注</a>
                 <a href="#none">清除下柜商品</a>
             </div>
@@ -136,7 +136,7 @@ export default {
         async updateChecked(cart, event) {
             try {
                 //如果修改数据成功，再次获取服务器数据（购物车）
-              //带给服务器的参数isChecked，不是布尔值，应该是0|1
+                //带给服务器的参数isChecked，不是布尔值，应该是0|1
                 let isChecked = event.target.checked ? "1" : "0";
                 await this.$store.dispatch("updateCheckedById", {
                     skuId: cart.skuId,
@@ -145,6 +145,17 @@ export default {
                 this.getData();
             } catch (error) {
                 //如果失败提示
+                alert(error.message);
+            }
+        },
+        //删除全部选中的商品
+        async deleteAllCheckCart() {
+            try {
+                //派发action
+                await this.$store.dispatch("deleteAllCheckedCart");
+                this.getData();
+                //再发请求获取购物车列表
+            } catch (error) {
                 alert(error.message);
             }
         },
