@@ -13,7 +13,12 @@
             <div class="cart-body">
                 <ul class="cart-list" v-for="cart in cartInfoList" :key="cart.id">
                     <li class="cart-list-con1">
-                        <input type="checkbox" name="chk_list" :checked="cart.isChecked == 1" />
+                        <input
+                            type="checkbox"
+                            name="chk_list"
+                            :checked="cart.isChecked == 1"
+                            @change="updateChecked(cart, $event)"
+                        />
                     </li>
                     <li class="cart-list-con2">
                         <img :src="cart.imgUrl" />
@@ -116,7 +121,7 @@ export default {
             } catch (error) {
                 return error;
             }
-        },1000),
+        }, 1000),
         //删除购物车商品操作
         async deleteCartById(cart) {
             try {
@@ -125,6 +130,22 @@ export default {
                 this.getData();
             } catch (error) {
                 console.log("删除商品失败!");
+            }
+        },
+        //修改购物车商品选中状态
+        async updateChecked(cart, event) {
+            try {
+                //如果修改数据成功，再次获取服务器数据（购物车）
+              //带给服务器的参数isChecked，不是布尔值，应该是0|1
+                let isChecked = event.target.checked ? "1" : "0";
+                await this.$store.dispatch("updateCheckedById", {
+                    skuId: cart.skuId,
+                    isChecked,
+                });
+                this.getData();
+            } catch (error) {
+                //如果失败提示
+                alert(error.message);
             }
         },
     },
