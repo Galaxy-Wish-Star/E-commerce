@@ -48,7 +48,9 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <div>
+                            <div v-wave="{
+                                color:'red'
+                            }">
                                 <router-link to="/personal"
                                     ><font-awesome-icon icon="fa-solid fa-user" />用户中心</router-link
                                 >

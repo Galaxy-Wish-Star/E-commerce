@@ -2,6 +2,10 @@ import Vue from "vue";
 import App from "./App.vue";
 // import store from './store'
 
+import VWave from "v-wave";
+
+Vue.use(VWave)
+
 //引入router
 import router from "@/router";
 
