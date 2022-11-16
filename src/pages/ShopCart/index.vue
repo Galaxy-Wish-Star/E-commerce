@@ -52,7 +52,13 @@
         </div>
         <div class="cart-tool">
             <div class="select-all">
-                <input class="chooseAll" type="checkbox" :checked="isAllCheck &&cartInfoList.length>0" @change="updateAllCartChecked" />
+                <input
+                    class="chooseAll"
+                    type="checkbox"
+                    :checked="isAllCheck && cartInfoList.length > 0"
+                    @change="updateAllCartChecked"
+                    :disabled="cartInfoList.length == 0"
+                />
                 <span>全选</span>
             </div>
             <div class="option">
@@ -61,7 +67,10 @@
                 <a href="#none">清除下柜商品</a>
             </div>
             <div class="money-box">
-                <div class="chosed">已选择 <span>0</span>件商品</div>
+                <div class="chosed">
+                    已选择 <span>{{ cartCheckedNum }}</span
+                    >件商品
+                </div>
                 <div class="sumprice">
                     <em>总价（不含运费） ：</em>
                     <i class="summoney">{{ totalPrice }}</i>
@@ -181,14 +190,26 @@ export default {
         totalPrice() {
             let sum = 0;
             this.cartInfoList.forEach((item) => {
-                sum += item.skuNum * item.skuPrice;
+              //选中的才计算总价
+                item.isChecked == 1 ? (sum += item.skuNum * item.skuPrice) : "";
             });
+            //返回总价
             return sum;
         },
         //计算全选
         isAllCheck() {
             //判断底部复选框是否勾选【全部产品都选中,才勾选】
             return this.cartInfoList.every((item) => item.isChecked == 1);
+        },
+        cartCheckedNum() {
+            let PromiseAll = 0;
+            this.cartInfoList.forEach((cartInfoList) => {
+                let promise = cartInfoList.isChecked == 1 ? 1 : 0;
+                //将每一次返回的Promise添加到数组当中
+                PromiseAll += promise;
+            });
+            //将相加的总和返回
+            return PromiseAll;
         },
     },
 };
