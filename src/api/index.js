@@ -30,3 +30,7 @@ export const reqDeleteCartById = (skuId) =>requests({ url:`/cart/deleteCart/${sk
 //修改商品选中状态/api/cart/checkCart/{skuID}/{isChecked}
 
 export const reqUpdateCheckdById=(skuID,isChecked) =>requests({ url:`/cart/checkCart/${skuID}/${isChecked}`,method:'get'})
+
+//获取用户地址信息
+export  const reqAddressInfo=() => requests({ url:'/user/userAddress/auth/findUserAddressList',method:'get'})
+

@@ -76,7 +76,7 @@
                     <i class="summoney">{{ totalPrice }}</i>
                 </div>
                 <div class="sumbtn">
-                    <a class="sum-btn" href="###" target="_blank">结算</a>
+                    <a class="sum-btn" @click="$router.push('/trade')">结算</a>
                 </div>
             </div>
         </div>
@@ -216,6 +216,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sum-btn{
+  cursor: pointer
+}
 .cart {
     width: 1200px;
     margin: 0 auto;
