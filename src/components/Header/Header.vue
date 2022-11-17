@@ -48,9 +48,11 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <div v-wave="{
-                                color:'red'
-                            }">
+                            <div
+                                v-wave="{
+                                    color: 'red',
+                                }"
+                            >
                                 <router-link to="/personal"
                                     ><font-awesome-icon icon="fa-solid fa-user" />用户中心</router-link
                                 >
@@ -250,6 +252,21 @@ export default {
 @import "../../assets/scss/_color.scss";
 @import "../../assets/scss/_fonts.scss";
 
+#login-regster-btn {
+    &:active {
+        background-color: #78aa37;
+        color: #fff;
+    }
+    &:first-child {
+        margin-right: 15px;
+        background-color: #8dc742;
+        color: #fff;
+    }
+    &:hover{
+        color: #fff;
+        background-color: #8dc742;
+    }
+}
 svg {
     margin: 0 4px;
 }
