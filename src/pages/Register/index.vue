@@ -17,7 +17,7 @@
             <div class="radio_sBox s_radioBox" style ="margin-right: 15px;">
                 <label claa="s_radi">
                     <input type="radio" name="user-type" id="gongyingshang" value="1">
-                    <span>我是采购人</span>
+                    <span>我是供应商</span>
                 </label>
             </div>
         </div>
@@ -29,15 +29,14 @@
                 <span class="error-msg">请输入4-32字符，只包括英文字母，数字和下划线</span>
             </div>
             <div class="content">
-                <label>手机号:</label>
-                <input type="text" placeholder="请输入你的手机号" />
-                <span class="error-msg">请输入11位手机号码（此号码位接收短信号码）</span>
+                <label>邮箱号:</label>
+                <input type="text" placeholder="请输入你的邮箱" />
+                <span class="error-msg">请输入邮箱号（以此来接收你的验证码）</span>
             </div>
             <div class="content">
-                <label>图片验证码:</label>
+                <label>邮箱验证:</label>
                 <input type="text" placeholder="请输入验证码" />
-                <!-- <img ref="code" src="http://gmall-h5-api.atguigu.cn/api/user/passport/code" alt="code" /> -->
-                <span class="error-msg">请输入左方算式的计算结果</span>
+                <span class="error-msg">请输入验证码</span>
             </div>
             <div class="content">
                 <label>登录密码:</label>
@@ -184,9 +183,10 @@ export default {
 }
  .zcym{
     width: 300px;
-     display: flex;
-      align-items: baseline;
-      padding-left: 444px;
+    display: flex;
+    align-items: baseline;
+    padding-left: 444px;
+    margin: 0 42px;
     margin-bottom: 28px;
     position: relative;
     color: #333;
