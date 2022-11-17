@@ -1,7 +1,6 @@
 //home模块仓库
 /* eslint-disable */
-import { reqCategoryList, reqGetBannerList, reqGetFloorBannerList } from "@/api";
-import async from "async";
+import { reqCategoryList, reqGetBannerList, reqGetFloorBannerList, reqGetGoodsHot } from "@/api";
 
 // //创建actions(本质就是对象) 用于响应组件中的动作
 const actions = {
@@ -27,6 +26,14 @@ const actions = {
             commit("GETFLOORBANLIST", result.data);
         }
     },
+    //获取热门商品列表
+    async getGoodsHot({ commit }) {
+        let result = await reqGetGoodsHot();
+        console.log(result);
+        if (result.code == 200) {
+            commit("GETGOODSHOT", result.data);
+        }
+    },
 };
 
 // //创建mutations(本质也是对象) 用于修改数据(state)
@@ -40,6 +47,10 @@ const mutations = {
     GETFLOORBANLIST(state, floorBannerList) {
         state.floorBannerList = floorBannerList;
     },
+
+    GETGOODSHOT(state, goodsHot) {
+        state.goodsHot = goodsHot;
+    },
 };
 
 // //准备state(数据) 存储数据
@@ -51,6 +62,7 @@ const state = {
     bannerList: [],
     //floor组件轮播图数据
     floorBannerList: [],
+    goodsHot: [],
 };
 
 /* eslint-disable */

@@ -52,204 +52,34 @@
                         <a>四川、重庆特色产品</a>
                     </li>
                 </ul>
-                <div class="product_inline_b fl">
+                <div class="product_inline_b fl" v-for="goods in goodsHot.slice(0, 8)" :key="goods.length">
                     <a>
                         <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
                     </a>
 
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
+                    <a class="goods-info">{{ goods.snameInfo }}</a>
                     <div class="left-price">
                         <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
+                            <div class="imgrenzheng">
+                                <span class="tips tips-yj">
+                                    <img
+                                        width="16px"
+                                        height="16px"
+                                        src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
+                                    /> </span
+                                ><span class="tips">
+                                    <img
+                                        width="16px"
+                                        height="16px"
+                                        src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
+                                    />
+                                </span>
+                            </div>
+                            <span class="stime">上架时间:{{ goods.stime.replace("T",' ').substring(0,18) }}</span>
                         </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
-                    </div>
-                </div>
-                <div class="product_inline_b fl">
-                    <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
-                    </a>
-
-                    <a class="goods-info">永顺县钟瑞祥清香压榨四级菜籽油5L/桶</a>
-                    <div class="left-price">
-                        <div class="icons-father">
-                            <span class="tips tips-yj">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/jcbg-icon.png"
-                                /> </span
-                            ><span class="tips">
-                                <img
-                                    width="16px"
-                                    height="16px"
-                                    src="https://www.fupin832.com/webpage/gxs/images/bzj-icon.png"
-                                />
-                            </span>
-                        </div>
-                        <p class="product_price tf">￥<span class="price_num">105.00</span></p>
+                        <p class="product_price tf">
+                            ￥<span class="price_num">{{ goods.sprice }}</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -258,7 +88,19 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+    name: "Rank",
+    mounted() {
+        this.$store.dispatch("getGoodsHot");
+    },
+    methods: {},
+    computed: {
+        ...mapState({
+            goodsHot: (state) => state.home.goodsHot,
+        }),
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -267,7 +109,7 @@ export default {};
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 650px;
+    height: 680px;
     .rec_pic {
         width: 144px;
         height: 144px;
@@ -275,15 +117,16 @@ export default {};
     }
     .product_inline_b {
         background-color: #e9e9e9;
-        padding: 5px 15px;
+        margin: 5px 15px;
         position: relative;
         &:hover {
             box-shadow: 0 0 10px rgb(0 0 0 / 30%);
         }
         .goods-info {
-            height: 30px;
+            width: 200px;
+            height: 45px;
             overflow: hidden;
-            margin: 6px 0;
+            padding: 6px 0;
             display: -webkit-box;
             -webkit-box-orient: vertical;
             word-break: break-all;
@@ -294,18 +137,45 @@ export default {};
         }
         .left-price {
             position: absolute;
-            top: 220px;
-            left: 13px;
+            top: 235px;
+            left: 0px;
+
+            display: flex;
+            flex-direction: column;
             .tips {
                 margin: 0 5px;
             }
+            .icons-father {
+                display: flex;
+                width: 220px;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 3px 0;
+                border: 1px solid #fff;
+                border-left: none;
+                border-right: none;
+                .stime {
+                    font-size: 12px;
+                    width: 200px;
+                    color: #e9903c;
+                    float: right;
+                }
+                .imgrenzheng{
+                    margin: 2px 0;
+                    float: left;
+                    width: 200px;
+                }
+            }
+
             .price_num,
             .product_price {
+                margin: 5px 0 0 5px;
                 color: #ff0000;
             }
         }
-        height: 260px;
-        width: 200px;
+        height: 305px;
+        width: 220px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -331,12 +201,12 @@ export default {};
             .db_prod_line {
                 &:nth-child(1) {
                     position: absolute;
-                    top: 480px;
+                    top: 500px;
                     left: 13.5px;
                 }
                 &:nth-child(2) {
                     position: absolute;
-                    top: 560px;
+                    top: 580px;
                     left: 13.5px;
                 }
 
@@ -372,7 +242,7 @@ export default {};
             width: 180px;
             height: 700px;
             background-image: url(https://res.fupin832.com/ghyx-bg.jpg);
-            background-size: 180px 650px;
+            background-size: 180px 680px;
             background-repeat: no-repeat;
         }
     }
@@ -393,13 +263,12 @@ export default {};
     li {
         &:hover {
             background: #e9903c;
-            a{
+            a {
                 color: #ffffff !important;
             }
         }
-        a{
-            
-        color: #e9903c !important;
+        a {
+            color: #e9903c !important;
         }
         text-align: center;
         border-radius: 35px;

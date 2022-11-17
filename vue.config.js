@@ -27,9 +27,12 @@ module.exports = {
                 ws: true, //支持websocket
                 changeOrigin: true, //host源
             },
-            // '/foo': {
-            //   target: '<other_url>'
-            // }
+            "/ipa": {
+                target: "http://10.31.1.65:8080", //代理转发路径
+                pathRewrites: { "^/ipa": "" }, //匹配字符串
+                ws: true, //支持websocket
+                changeOrigin: true, //host源
+            },
         },
     },
 };
