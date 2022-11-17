@@ -17,10 +17,9 @@ const actions = {
         let result = await reqAddOrUpdateShopCart(skuId, skuNum);
 
         if (result.code == 200) {
-            //代表服务器加入购物车成功
+            //代表加入购物车成功
             return "ok";
         } else {
-            // 加入成功
             return Promise.reject(new Error("faile"));
         }
     },
