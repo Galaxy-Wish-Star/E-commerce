@@ -9,9 +9,15 @@ import News from "@/pages/News";
 import AddCartSuccess from '@/pages/AddCartSuccess';
 import Site from "@/pages/Site";
 import ShopCart from '@/pages/ShopCart'
+import Trade from '@/pages/Trade'
 
 //配置路由
 export default [
+    {
+        path: "/trade",
+        component: Trade,
+        name: "trade",
+    },
     {
         path: "/Shopcart",
         component: ShopCart,
