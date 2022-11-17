@@ -31,6 +31,9 @@ export const reqDeleteCartById = (skuId) =>requests({ url:`/cart/deleteCart/${sk
 
 export const reqUpdateCheckdById=(skuID,isChecked) =>requests({ url:`/cart/checkCart/${skuID}/${isChecked}`,method:'get'})
 
+//登录
+export const reqUserLogin=(data) => requests({ url:'/user/passport/login',data,method:'post'})
+
 //获取用户地址信息
 export  const reqAddressInfo=() => requests({ url:'/user/userAddress/auth/findUserAddressList',method:'get'})
 

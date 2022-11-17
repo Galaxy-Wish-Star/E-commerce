@@ -6,30 +6,29 @@
                 <div class="loginform">
                     <ul class="tab clearFix">
                         <!-- <li>
-                            <a href="##" style="border-right: 0;">扫描登录</a>
-                            <div class="lllsz" style="display:none">
-                                <img src="../Login/images/wx_cz.jpg" alt="">
-                            </div>
-                        </li> -->
-                        <div class="phone"><font-awesome-icon icon="fa-solid fa-phone" />客服中心电话：<span>400-1188-832</span></div>
+    <a href="##" style="border-right: 0;">扫描登录</a>
+    <div class="lllsz" style="display:none">
+        <img src="../Login/images/wx_cz.jpg" alt="">
+    </div>
+</li> -->
+                        <div class="phone">
+                            <font-awesome-icon icon="fa-solid fa-phone" />
+                            客服中心电话：<span>400-1188-832</span>
+                        </div>
                         <li>
                             <a href="##" class="current">账户登录</a>
                         </li>
                     </ul>
 
                     <div class="content">
-                        <form action="##">
+                        <form>
                             <div class="input-text clearFix">
-                                <input
-                                    type="text"
-                                    placeholder="邮箱/用户名/手机号"
-                                    v-model="userName"
-                                /><font-awesome-icon icon="fas fa-user" />
+                                <input type="text" placeholder="邮箱/用户名/手机号" v-model="user" />
+                                <font-awesome-icon icon="fas fa-user" />
                             </div>
                             <div class="input-text clearFix">
-                                <input type="text" placeholder="请输入密码" v-model="password" /><font-awesome-icon
-                                    icon="fa-solid fa-eye-slash"
-                                />
+                                <input type="text" placeholder="请输入密码" v-model="password" />
+                                <font-awesome-icon icon="fa-solid fa-eye-slash" />
                             </div>
                             <div class="setting clearFix">
                                 <label class="checkbox inline">
@@ -38,7 +37,7 @@
                                 </label>
                                 <span class="forget">忘记密码？</span>
                             </div>
-                            <button class="btn" @click="getLogin">登&nbsp;&nbsp;录</button>
+                            <button class="btn" @click.prevent="getLogin">登&nbsp;&nbsp;录</button>
                         </form>
 
                         <div class="call clearFix">
@@ -52,7 +51,9 @@
                                 <li>
                                     <font-awesome-icon icon="fa-brands fa-weixin" />
                                 </li>
-                                <li><font-awesome-icon icon="fa-brands fa-github" /></li>
+                                <li>
+                                    <font-awesome-icon icon="fa-brands fa-github" />
+                                </li>
                             </ul>
                             <router-link class="register" to="/register">立即注册</router-link>
                         </div>
@@ -64,28 +65,18 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
     name: "Login",
     data() {
         return {
-            userName: "admin",
-            password: "123456",
+            user: "",
+            password: "",
         };
     },
     methods: {
         getLogin() {
-            // axios
-            //     .post(
-            //         "http://192.168.157.250:8080/api/login?username=" +
-            //             this.userName +
-            //             "&password=" +
-            //             this.password +
-            //             "",
-            //     )
-            //     .then(function (response) {
-            //         console.log(response.data);
-            //     });
+            const { phone, password } = this;
+          (phone && password) && this.$store.dispatch("userLogin");
         },
     },
 };
@@ -99,13 +90,16 @@ export default {
     color: rgb(110, 110, 110);
     top: -45px;
     right: 50px;
+
     span {
         color: rgb(31, 31, 31);
     }
-    .fa-phone{
+
+    .fa-phone {
         margin-right: 5px;
     }
 }
+
 .login-container {
     .login-wrap {
         height: 450px;
@@ -177,6 +171,7 @@ export default {
                         padding-top: 48px;
                         height: 20px;
                         width: 342px;
+
                         .fa-user {
                             position: absolute;
                             top: 90px;
@@ -184,6 +179,7 @@ export default {
                             font-size: 16px;
                             cursor: pointer;
                         }
+
                         .fa-eye-slash {
                             position: absolute;
                             top: 160px;
@@ -191,6 +187,7 @@ export default {
                             font-size: 16px;
                             cursor: pointer;
                         }
+
                         span {
                             float: left;
                             width: 37px;
@@ -236,6 +233,7 @@ export default {
                             font-size: 18px;
                             padding-top: 28px;
                             cursor: pointer;
+
                             &:hover {
                                 color: #000000;
                             }
@@ -256,6 +254,7 @@ export default {
                         margin-top: 30px;
                         outline: none;
                         cursor: pointer;
+
                         &:hover {
                             background-color: #c41f16;
                         }
@@ -272,20 +271,25 @@ export default {
                         align-items: center;
                         justify-content: center;
                         height: 40px;
+
                         li {
                             float: left;
                             margin-right: 8px;
                             font-size: 20px;
                             cursor: pointer;
+
                             &:nth-child(1) {
                                 color: #ea6e2f;
                             }
+
                             &:nth-child(2) {
                                 color: #1090f2;
                             }
+
                             &:nth-child(3) {
                                 color: #00a818;
                             }
+
                             &:nth-child(4) {
                                 color: #24292f;
                             }
