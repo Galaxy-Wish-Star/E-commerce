@@ -4,7 +4,7 @@
         <div class="register">
             <h3>
                 注册新用户
-                <span class="go">我有账号，去 <a href="login.html" target="_blank">登陆</a> </span>
+                <span class="go">我有账号，去 <router-link to="/login" >登陆</router-link> </span>
             </h3>
             <div class="Register_sFill">
             <div class="zcym">
@@ -21,7 +21,7 @@
                 </label>
             </div>
         </div>
-           
+
             <div class="content">
                 <label>邮箱号:</label>
                 <input type="text" placeholder="请输入你的邮箱" />
@@ -47,15 +47,15 @@
                 <span>我已阅读并同意</span>
                 <a herf="yhzcxy" class="xy">《用户注册协议》</a>
                 <a herf="ysxy" class="ys">《隐私协议》</a>
-                
+
             </div>
             <div class="btn">
                 <button>完成注册</button>
             </div>
-        
+
         </div>
     </div>
-</div>    
+</div>
 </template>
 
 <script>
@@ -123,7 +123,7 @@ export default {
             }
 
             .error-msg {
-                
+
                 top: 100%;
                 left: 495px;
                 color: #999;
