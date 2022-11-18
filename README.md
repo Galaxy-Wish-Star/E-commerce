@@ -92,9 +92,9 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 - [x] 登陆注册
 - [x] 商城首页
-- [ ] 商品详情
-- [ ] 购物车
-- [ ] 支付页
+- [x] 商品详情
+- [x] 购物车
+- [x] 支付页
 - [ ] 我的收藏
 - [ ] 订单页
 - [ ] 个人信息管理
