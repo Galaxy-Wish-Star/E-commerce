@@ -9,6 +9,9 @@ Vue.use(VWave)
 //引入router
 import router from "@/router";
 
+//引入swiper
+import 'swiper/css/swiper.css'
+
 //三级联动全局组件
 import TypeNav from "@/components/TypeNav";
 Vue.component(TypeNav.name, TypeNav);

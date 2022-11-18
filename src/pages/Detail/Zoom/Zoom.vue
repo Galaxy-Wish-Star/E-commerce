@@ -1,11 +1,12 @@
 <template>
     <div class="spec-preview">
         <img :src="imgObj.imgUrl" />
-        <div class="event" @mousemove="handle"></div>
+        <div class="event" @mousemove="handler"></div>
         <div class="big">
-            <img :src="imgObj.imgUrl" ref="big"/>
+            <img :src="imgObj.imgUrl" ref="big" />
         </div>
-        <div class="mask" ref="mark"></div>
+        <!-- 遮罩层 -->
+        <div class="mask" ref="mask"></div>
     </div>
 </template>
 
@@ -13,33 +14,37 @@
 export default {
     name: "Zoom",
     props: ["skuImageList"],
+    data() {
+        return {
+            currentIndex: 0,
+        };
+    },
     computed: {
         imgObj() {
-            return this.skuImageList[0] || {}; //如果服务器数据没有回来，skuInfo这个对象是空对象
+            return this.skuImageList[this.currentIndex] || {};
         },
     },
+    mounted() {
+        //全局事件总线：获取兄弟组件传递过来的索引值
+        this.$bus.$on("getIndex", (index) => {
+            //修改当前响应式数据
+            this.currentIndex = index;
+        });
+    },
     methods: {
-        // 放大镜效果
-        handle(e) {
-            let mark = this.$refs.mark;
+        handler(event) {
+            let mask = this.$refs.mask;
             let big = this.$refs.big;
-            let left = e.offsetX - mark.offsetWidth / 2;
-            let top = e.offsetY - mark.offsetHeight / 2;
-            // 约束范围
-            if (left <= 0) {
-                left = 0;
-            }
-            if (left >= mark.offsetWidth) {
-                left = mark.offsetWidth;
-            }
-            if (top <= 0) {
-                top = 0;
-            }
-            if (top >= mark.offsetHeight) {
-                top = mark.offsetHeight;
-            }
-            mark.style.left = left + "px";
-            mark.style.top = top + "px";
+            let left = event.offsetX - mask.offsetWidth / 2;
+            let top = event.offsetY - mask.offsetHeight / 2;
+            //约束范围
+            if (left <= 0) left = 0;
+            if (left >= mask.offsetWidth) left = mask.offsetWidth;
+            if (top <= 0) top = 0;
+            if (top >= mask.offsetHeight) top = mask.offsetHeight;
+            //修改元素的left|top属性值
+            mask.style.left = left + "px";
+            mask.style.top = top + "px";
             big.style.left = -2 * left + "px";
             big.style.top = -2 * top + "px";
         },
@@ -47,7 +52,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .spec-preview {
     position: relative;
     width: 400px;
