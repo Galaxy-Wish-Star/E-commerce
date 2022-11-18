@@ -5,10 +5,12 @@ module.exports = defineConfig({
     lintOnSave: false,
     transpileDependencies: true,
 });
+
 module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/E-commerce/" : "/",
-};
-module.exports = {
+    lintOnSave: false,
+
+    // publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+
     // //代理服务器
     devServer: {
         proxy: {
