@@ -22,12 +22,6 @@
             </div>
         </div>
            
-        
-            <div class="content">
-                <label>账号：</label>
-                <input type="text" placeholder="请输入你的账号" />
-                <span class="error-msg">请输入4-32字符，只包括英文字母，数字和下划线</span>
-            </div>
             <div class="content">
                 <label>邮箱号:</label>
                 <input type="text" placeholder="请输入你的邮箱" />
