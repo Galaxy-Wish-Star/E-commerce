@@ -5,19 +5,10 @@ module.exports = defineConfig({
     lintOnSave: false,
     transpileDependencies: true,
 });
-
-//vant配置
-const { VantResolver } = require("unplugin-vue-components/resolvers");
-const ComponentsPlugin = require("unplugin-vue-components/webpack");
 module.exports = {
-    lintOnSave: false,
-    configureWebpack: {
-        plugins: [
-            ComponentsPlugin({
-                resolvers: [VantResolver()],
-            }),
-        ],
-    },
+    publicPath: process.env.NODE_ENV === "production" ? "/E-commerce/" : "/",
+};
+module.exports = {
     // //代理服务器
     devServer: {
         proxy: {

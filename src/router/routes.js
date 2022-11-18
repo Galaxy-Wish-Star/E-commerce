@@ -42,6 +42,16 @@ export default [
         path: "/detail/:skuid",
         component: Detail,
         name: "detail",
+        // children: [
+        //     {
+        //         path:'goodsinfor',
+        //         component: Goodsinfor,
+        //     },
+        //     {
+        //         path: 'comments',
+        //         component: Comments,
+        //     }
+        // ]
     },
     {
         path: "/home",
