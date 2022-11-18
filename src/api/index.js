@@ -33,11 +33,17 @@ export const reqDeleteCartById = (skuId) =>requests({ url:`/cart/deleteCart/${sk
 
 export const reqUpdateCheckdById=(skuID,isChecked) =>requests({ url:`/cart/checkCart/${skuID}/${isChecked}`,method:'get'})
 
+//获取验证码/api/user/passport/sendCode/{phone}
+export const reqGetCode = (email) =>requests({ url:`user/passport/sendCode/${email}`,method:'get'})
+
+// 注册
+export const reqUserRegister = (data) =>requests({ url:`user/passport/register`,data,method:'post'})
+
 //登录
 export const reqUserLogin=(data) => requests({ url:'/user/passport/login',data,method:'post'})
 
 //获取用户地址信息
 export  const reqAddressInfo=() => requests({ url:'/user/userAddress/auth/findUserAddressList',method:'get'})
 
-//获取热门商品列表
+//获取热门商品列表 TODO
 export const reqGetGoodsHot=()=>localRequest({ url:'/index/show-shopping',method:'get'})

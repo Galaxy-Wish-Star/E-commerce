@@ -4,63 +4,106 @@
         <div class="register">
             <h3>
                 注册新用户
-                <span class="go">我有账号，去 <router-link to="/login" >登陆</router-link> </span>
+                <span class="go">我有账号，去 <router-link to="/login">登陆</router-link> </span>
             </h3>
             <div class="Register_sFill">
-            <div class="zcym">
-            <div class="bossradio_sBox s_radioBox" style ="margin-right: 15px;">
-                <label claa="s_radi">
-                    <input type="radio" name="user-type" id="caigoushang" value="1">
-                    <span>我是采购人</span>
-                </label>
-            </div>
-            <div class="radio_sBox s_radioBox" style ="margin-right: 15px;">
-                <label claa="s_radi">
-                    <input type="radio" name="user-type" id="gongyingshang" value="1">
-                    <span>我是供应商</span>
-                </label>
-            </div>
-        </div>
+                <div class="zcym">
+                    <div class="bossradio_sBox s_radioBox" style="margin-right: 15px">
+                        <label claa="s_radi">
+                            <input type="radio" name="user-type" id="caigoushang" value="1" />
+                            <span>我是采购人</span>
+                        </label>
+                    </div>
+                    <div class="radio_sBox s_radioBox" style="margin-right: 15px">
+                        <label claa="s_radi">
+                            <input type="radio" name="user-type" id="gongyingshang" value="1" />
+                            <span>我是供应商</span>
+                        </label>
+                    </div>
+                </div>
 
-            <div class="content">
-                <label>邮箱号:</label>
-                <input type="text" placeholder="请输入你的邮箱" />
-                <span class="error-msg">请输入邮箱号（以此来接收你的验证码）</span>
+                <div class="content">
+                    <label>邮箱号:</label>
+                    <input type="text" placeholder="请输入你的邮箱" v-model="phone" />
+                    <span class="error-msg">请输入邮箱号（以此来接收你的验证码）</span>
+                </div>
+                <div class="content">
+                    <label>邮箱验证:</label>
+                    <input type="text" placeholder="请输入验证码" v-model="code" />
+                    <button style="width: 100px; height: 38px" @click="getCode">获取验证码</button>
+                    <span class="error-msg">请输入验证码</span>
+                </div>
+                <div class="content">
+                    <label>登录密码:</label>
+                    <input type="password" placeholder="请输入你的登录密码" v-model="password" />
+                    <span class="error-msg">请输入8-30密码，密码必须同时包含字母数字</span>
+                </div>
+                <div class="content">
+                    <label>确认密码:</label>
+                    <input type="password" placeholder="请输入确认密码" v-model="confirmPassword" />
+                    <span class="error-msg">请与上方填写的密码一致</span>
+                </div>
+                <div class="controls">
+                    <input name="m1" type="checkbox" :checked="agree" />
+                    <span>我已阅读并同意</span>
+                    <a herf="yhzcxy" class="xy">《用户注册协议》</a>
+                    <a herf="ysxy" class="ys">《隐私协议》</a>
+                </div>
+                <div class="btn">
+                    <button @click="userRegister">完成注册</button>
+                </div>
             </div>
-            <div class="content">
-                <label>邮箱验证:</label>
-                <input type="text" placeholder="请输入验证码" />
-                <span class="error-msg">请输入验证码</span>
-            </div>
-            <div class="content">
-                <label>登录密码:</label>
-                <input type="text" placeholder="请输入你的登录密码" />
-                <span class="error-msg">请输入8-30密码，密码必须同时包含字母数字</span>
-            </div>
-            <div class="content">
-                <label>确认密码:</label>
-                <input type="text" placeholder="请输入确认密码" />
-                <span class="error-msg">请与上方填写的密码一致</span>
-            </div>
-            <div class="controls">
-                <input name="m1" type="checkbox" />
-                <span>我已阅读并同意</span>
-                <a herf="yhzcxy" class="xy">《用户注册协议》</a>
-                <a herf="ysxy" class="ys">《隐私协议》</a>
-
-            </div>
-            <div class="btn">
-                <button>完成注册</button>
-            </div>
-
         </div>
     </div>
-</div>
 </template>
 
 <script>
 export default {
     name: "Register",
+    data() {
+        return {
+            //收集表单数据--手机号
+            phone: "",
+            // 验证码
+            code: "",
+            //密码
+            password: "",
+            //确认密码
+            confirmPassword: "",
+            //是否同意
+            agree: true,
+        };
+    },
+    methods: {
+        async getCode() {
+            try {
+                //如果或取到验证码
+                const { phone } = this;
+                phone && (await this.$store.dispatch("getCode", phone));
+                //将组件的code属性值变为仓库中验证码
+                this.code = this.$store.state.user.code;
+            } catch (error) {}
+        },
+        //用户注册
+        async userRegister() {
+            try {
+                //如果成功----路由跳转
+
+                const { phone, code, password, confirmPassword } = this;
+                (phone &&
+                    code &&
+                    password == confirmPassword) &&
+                    (await this.$store.dispatch("userRegister", {
+                        phone,
+                        code,
+                        password,
+                    }));
+                this.$router.push("/login");
+            } catch (error) {
+                alert(error.message);
+            }
+        },
+    },
 };
 </script>
 
@@ -123,7 +166,6 @@ export default {
             }
 
             .error-msg {
-
                 top: 100%;
                 left: 495px;
                 color: #999;
@@ -136,13 +178,15 @@ export default {
             text-align: center;
             position: relative;
             font-size: 15px;
+
             .xy {
-             font-size: 14px;
-             color: #e1251b;
+                font-size: 14px;
+                color: #e1251b;
             }
+
             .ys {
-             font-size: 14px;
-             color: #e1251b;
+                font-size: 14px;
+                color: #e1251b;
             }
 
             input {
@@ -152,7 +196,7 @@ export default {
             .error-msg {
                 top: 100%;
                 left: 495px;
-                color:#999;
+                color: #999;
                 font-size: 10px;
                 padding-left: 10px;
             }
@@ -175,7 +219,8 @@ export default {
         }
     }
 }
- .zcym{
+
+.zcym {
     width: 300px;
     display: flex;
     align-items: baseline;
@@ -185,8 +230,9 @@ export default {
     position: relative;
     color: #333;
     font-size: 16px;
-     }
-.register>.row {
+}
+
+.register > .row {
     margin-bottom: 15px;
 }
 </style>
