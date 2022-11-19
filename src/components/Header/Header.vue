@@ -194,15 +194,15 @@
                             >
                         </ul>
                     </div>
-
-                    <div class="header-body-right" v-show="loginHide">
+                  <div class="header-body-right" >
+<!--                    <div class="header-body-right" v-show="loginHide">-->
                         <div class="login-dis" v-if="!userName">
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
                         <div class="login-dis" v-else>
                             <a>你好！{{ userName }}</a>
-                            <a>退出登录</a>
+                            <a @click="logOut">退出登录</a>
                         </div>
 
                         <span>|</span>
@@ -235,6 +235,17 @@ export default {
                 };
                 loction.query = this.$route.query;
                 this.$router.push(loction);
+            }
+        },
+        //退出登录
+        logOut() {
+            try {
+              //退出成功
+              this.$store.dispatch("userLogOut");
+              this.$router.push('/home')
+              //回到首页
+            }catch (error) {
+              alert(error.message);
             }
         },
     },
