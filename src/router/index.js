@@ -51,13 +51,14 @@ router.beforeEach(async (to, from, next) => {
     //next:放行函数 next()放行 next(path)放行到指令路由
     next();
     //用户登录了,才会有token,未登录一定不会有token
+    let name = store.state.user.userInfo.name;
     let token = store.state.user.token;
     if (token) {
         //登录后组织跳转login
-        if (to.path == "/login") {
+        if (to.path == "/login" || to.path == "/register") {
             next("/");
         } else {
-            // 登陆了,但是去的不是login
+            // 登陆了,但是去的不是login和regster且拥有用户信息放行
             if (name) {
                 next();
             } else {
