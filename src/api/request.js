@@ -24,8 +24,13 @@ export const requests = axios.create({
 requests.interceptors.request.use((config) => {
     if (store.state.detail.uuid_token) {
         //请求头添加一个字段:和后端商量
-        config.headers.userTempId = store.state.detail.uuid_token
+        config.headers.userTempId = store.state.detail.uuid_token;
     }
+    //需要携带token带给服务器
+    if (store.state.user.token) {
+        config.headers.token = store.state.user.token;
+    }
+
     //进度条开始
     nprogress.start();
     return config;

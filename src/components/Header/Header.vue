@@ -9,7 +9,10 @@
                         <span>|</span>
                         <li>
                             <a href="../www/mobile_index.html">
-                                <font-awesome-icon icon="fa-solid fa-mobile" />
+                                <font-awesome-icon
+                                    icon="fa-solid
+                                fa-mobile"
+                                />
                                 手机版</a
                             >
                         </li>
@@ -43,7 +46,10 @@
                         <span>|</span>
                         <li>
                             <router-link to="/shopcart">
-                                <a><font-awesome-icon icon="fa-solid fa-cart-shopping" />购物车</a></router-link
+                                <a>
+                                    <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                                    购物车</a
+                                ></router-link
                             >
                         </li>
                         <span>|</span>
@@ -53,14 +59,18 @@
                                     color: 'red',
                                 }"
                             >
-                                <router-link to="/personal"
-                                    ><font-awesome-icon icon="fa-solid fa-user" />用户中心</router-link
-                                >
+                                <router-link to="/personal">
+                                    <font-awesome-icon icon="fa-solid fa-user" />
+                                    用户中心
+                                </router-link>
                             </div>
                         </li>
                         <span>|</span>
                         <li class="user-sever-box">
-                            <a href="javascript:;"><font-awesome-icon icon="fa-solid fa-comment-dots" />客户服务</a>
+                            <a href="javascript:;">
+                                <font-awesome-icon icon="fa-solid fa-comment-dots" />
+                                客户服务</a
+                            >
                             <div class="user-sever">
                                 <ul>
                                     <li><i class="fa fa-clock"></i> (08:30-22:00)</li>
@@ -74,10 +84,11 @@
                         </li>
                         <span>|</span>
                         <li class="daohang-box">
-                            <a href="javascript:;"
-                                ><font-awesome-icon icon="fa-solid fa-globe" />网站导航<font-awesome-icon
-                                    icon="fa-solid fa-chevron-down"
-                            /></a>
+                            <a href="javascript:;">
+                                <font-awesome-icon icon="fa-solid fa-globe" />
+                                网站导航
+                                <font-awesome-icon icon="fa-solid fa-chevron-down" />
+                            </a>
                             <div class="wdzhc show_z">
                                 <table>
                                     <tbody>
@@ -174,9 +185,9 @@
                         />
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
-                            <span style="float: left; margin-right: 4px;">热门搜索：</span>
+                            <span style="float: left; margin-right: 4px">热门搜索：</span>
                             <span class="hot_search_box"
-                                ><a style="color: #f40000;" href="javascript:;">北京仓优选</a
+                                ><a style="color: #f40000" href="javascript:;">北京仓优选</a
                                 ><a style="" href="javascript:;">工会优选</a><a style="" href="javascript:;">832溯源</a
                                 ><a style="" href="javascript:;">832福蛋</a><a style="" href="javascript:;">832福米</a
                                 ><a style="" href="javascript:;">832福油</a></span
@@ -185,18 +196,20 @@
                     </div>
 
                     <div class="header-body-right" v-show="loginHide">
-                        <div class="login-dis">
-                            <!-- <a id="login-regster-btn" href="javascript:void(0)"
-><i class="fa fa-user"></i>登录
-<span>/</span>
-注册</a
-> -->
+                        <div class="login-dis" v-if="!userName">
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
                         </div>
+                        <div class="login-dis" v-else>
+                            <a>你好！{{ userName }}</a>
+                            <a>退出登录</a>
+                        </div>
 
                         <span>|</span>
-                        <a href="javascript:;"><font-awesome-icon icon="fa-solid fa-ranking-star" />排行榜</a>
+                        <a href="javascript:;">
+                            <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                            排行榜</a
+                        >
                     </div>
                 </div>
             </div>
@@ -238,6 +251,10 @@ export default {
                 !(this.$route.path == "/login")
             );
         },
+        //用户名信息
+        userName() {
+            return this.$store.state.user.userInfo.name;
+        },
     },
     mounted() {
         //通过全局事件总线清除关健字
@@ -257,19 +274,23 @@ export default {
         background-color: #78aa37;
         color: #fff;
     }
+
     &:first-child {
         margin-right: 15px;
         background-color: #8dc742;
         color: #fff;
     }
-    &:hover{
+
+    &:hover {
         color: #fff;
         background-color: #8dc742;
     }
 }
+
 svg {
     margin: 0 4px;
 }
+
 .login-dis {
     #login-regster-btn {
         border: 1px solid #06c152;
@@ -353,6 +374,7 @@ body {
                 svg {
                     color: #999;
                 }
+
                 color: #999;
                 width: 450px;
                 height: 100%;
@@ -468,6 +490,7 @@ body {
                     svg {
                         color: #e6560e;
                     }
+
                     position: relative;
                     top: 0;
                     left: 0;

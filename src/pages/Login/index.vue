@@ -6,10 +6,10 @@
                 <div class="loginform">
                     <ul class="tab clearFix">
                         <!-- <li>
-    <a href="##" style="border-right: 0;">扫描登录</a>
-    <div class="lllsz" style="display:none">
-        <img src="../Login/images/wx_cz.jpg" alt="">
-    </div>
+<a href="##" style="border-right: 0;">扫描登录</a>
+<div class="lllsz" style="display:none">
+<img src="../Login/images/wx_cz.jpg" alt="">
+</div>
 </li> -->
                         <div class="phone">
                             <font-awesome-icon icon="fa-solid fa-phone" />
@@ -23,11 +23,11 @@
                     <div class="content">
                         <form>
                             <div class="input-text clearFix">
-                                <input type="text" placeholder="邮箱/用户名/手机号" v-model="user" />
+                                <input type="text" placeholder="邮箱" v-model="phone" />
                                 <font-awesome-icon icon="fas fa-user" />
                             </div>
                             <div class="input-text clearFix">
-                                <input type="text" placeholder="请输入密码" v-model="password" />
+                                <input type="password" placeholder="请输入密码" v-model="password" />
                                 <font-awesome-icon icon="fa-solid fa-eye-slash" />
                             </div>
                             <div class="setting clearFix">
@@ -69,14 +69,21 @@ export default {
     name: "Login",
     data() {
         return {
-            user: "",
+            phone: "",
             password: "",
         };
     },
     methods: {
-        getLogin() {
-            const { phone, password } = this;
-          (phone && password) && this.$store.dispatch("userLogin");
+        async getLogin() {
+            try {
+                //登录成功
+                const { phone, password } = this;
+                phone && password && (await this.$store.dispatch("userLogin", { phone, password }));
+                // 跳转首页
+                this.$router.push("home");
+            } catch (error) {
+                alert(error.message);
+            }
         },
     },
 };
