@@ -45,7 +45,6 @@ export const reqUserLogin=(data) => requests({ url:'/user/passport/login',data,m
 //退出登录
 export const reqLogOut=()=>requests({url:'/user/passport/logout',method:'get'})
 
-
 //获取用户信息
 export const reqUserInfo = () =>requests({ url:'/user/passport/auth/getUserInfo',method:'get'})
 
@@ -54,3 +53,8 @@ export  const reqAddressInfo=() => requests({ url:'/user/userAddress/auth/findUs
 
 //获取热门商品列表 TODO
 export const reqGetGoodsHot=()=>localRequest({ url:'/index/show-shopping',method:'get'})
+
+//获取商品清单
+export const reqOrderInfo=() => requests({ url:'/order/auth/trade',method:'get'})
+
+
