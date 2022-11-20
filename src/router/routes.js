@@ -11,9 +11,15 @@ import Site from "@/pages/Site";
 import ShopCart from "@/pages/ShopCart";
 import Trade from "@/pages/Trade";
 import Pay from "@/pages/Pay";
+import PaySuccess from "@/pages/PaySuccess"
 
 //配置路由
 export default [
+    {
+        path: "/paysuccess",
+        component: PaySuccess,
+        name: "paysuccess",
+    },
     {
         path: "/pay",
         component: Pay,
