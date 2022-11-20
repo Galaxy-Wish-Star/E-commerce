@@ -127,7 +127,7 @@ export default {
         //提交订单
         async submitOrder() {
             //交易编码
-            let { tradeNo } = this.orderInfo();
+            let { tradeNo } = this.orderInfo;
             let data = {
                 consignee: this.userDefaultAddress.consignee,//最终收件人的名字
                 consigneeTel: this.userDefaultAddress.phoneNum,//手机号
