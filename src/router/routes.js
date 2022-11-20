@@ -11,7 +11,10 @@ import Site from "@/pages/Site";
 import ShopCart from "@/pages/ShopCart";
 import Trade from "@/pages/Trade";
 import Pay from "@/pages/Pay";
-import PaySuccess from "@/pages/PaySuccess"
+import PaySuccess from "@/pages/PaySuccess";
+//引入二级路由
+import Wicket from "@/pages/Personal/Wicket";
+import GroupOrder from "@/pages/Personal/groupOrder";
 
 //配置路由
 export default [
@@ -84,6 +87,24 @@ export default [
         path: "/personal",
         component: Personal,
         name: "personal",
+        //二级路由
+        children: [
+            {
+                path: "myorder",
+                component: Wicket,
+                name: "myorder",
+            },
+            {
+                path: "grouporder",
+                component: GroupOrder,
+                name: "grouporder",
+            },
+            {
+                //访问父路由跳转默认界面
+                path: '/personal',
+                redirect:'/personal/myorder'
+            }
+        ],
     },
     {
         path: "/login",

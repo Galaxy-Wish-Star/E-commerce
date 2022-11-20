@@ -4,8 +4,8 @@
             <div class="order-left-list">
                 <ul>
                 <h3>订单中心</h3>
-                <li><a >我的订单</a></li>
-                <li><a >我的活动</a></li>
+                <li><router-link to="/personal/myorder">我的订单</router-link></li>
+                <li><router-link to="/personal/grouporder">团购订单</router-link></li>
                 <li><a >评价晒单</a></li>
                 <li><a >我的常购商品<span>NEW</span></a></li>
                 <li><a >代下单</a></li>
