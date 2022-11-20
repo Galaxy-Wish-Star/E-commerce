@@ -194,8 +194,8 @@
                             >
                         </ul>
                     </div>
-                  <div class="header-body-right" >
-<!--                    <div class="header-body-right" v-show="loginHide">-->
+<!--                  <div class="header-body-right" >-->
+                    <div class="header-body-right" v-show="loginHide">
                         <div class="login-dis" v-if="!userName">
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
                             <router-link to="/register" id="login-regster-btn">注册</router-link>
@@ -257,7 +257,6 @@ export default {
         //登录按钮显示与隐藏
         loginHide() {
             return (
-                !(this.$route.path == "/search") &&
                 !(this.$route.path == "/register") &&
                 !(this.$route.path == "/login")
             );
