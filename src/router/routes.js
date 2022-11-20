@@ -15,7 +15,8 @@ import PaySuccess from "@/pages/PaySuccess";
 //引入二级路由
 import Wicket from "@/pages/Personal/Wicket";
 import GroupOrder from "@/pages/Personal/groupOrder";
-
+// import Comments from '@/pages/Detail/comments'
+// import goodsInfo from '@/pages/Detail/goodsInfo'
 //配置路由
 export default [
     {
@@ -59,12 +60,16 @@ export default [
         name: "detail",
         // children: [
         //     {
-        //         path:'goodsinfor',
-        //         component: Goodsinfor,
+        //         path:'goodsinfo',
+        //         component: goodsInfo,
         //     },
         //     {
         //         path: 'comments',
         //         component: Comments,
+        //     },
+        //     {
+        //         path:'detail',
+        //         redirect: '/detail/goodsInfo',
         //     }
         // ]
     },
