@@ -28,38 +28,24 @@
             </div>
             <div class="detail">
                 <h5>商品清单</h5>
-                <ul class="list clearFix">
+                <ul class="list clearFix" v-for="(order, index) in orderInfo.detailArrayList" :key="order.skuid">
                     <li>
-                        <img src="./images/goods.png" alt="" />
+                        <img :src="order.imgUrl" alt="" style="width: 100px; height: 100px" />
                     </li>
                     <li>
-                        <p>Apple iPhone 6s (A1700) 64G 玫瑰金色 移动联通电信4G手机硅胶透明防摔软壳 本色系列</p>
+                        <p>{{ order.skuName }}</p>
                         <h4>7天无理由退货</h4>
                     </li>
                     <li>
-                        <h3>￥5399.00</h3>
+                        <h3>￥{{ order.orderPrice }}.00</h3>
                     </li>
-                    <li>X1</li>
-                    <li>有货</li>
-                </ul>
-                <ul class="list clearFix">
-                    <li>
-                        <img src="./images/goods.png" alt="" />
-                    </li>
-                    <li>
-                        <p>Apple iPhone 6s (A1700) 64G 玫瑰金色 移动联通电信4G手机硅胶透明防摔软壳 本色系列</p>
-                        <h4>7天无理由退货</h4>
-                    </li>
-                    <li>
-                        <h3>￥5399.00</h3>
-                    </li>
-                    <li>X1</li>
+                    <li>X{{ order.skuNum }}</li>
                     <li>有货</li>
                 </ul>
             </div>
             <div class="bbs">
                 <h5>买家留言：</h5>
-                <textarea placeholder="建议留言前先与商家沟通确认" class="remarks-cont"></textarea>
+                <textarea placeholder="建议留言前先与商家沟通确认" class="remarks-cont" v-model="msg"></textarea>
             </div>
             <div class="line"></div>
             <div class="bill">
@@ -71,8 +57,8 @@
         <div class="money clearFix">
             <ul>
                 <li>
-                    <b><i>1</i>件商品，总商品金额</b>
-                    <span>¥5399.00</span>
+                    <b><i>{{orderInfo.totalNum}}</i>件商品，总商品金额</b>
+                    <span>¥{{orderInfo.totalAmount}}.00</span>
                 </li>
                 <li>
                     <b>返现：</b>
@@ -85,12 +71,12 @@
             </ul>
         </div>
         <div class="trade">
-            <div class="price">应付金额:　<span>¥5399.00</span></div>
+            <div class="price">应付金额:　<span>¥{{orderInfo.totalAmount}}.00</span></div>
             <div class="receiveInfo">
                 寄送至:
-                <span>{{userDefaultAddress.fullAddress}}</span>
-                收货人：<span>{{userDefaultAddress.consignee}}</span>
-                <span>{{userDefaultAddress.phoneNum}}</span>
+                <span>{{ userDefaultAddress.fullAddress }}</span>
+                收货人：<span>{{ userDefaultAddress.consignee }}</span>
+                <span>{{ userDefaultAddress.phoneNum }}</span>
             </div>
         </div>
         <div class="sub clearFix">
@@ -104,6 +90,12 @@ import { mapState } from "vuex";
 
 export default {
     name: "Trade",
+    data() {
+        return {
+            //收集买家的留言信息
+            msg: "",
+        };
+    },
     mounted() {
         this.$store.dispatch("getUserAddress");
         this.$store.dispatch("getOrderInfo");
@@ -111,11 +103,12 @@ export default {
     computed: {
         ...mapState({
             addressInfo: (state) => state.trade.address,
+            orderInfo: (state) => state.trade.orderInfo,
         }),
         //将来提交订单最终选中地址
         userDefaultAddress() {
-          // find:查找数组当中符合条件的元素返回，最为最终结果
-          return this.addressInfo.find((item) => item.isDefault == 1);
+            // find:查找数组当中符合条件的元素返回，最为最终结果
+            return this.addressInfo.find((item) => item.isDefault == 1)||{};
         },
     },
     methods: {
