@@ -57,8 +57,11 @@
         <div class="money clearFix">
             <ul>
                 <li>
-                    <b><i>{{orderInfo.totalNum}}</i>件商品，总商品金额</b>
-                    <span>¥{{orderInfo.totalAmount}}.00</span>
+                    <b
+                        ><i>{{ orderInfo.totalNum }}</i
+                        >件商品，总商品金额</b
+                    >
+                    <span>¥{{ orderInfo.totalAmount }}.00</span>
                 </li>
                 <li>
                     <b>返现：</b>
@@ -71,7 +74,9 @@
             </ul>
         </div>
         <div class="trade">
-            <div class="price">应付金额:　<span>¥{{orderInfo.totalAmount}}.00</span></div>
+            <div class="price">
+                应付金额:　<span>¥{{ orderInfo.totalAmount }}.00</span>
+            </div>
             <div class="receiveInfo">
                 寄送至:
                 <span>{{ userDefaultAddress.fullAddress }}</span>
@@ -80,7 +85,8 @@
             </div>
         </div>
         <div class="sub clearFix">
-            <router-link class="subBtn" to="/pay">提交订单</router-link>
+            <!--            <router-link class="subBtn" to="/pay" @click="">提交订单</router-link>-->
+            <a class="subBtn" @click="submitOrder">提交订单</a>
         </div>
     </div>
 </template>
@@ -108,7 +114,7 @@ export default {
         //将来提交订单最终选中地址
         userDefaultAddress() {
             // find:查找数组当中符合条件的元素返回，最为最终结果
-            return this.addressInfo.find((item) => item.isDefault == 1)||{};
+            return this.addressInfo.find((item) => item.isDefault == 1) || {};
         },
     },
     methods: {
@@ -117,6 +123,23 @@ export default {
             //全部的isDefault为零
             addressInfo.forEach((item) => (item.isDefault = 0));
             address.isDefault = 1;
+        },
+        //提交订单
+        async submitOrder() {
+            //交易编码
+            let { tradeNo } = this.orderInfo();
+            let data = {
+                consignee: this.userDefaultAddress.consignee,//最终收件人的名字
+                consigneeTel: this.userDefaultAddress.phoneNum,//手机号
+                deliveryAddress: this.userDefaultAddress.fullAddress,//地址
+                paymentWay: "ONLINE",//支付方式
+                orderComment: this.msg,//留言信息
+                orderDetailList: this.orderInfo.detailArrayList//商品清单
+            };
+
+            //需要带参数的:tradeNo
+           let result= await this.$API.reqSubmitOrder(tradeNo,data);
+           console.log(result)
         },
     },
 };

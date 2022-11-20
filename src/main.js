@@ -12,6 +12,9 @@ import router from "@/router";
 //引入swiper
 import 'swiper/css/swiper.css'
 
+//统一接口api文件夹里面全部请求函数
+import * as API from '@/api'
+
 //三级联动全局组件
 import TypeNav from "@/components/TypeNav";
 Vue.component(TypeNav.name, TypeNav);
@@ -100,6 +103,7 @@ new Vue({
     //全局事件总线$bus配置
     beforeCreate() {
         Vue.prototype.$bus = this;
+        Vue.prototype.$API=API
     },
     //注册路由
     router,
