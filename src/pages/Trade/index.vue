@@ -98,8 +98,8 @@ export default {
     name: "Trade",
     data() {
         return {
-            //收集买家的留言信息
-            msg: "",
+            msg: "", //收集买家的留言信息
+            orderId: "", //订单号
         };
     },
     mounted() {
@@ -113,33 +113,42 @@ export default {
         }),
         //将来提交订单最终选中地址
         userDefaultAddress() {
-            // find:查找数组当中符合条件的元素返回，最为最终结果
+            //find:查找数组当中符合条件的元素返回，最为最终结果
             return this.addressInfo.find((item) => item.isDefault == 1) || {};
         },
     },
     methods: {
         //修改默认地址
         changeDefault(address, addressInfo) {
-            //全部的isDefault为零
-            addressInfo.forEach((item) => (item.isDefault = 0));
-            address.isDefault = 1;
+            addressInfo.forEach((item) => {
+                //全部的为0
+                item.isDefault = 0;
+            });
+            address.isDefault = 1; //点击的为1
         },
         //提交订单
         async submitOrder() {
             //交易编码
             let { tradeNo } = this.orderInfo;
+            //其余的六个参数
             let data = {
-                consignee: this.userDefaultAddress.consignee,//最终收件人的名字
-                consigneeTel: this.userDefaultAddress.phoneNum,//手机号
-                deliveryAddress: this.userDefaultAddress.fullAddress,//地址
-                paymentWay: "ONLINE",//支付方式
-                orderComment: this.msg,//留言信息
-                orderDetailList: this.orderInfo.detailArrayList//商品清单
+                consignee: this.userDefaultAddress.consignee, //最终收件人的名字
+                consigneeTel: this.userDefaultAddress.phoneNum, //最终收件人的手机号
+                deliveryAddress: this.userDefaultAddress.fullAddress, //收件人的地址
+                paymentWay: "ONLINE", //支付方式
+                orderComment: this.msg, //买家的留言信息
+                orderDetailList: this.orderInfo.detailArrayList, //商品清单
             };
-
-            //需要带参数的:tradeNo
-           let result= await this.$API.reqSubmitOrder(tradeNo,data);
-           console.log(result)
+            //需要带参数的：tradeNo
+            let result = await this.$API.reqSubmitOrder(tradeNo, data);
+            // console.log(result);
+            if (result.code == 200) {
+                (this.orderId = result.data),
+                    //路由跳转 + 路由传递参数
+                    this.$router.push("/pay?orderId=" + this.orderId);
+            } else {
+                alert(result.data);
+            }
         },
     },
 };
