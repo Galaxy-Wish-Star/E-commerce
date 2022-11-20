@@ -12,7 +12,9 @@
                             >{{ orderId }}</em
                         ></span
                     >
-                    <span class="fr"><em class="lead">应付金额：</em><em class="orange money">￥{{payInfo.totalFee}}</em></span>
+                    <span class="fr"
+                        ><em class="lead">应付金额：</em><em class="orange money">￥{{ payInfo.totalFee }}</em></span
+                    >
                 </div>
             </div>
             <div class="checkout-info">
@@ -66,7 +68,7 @@
                 <div class="hr"></div>
 
                 <div class="submit">
-                    <a class="btn">立即支付</a>
+                    <a class="btn" @click="open">立即支付</a>
                 </div>
                 <div class="otherpay">
                     <div class="step-tit">
@@ -106,6 +108,20 @@ export default {
             if (result.code == 200) {
                 this.payInfo = result.data;
             }
+        },
+        //获取支付信息
+        //弹出框
+        open() {
+            this.$alert("<strong>这是 <i>HTML</i> 片段</strong>", "HTML 片段", {
+                dangerouslyUseHTMLString: true,
+                //居中
+                center: true,
+                //是否显示取消
+                showCancelButton: true,
+                cancelButtonText: "支付遇见问题",
+                confirmButtonText: "已支付成功",
+                showClose: false, //右上角X
+            });
         },
     },
 };
