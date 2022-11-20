@@ -128,6 +128,28 @@ export default {
                 cancelButtonText: "支付遇见问题",
                 confirmButtonText: "已支付成功",
                 showClose: false, //右上角X
+                //关闭弹出框
+                beforeClose: (type, instance, done) => {
+                    //type:区分取消|确定按钮
+                    // instance:当前组件实例
+                    // done:关闭弹出框的方法
+                    if (type == "cancel") {
+                        alert("请联系管理员");
+                        //清除定时器
+                        clearInterval(this.timer);
+                        this.timer = null;
+                        //关闭弹出框
+                        done();
+                    } else {
+                        //判断是否真的支付
+                        // if (this.code==200) {
+                            clearInterval(this.timer);
+                            this.timer = null;
+                            done()
+                          this.$router.push('/paysuccess')
+                        // }
+                    }
+                },
             });
             //支付成功,路由的跳转,如果支付失败，提示信息
             if (!this.timer) {
@@ -141,9 +163,9 @@ export default {
                         //保存支付成功的code
                         this.code = result.code;
                         //关闭弹出框
-                      this.$msgbox.close()
-                      //跳转
-                      this.$router.push('/paysuccess')
+                        this.$msgbox.close();
+                        //跳转
+                        this.$router.push("/paysuccess");
                     }
                 }, 1000);
             }

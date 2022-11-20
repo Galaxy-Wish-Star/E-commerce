@@ -147,7 +147,7 @@ export default {
                     //路由跳转 + 路由传递参数
                     this.$router.push("/pay?orderId=" + this.orderId);
             } else {
-                alert(result.data);
+                alert(result.data+"不能重复提交订单");
             }
         },
     },

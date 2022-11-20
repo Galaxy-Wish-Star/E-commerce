@@ -4,22 +4,22 @@
             <div class="order-left-list">
                 <ul>
                 <h3>订单中心</h3>
-                <li><a href="">我的订单</a></li>
-                <li><a href="">我的活动</a></li>
-                <li><a href="">评价晒单</a></li>
-                <li><a href="">我的常购商品<span>NEW</span></a></li>
-                <li><a href="">代下单</a></li>
+                <li><a >我的订单</a></li>
+                <li><a >我的活动</a></li>
+                <li><a >评价晒单</a></li>
+                <li><a >我的常购商品<span>NEW</span></a></li>
+                <li><a >代下单</a></li>
             </ul>
             <ul>
                 <h3>关注中心</h3>
-                <li><a href="">关注的商品</a></li>
-                <li><a href="">关注的店铺</a></li>
-                <li><a href="">关注的活动</a></li>
+                <li><a >关注的商品</a></li>
+                <li><a >关注的店铺</a></li>
+                <li><a >关注的活动</a></li>
             </ul>
             <ul>
                 <h3>设置</h3>
-                <li><a href="">个人信息</a></li>
-                <router-link to="/site" id="shipping"><a href="">收货地址</a></router-link>
+                <li><a >个人信息</a></li>
+                <router-link to="/site" id="shipping"><a >收货地址</a></router-link>
             </ul>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
 <script>
     export default {
-        
+
     }
 </script>
 
@@ -43,7 +43,7 @@
             // width: 1230px;
             // display: flex;
             .order-left{
-                width: 150px;               
+                width: 150px;
                 .order-left-list{
                     font-size: 16px;
                     #shipping{
