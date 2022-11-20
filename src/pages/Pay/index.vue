@@ -9,10 +9,10 @@
                 <div class="paymark">
                     <span class="fl"
                         >请您在提交订单<em class="orange time">4小时</em>之内完成支付，超时订单会自动取消。订单号：<em
-                            >145687</em
+                            >{{ orderId }}</em
                         ></span
                     >
-                    <span class="fr"><em class="lead">应付金额：</em><em class="orange money">￥17,654</em></span>
+                    <span class="fr"><em class="lead">应付金额：</em><em class="orange money">￥{{payInfo.totalFee}}</em></span>
                 </div>
             </div>
             <div class="checkout-info">
@@ -66,7 +66,7 @@
                 <div class="hr"></div>
 
                 <div class="submit">
-                    <router-link class="btn" to="/paysuccess">立即支付</router-link>
+                    <a class="btn">立即支付</a>
                 </div>
                 <div class="otherpay">
                     <div class="step-tit">
@@ -85,6 +85,29 @@
 <script>
 export default {
     name: "Pay",
+    data() {
+        return {
+            payInfo: {},
+        };
+    },
+    computed: {
+        orderId() {
+            return this.$route.query.orderId;
+        },
+    },
+    mounted() {
+        // 别再生命周期函威中async | await
+        this.getPayInfo();
+    },
+    methods: {
+        async getPayInfo() {
+            let result = await this.$API.reqPayInfo(this.orderId);
+            //如果成功:组件当中存储支付信息
+            if (result.code == 200) {
+                this.payInfo = result.data;
+            }
+        },
+    },
 };
 </script>
 
