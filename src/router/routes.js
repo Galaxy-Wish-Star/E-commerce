@@ -6,13 +6,19 @@ import Register from "@/pages/Register";
 import Personal from "@/pages/Personal";
 import Login from "@/pages/Login";
 import News from "@/pages/News";
-import AddCartSuccess from '@/pages/AddCartSuccess';
+import AddCartSuccess from "@/pages/AddCartSuccess";
 import Site from "@/pages/Site";
-import ShopCart from '@/pages/ShopCart'
-import Trade from '@/pages/Trade'
+import ShopCart from "@/pages/ShopCart";
+import Trade from "@/pages/Trade";
+import Pay from "@/pages/Pay";
 
 //配置路由
 export default [
+    {
+        path: "/pay",
+        component: Pay,
+        name: "pay",
+    },
     {
         path: "/trade",
         component: Trade,
