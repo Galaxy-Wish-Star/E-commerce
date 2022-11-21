@@ -22,68 +22,12 @@
                         </table>
                     </div>
                     <div class="orders">
-                        <table class="order-item">
+                        <table class="order-item" v-for="order in myOrder.records" :key="order.id">
                             <thead>
                                 <tr>
                                     <th colspan="5">
                                         <span class="ordertitle"
-                                            >2017-02-11 11:59　订单编号：7867473872181848
-                                            <span class="pull-right delete"><img src="./images/delete.png" /></span
-                                        ></span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td width="60%">
-                                        <div class="typographic">
-                                            <img src="./images/goods.png" />
-                                            <a href="#" class="block-text"
-                                                >包邮 正品玛姬儿压缩面膜无纺布纸膜100粒 送泡瓶面膜刷喷瓶 新款</a
-                                            >
-                                            <span>x1</span>
-                                            <a href="#" class="service">售后申请</a>
-                                        </div>
-                                    </td>
-                                    <td rowspan="2" width="8%" class="center">小丽</td>
-                                    <td rowspan="2" width="13%" class="center">
-                                        <ul class="unstyled">
-                                            <li>总金额¥138.00</li>
-                                            <li>在线支付</li>
-                                        </ul>
-                                    </td>
-                                    <td rowspan="2" width="8%" class="center">
-                                        <a href="#" class="btn">已完成 </a>
-                                    </td>
-                                    <td rowspan="2" width="13%" class="center">
-                                        <ul class="unstyled">
-                                            <li>
-                                                <a href="mycomment.html" target="_blank">评价|晒单</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="50%">
-                                        <div class="typographic">
-                                            <img src="./images/goods.png" />
-                                            <a href="#" class="block-text"
-                                                >包邮 正品玛姬儿压缩面膜无纺布纸膜100粒 送泡瓶面膜刷喷瓶 新款</a
-                                            >
-                                            <span>x1</span>
-                                            <a href="#" class="service">售后申请</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <table class="order-item">
-                            <thead>
-                                <tr>
-                                    <th colspan="5">
-                                        <span class="ordertitle"
-                                            >2017-02-11 11:59　订单编号：7867473872181848
+                                            >{{ order.createTime }} 　订单编号：{{ order.outTradeNo }}
                                             <span class="pull-right delete"><img src="./images/delete.png" /></span
                                         ></span>
                                     </th>
@@ -164,6 +108,12 @@
                     </div>
                 </div>
                 <!--猜你喜欢-->
+                <div class="flooter">
+                    <div class="foolter-banner">
+                        <Glike></Glike>
+                        <Adver></Adver>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -209,6 +159,14 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/scss/_color.scss";
 @import "../../../assets/scss/_fonts.scss";
+
+
+.foolter-banner {
+    border-top: 1px solid #00a818;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .order-my {
     margin-top: 30px;
@@ -371,6 +329,7 @@ export default {
                 // 分页
                 .choose-order {
                     .pagination {
+                        position: relative;
                         margin: 38px 0;
 
                         ul {

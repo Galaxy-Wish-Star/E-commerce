@@ -22,6 +22,6 @@ export default {
   background-repeat: no-repeat;
   background-size:100% 100%;
   height: 170px;
-  margin: 20px auto 0;
+  margin: 20px 0 10px;
 }
 </style>
