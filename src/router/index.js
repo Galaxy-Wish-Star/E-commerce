@@ -76,8 +76,14 @@ router.beforeEach(async (to, from, next) => {
             }
         }
     } else {
-        //未登录
-        next();
+        //未登录:不能去交易相关、不能去支付相关【pay |paysuccess】、不能去个人中心
+        let toPath = to.path;
+        //如果去trade
+        if (toPath.indexOf("/trade") != -1 || toPath.indexOf("/pay") != -1 || toPath.indexOf("/personal")!=-1) {
+            next("/login?redirect="+toPath);
+        } else {
+            next();
+        }
     }
 });
 
