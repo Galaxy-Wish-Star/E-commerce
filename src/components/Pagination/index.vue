@@ -42,7 +42,7 @@ export default {
     computed: {
         //总共多少页
         totalPage() {
-            //向上取证
+            //向上取整
             return Math.ceil(this.total / this.pageSize);
         },
         //计算出连续的页码的起始数字与结束数字[连续页码的数字:至少是5]

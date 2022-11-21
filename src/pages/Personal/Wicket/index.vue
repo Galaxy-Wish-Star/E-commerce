@@ -34,28 +34,48 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr v-for="(cart, index) in order.orderDetailList" :key="cart.id">
                                     <td width="60%">
                                         <div class="typographic">
-                                            <img src="./images/goods.png" />
-                                            <a href="#" class="block-text"
-                                                >包邮 正品玛姬儿压缩面膜无纺布纸膜100粒 送泡瓶面膜刷喷瓶 新款</a
-                                            >
-                                            <span>x1</span>
+                                            <img style="width: 82px; height: 82px" :src="cart.imgUrl" />
+                                            <a href="#" class="block-text">{{ cart.skuName }}</a>
+                                            <span>x{{ cart.skuNum }}</span>
                                             <a href="#" class="service">售后申请</a>
                                         </div>
                                     </td>
-                                    <td rowspan="2" width="8%" class="center">小丽</td>
-                                    <td rowspan="2" width="13%" class="center">
+                                    <td
+                                        :rowspan="order.orderDetailList.length"
+                                        v-if="index == 0"
+                                        width="8%"
+                                        class="center"
+                                    >
+                                        {{ order.consignee }}
+                                    </td>
+                                    <td
+                                        v-if="index == 0"
+                                        :rowspan="order.orderDetailList.length"
+                                        width="13%"
+                                        class="center"
+                                    >
                                         <ul class="unstyled">
-                                            <li>总金额¥138.00</li>
+                                            <li>总金额¥{{ order.totalAmount }}.00</li>
                                             <li>在线支付</li>
                                         </ul>
                                     </td>
-                                    <td rowspan="2" width="8%" class="center">
-                                        <a href="#" class="btn">已完成 </a>
+                                    <td
+                                        v-if="index == 0"
+                                        :rowspan="order.orderDetailList.length"
+                                        width="8%"
+                                        class="center"
+                                    >
+                                        <a href="#" class="btn">{{ order.orderStatusName }}</a>
                                     </td>
-                                    <td rowspan="2" width="13%" class="center">
+                                    <td
+                                        v-if="index == 0"
+                                        :rowspan="order.orderDetailList.length"
+                                        width="13%"
+                                        class="center"
+                                    >
                                         <ul class="unstyled">
                                             <li>
                                                 <a href="mycomment.html" target="_blank">评价|晒单</a>
@@ -63,48 +83,18 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td width="50%">
-                                        <div class="typographic">
-                                            <img src="./images/goods.png" />
-                                            <a href="#" class="block-text"
-                                                >包邮 正品玛姬儿压缩面膜无纺布纸膜100粒 送泡瓶面膜刷喷瓶 新款</a
-                                            >
-                                            <span>x1</span>
-                                            <a href="#" class="service">售后申请</a>
-                                        </div>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="choose-order">
-                        <div class="pagination">
-                            <ul>
-                                <li class="prev disabled">
-                                    <a href="javascript:">«上一页</a>
-                                </li>
-                                <li class="page actived">
-                                    <a href="javascript:">1</a>
-                                </li>
-                                <li class="page">
-                                    <a href="javascript:">2</a>
-                                </li>
-                                <li class="page">
-                                    <a href="javascript:">3</a>
-                                </li>
-                                <li class="page">
-                                    <a href="javascript:">4</a>
-                                </li>
-
-                                <li class="next disabled">
-                                    <a href="javascript:">下一页»</a>
-                                </li>
-                            </ul>
-                            <div>
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;共2页&nbsp;</span>
-                            </div>
-                        </div>
+<!--                        //分页器-->
+                        <Pagination
+                            :pageNo="page"
+                            :pageSize="limit"
+                            :total="myOrder.total"
+                            :continues="5"
+                            @getPageNo="getPageNo"
+                        />
                     </div>
                 </div>
                 <!--猜你喜欢-->
@@ -152,6 +142,12 @@ export default {
                 this.myOrder = result.data;
             }
         },
+        //获取点击页码
+        getPageNo(page) {
+            // 获取点击后对应页码
+            this.page = page;
+            this.getData();
+        },
     },
 };
 </script>
@@ -159,7 +155,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/scss/_color.scss";
 @import "../../../assets/scss/_fonts.scss";
-
 
 .foolter-banner {
     border-top: 1px solid #00a818;
