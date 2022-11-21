@@ -60,8 +60,8 @@
                                 }"
                             >
                                 <router-link to="/personal">
-                                    <font-awesome-icon icon="fa-solid fa-user" />
-                                    用户中心
+                                  <font-awesome-icon icon="fa-brands fa-wpforms" />
+                                    我的订单
                                 </router-link>
                             </div>
                         </li>
@@ -104,7 +104,7 @@
                                         <tr>
                                             <th>义乌购产品</th>
                                             <td>
-                                                <a href="javascript:;">排行榜</a>
+                                                <a href="javascript:;">用户中心</a>
                                                 <a href="javascript:;">市场地图</a>
                                                 <a href="javascript:;">经侦平台</a>
                                                 <a href="javascript:;">转租转让</a>
@@ -207,7 +207,7 @@
 
                         <span>|</span>
                         <a href="javascript:;">
-                            <font-awesome-icon icon="fa-solid fa-ranking-star" />
+                          <font-awesome-icon icon="fa-solid fa-user" />
                             排行榜</a
                         >
                     </div>

@@ -67,6 +67,7 @@ import { faWeixin,
   faWeibo,
   faQq,
   faGithub,
+  faWpforms,
 
 } from "@fortawesome/free-brands-svg-icons";
 //在核心依赖中加入这个引入的图标
@@ -93,6 +94,7 @@ library.add(faUser,
   faHeadset,
   faWarehouse,
   faCreditCard,
+  faWpforms,
 );
 
 //关闭生产提示
