@@ -28,11 +28,28 @@ export default [
         path: "/pay",
         component: Pay,
         name: "pay",
+        beforeEnter: (to, from, next) => {
+            //去交易页面,必须是从购物车而来
+            if (from.path === "/trade") {
+                next();
+            } else {
+                next(false);
+            }
+        },
     },
     {
         path: "/trade",
         component: Trade,
         name: "trade",
+        //路由独享守卫
+        beforeEnter: (to, from, next) => {
+            //去交易页面,必须是从购物车而来
+            if (from.path === "/shopcart") {
+                next();
+            } else {
+                next(false);
+            }
+        },
     },
     {
         path: "/Shopcart",
@@ -106,9 +123,9 @@ export default [
             },
             {
                 //访问父路由跳转默认界面
-                path: '/personal',
-                redirect:'/personal/myorder'
-            }
+                path: "/personal",
+                redirect: "/personal/myorder",
+            },
         ],
     },
     {
