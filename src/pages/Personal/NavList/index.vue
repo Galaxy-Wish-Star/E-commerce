@@ -35,7 +35,7 @@
 <style lang="scss" scoped>
         #order{
             // 此处是整个商品区域距离hader部分的距离
-            margin-top: 30px;
+            margin: 30px 0 750px 0;
         }
         .order{
             //这里是设置页面通用宽度以及居中

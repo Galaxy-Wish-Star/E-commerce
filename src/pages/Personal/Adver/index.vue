@@ -1,8 +1,5 @@
 <template>
     <div class="img">
-      <div class="img-banner">
-           <img src="../Adver/images/banner1.jpg" alt="">
-      </div>
     </div>
 </template>
 
@@ -20,11 +17,11 @@ export default {
 @import "../../../assets/scss/_fonts.scss";
 
 .img{
-  background-color: $white-color;
-  height: 150px;
-  margin-top: 20px;
-  .img-banner{
-    padding-top: 25px;
-  }
+  display:block;
+  background-image: url("../Adver/images/banner1.jpg");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  height: 170px;
+  margin: 20px auto 0;
 }
 </style>

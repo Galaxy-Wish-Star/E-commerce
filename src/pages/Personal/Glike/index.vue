@@ -66,6 +66,7 @@ export default {
 @import "../../../assets/scss/_color.scss";
 @import "../../../assets/scss/_fonts.scss";
     .glike{
+      display:block;
         margin-top: 20px;
         background-color: $white-color;
         .mt{
