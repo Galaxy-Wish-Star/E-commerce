@@ -12,6 +12,15 @@ import router from "@/router";
 //引入swiper
 import 'swiper/css/swiper.css'
 
+// //图片懒加载cnpm i vue-lazyload
+// import VueLazyload from 'vue-lazyload'
+// Vue.use(VueLazyload, {
+//   preLoad: 1.3,
+//   error: errorimage,
+//   loading: loadimage,
+//   attempt: 1
+// })
+
 //统一接口api文件夹里面全部请求函数
 import * as API from '@/api'
 

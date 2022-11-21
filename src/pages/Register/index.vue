@@ -7,20 +7,6 @@
                 <span class="go">我有账号，去 <router-link to="/login">登陆</router-link> </span>
             </h3>
             <div class="Register_sFill">
-                <div class="zcym">
-                    <div class="bossradio_sBox s_radioBox" style="margin-right: 15px">
-                        <label claa="s_radi">
-                            <input type="radio" name="user-type" id="caigoushang" value="1" />
-                            <span>我是采购人</span>
-                        </label>
-                    </div>
-                    <div class="radio_sBox s_radioBox" style="margin-right: 15px">
-                        <label claa="s_radi">
-                            <input type="radio" name="user-type" id="gongyingshang" value="1" />
-                            <span>我是供应商</span>
-                        </label>
-                    </div>
-                </div>
 
                 <div class="content">
                     <label>邮箱号:</label>
@@ -30,7 +16,7 @@
                 <div class="content">
                     <label>邮箱验证:</label>
                     <input type="text" placeholder="请输入验证码" v-model="code" />
-                    <button style="width: 100px; height: 38px" @click="getCode">获取验证码</button>
+                    <button style="width: 100px; height: 38px;" @click="getCode">获取验证码</button>
                     <span class="error-msg">请输入验证码</span>
                 </div>
                 <div class="content">
@@ -90,9 +76,9 @@ export default {
                 //如果成功----路由跳转
 
                 const { phone, code, password, confirmPassword } = this;
-                (phone &&
+                phone &&
                     code &&
-                    password == confirmPassword) &&
+                    password == confirmPassword &&
                     (await this.$store.dispatch("userRegister", {
                         phone,
                         code,
@@ -109,38 +95,45 @@ export default {
 
 <style lang="scss" scoped>
 .register-container {
+    border: 2px solid #06c152;
+    border-right: none;
+    border-left: none;
     .register {
         width: 1200px;
-        height: 615px;
-        border: 1px solid rgb(223, 223, 223);
+        height: 405px;
         margin: 0 auto;
 
         h3 {
+            position: absolute;
+            top: 100px;
             margin: 0;
             padding: 6px 15px;
-            color: #333;
+            color: #666;
             font-size: 20.04px;
             line-height: 30.06px;
             margin-right: 20px;
-            margin-left: 260px;
-
+            margin-left: 340px;
+            font-size: 20px;
+            font-weight: 600;
             span {
+                width: 650px;
                 font-size: 14px;
                 float: right;
-
+                display: flex;
+                justify-content: end;
                 a {
-                    color: #e1251b;
+                    color: #e6560e;
                 }
             }
         }
 
         div:nth-of-type(1) {
-            margin-top: 40px;
+            padding-top: 25px;
         }
 
         .content {
             padding-left: 390px;
-            margin-bottom: 20px;
+            padding-bottom: 20px;
             position: relative;
 
             label {
@@ -215,23 +208,11 @@ export default {
                 color: #fff !important;
                 display: inline-block;
                 font-size: 16px;
+                border: none;
             }
         }
     }
 }
-
-.zcym {
-    width: 300px;
-    display: flex;
-    align-items: baseline;
-    padding-left: 444px;
-    margin: 0 42px;
-    margin-bottom: 28px;
-    position: relative;
-    color: #333;
-    font-size: 16px;
-}
-
 .register > .row {
     margin-bottom: 15px;
 }
