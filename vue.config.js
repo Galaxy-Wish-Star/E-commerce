@@ -8,6 +8,7 @@ module.exports = defineConfig({
 
 module.exports = {
     lintOnSave: false,
+    publicPath: '/E-commerce/',
     // publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
 
     // //代理服务器
