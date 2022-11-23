@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkAgricultural_online_marketing_platform"]=self["webpackChunkAgricultural_online_marketing_platform"]||[]).push([[23],{9023:function(n,r,e){e.r(r),e.d(r,{default:function(){return f}});var l=function(){var n=this,r=n._self._c;return r("div",[n._v(" 团购订单 ")])},t=[],u={},a=u,i=e(1001),c=(0,i.Z)(a,l,t,!1,null,"e1e2472a",null),f=c.exports}}]);
+//# sourceMappingURL=23.fddfd583.js.map
