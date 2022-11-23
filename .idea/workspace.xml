@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b38b4066-e59c-4de1-bfd7-ddcdafe6f4fb" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Detail/goodsInfo/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/auto-merge.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Detail/images/intro01.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Detail/goodsInfo/images/intro01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Detail/images/intro02.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Detail/goodsInfo/images/intro02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Detail/images/intro03.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Detail/goodsInfo/images/intro03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Detail/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Detail/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Search/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Search/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/search/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
