@@ -1,8 +1,10 @@
 <template>
     <div>
         <Nav></Nav>
-        <Right />
-        <Left />
+        <div class="contion">
+            <Left />
+            <Right />
+        </div>
     </div>
 </template>
 
@@ -20,5 +22,11 @@ export default {
     },
 };
 </script>
-div{ }
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contion {
+    display: flex;
+    justify-content: space-around;
+    width: 1226px;
+    margin: 0 auto;
+}
+</style>

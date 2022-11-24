@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="right">
         <div class="zxzn">助农行动｜共筑乡村振兴梦</div>
         <div class="xw">
             <!-- <div class="toptitle a">助农行动｜共筑乡村振兴梦</div> -->
@@ -50,8 +50,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.right{
+    margin-left: 95px;
+}
 .xw {
-    margin-left: 830px;   
     width: 550px;
 
 }
@@ -80,14 +82,18 @@ export default {};
 //         color: #666;
 //     }
 .text ul li  a{
-    font-size: 13px;
-    padding: 9px 0px 6px 12px;
+    margin: 9px 0px 6px 12px;
      color: #666;
     line-height: 22px;
     // white-space: nowrap;
     // text-overflow: ellipsis;
     float:right;
     // list-style:none;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     
 }
 .text ul li  a:hover{
