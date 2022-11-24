@@ -63,22 +63,22 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-                                    <a href="#">节能补贴</a>
+                                    <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
-                                    <a href="#">4K电视</a>
+                                    <a href="#">新鲜鱼产</a>
                                 </li>
                                 <li>
-                                    <a href="#">空气净化器</a>
+                                    <a href="#">各地特色</a>
                                 </li>
                                 <li>
-                                    <a href="#">IH电饭煲</a>
+                                    <a href="#">优惠产品</a>
                                 </li>
                                 <li>
-                                    <a href="#">滚筒洗衣机</a>
+                                    <a href="#">新疆哈密瓜</a>
                                 </li>
                                 <li>
-                                    <a href="#">电热水器</a>
+                                    <a href="#">特色红薯</a>
                                 </li>
                             </ul>
                             <div class="img1-activity-box">
@@ -169,22 +169,22 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-                                    <a href="#">节能补贴</a>
+                                    <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
-                                    <a href="#">4K电视</a>
+                                    <a href="#">新鲜鱼产</a>
                                 </li>
                                 <li>
-                                    <a href="#">空气净化器</a>
+                                    <a href="#">各地特色</a>
                                 </li>
                                 <li>
-                                    <a href="#">IH电饭煲</a>
+                                    <a href="#">优惠产品</a>
                                 </li>
                                 <li>
-                                    <a href="#">滚筒洗衣机</a>
+                                    <a href="#">新疆哈密瓜</a>
                                 </li>
                                 <li>
-                                    <a href="#">电热水器</a>
+                                    <a href="#">特色红薯</a>
                                 </li>
                             </ul>
                             <div class="img1-activity-box">
@@ -275,22 +275,22 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-                                    <a href="#">节能补贴</a>
+                                    <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
-                                    <a href="#">4K电视</a>
+                                    <a href="#">新鲜鱼产</a>
                                 </li>
                                 <li>
-                                    <a href="#">空气净化器</a>
+                                    <a href="#">各地特色</a>
                                 </li>
                                 <li>
-                                    <a href="#">IH电饭煲</a>
+                                    <a href="#">优惠产品</a>
                                 </li>
                                 <li>
-                                    <a href="#">滚筒洗衣机</a>
+                                    <a href="#">新疆哈密瓜</a>
                                 </li>
                                 <li>
-                                    <a href="#">电热水器</a>
+                                    <a href="#">特色红薯</a>
                                 </li>
                             </ul>
                             <div class="img1-activity-box">
@@ -364,7 +364,9 @@
                 <div class="new-list-box">
                     <div class="new-list-title">
                         <span>资讯</span>
-                        <span class="gd"><a>更多>></a></span>
+                        <router-link to="/news">
+                            <span class="gd"><a>更多>></a></span>
+                        </router-link>
                         <img src="./images/助农.jpeg" />
                     </div>
                     <div class="zn-newss">
@@ -395,7 +397,9 @@
                 <div class="new-list-box">
                     <div class="new-list-title">
                         <span>资讯</span>
-                        <span class="gd"><a>更多>></a></span>
+                        <router-link to="/news">
+                            <span class="gd"><a>更多>></a></span>
+                        </router-link>
                         <img src="./images/助农2.jpeg" />
                     </div>
                     <div class="zn-newss">
@@ -427,8 +431,10 @@
                 </div>
                 <div class="new-list-box">
                     <div class="new-list-title">
-                        <span>资讯</span>
-                        <span class="gd"><a>更多>></a></span>
+                        <span>资讯</span>                      
+                        <router-link to="/news">
+                            <span class="gd"><a>更多>></a></span>
+                        </router-link>
                         <img src="./images/助农3.jpeg" />
                     </div>
                     <div class="zn-newss">
