@@ -45,12 +45,16 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <router-link to="/shopcart">
+                            <div v-wave="{
+                                    color: 'red',
+                                }">
+                                <router-link to="/shopcart">
                                 <a>
                                     <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                                     购物车</a
                                 ></router-link
                             >
+                            </div>
                         </li>
                         <span>|</span>
                         <li>
