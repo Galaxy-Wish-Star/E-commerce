@@ -83,7 +83,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
         <a href="https://github.com/uber0213">
             <img src="https://avatars.githubusercontent.com/u/117715641?v=4" width="100;" alt="uber0213"/>
             <br />
-            <sub><b>uber0213</b></sub>
+            <sub><b>Uber0213</b></sub>
         </a>
     </td>
     <td align="center">
