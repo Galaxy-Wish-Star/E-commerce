@@ -23,9 +23,9 @@
   - [贡献者](#贡献者)
   - [页面描述](#页面描述)
   - [安装使用](#安装使用)
-- [安装依赖](#安装依赖)
+  - [安装依赖](#安装依赖)
   - [开启服务器，浏览器访问 http://localhost:8080](#开启服务器浏览器访问-httplocalhost8080)
-- [特别感谢：](#特别感谢)
+  - [特别感谢：](#特别感谢)
 - [使用许可](#使用许可)
 
 ---
@@ -35,12 +35,12 @@
 * `develop`：开发分支，该分支记录相对稳定的版本，所有的feature分支和bugfix分支都从该分支创建。其它分支为短期分支，其完成功能开发之后需要删除
 * `feature/*`：特性（功能）分支，用于开发新的功能，不同的功能创建不同的功能分支，功能分支开发完成并自测通过之后，需要合并到 develop 分支，之后删除该分支。
 * `bugfix/*`：bug修复分支，用于修复不紧急的bug，普通bug均需要创建bugfix分支开发，开发完成自测没问题后合并到 develop 分支后，删除该分支。
-* `release/*`：发布分支，用于代码上线准备，该分支从develop分支创建，创建之后由测试同学发布到测试环境进行测试，测试过程中发现bug需要开发人员在该release分支上进行bug修复，所有bug修复完后，在上线之前，需要合并该release分支到master分支和develop分支。
+* `release/*`：发布分支，用于代码上线准备，该分支从develop分支创建，创建之后由测试发布到测试环境进行测试，测试过程中发现bug需要在该release分支上进行bug修复，所有bug修复完后，上线之前，需要合并该release分支到master分支和develop分支。
 * `hotfix/`*：紧急bug修复分支，该分支只有在紧急情况下使用，从master分支创建，用于紧急修复线上bug，修复完成后，需要合并该分支到master分支以便上线，同时需要再合并到develop分支。
 
 
 # Git Commit Message格式
-type : subject
+**type : subject**
 
 ## type 提交类型：
 * `revert:` 回滚代码
@@ -54,7 +54,7 @@ type : subject
 * `build:` 其他修改, 比如构建流程, 依赖管理
 ## subject 提交描述
 
-对应内容是commit 目的的简短描述，一般不超过50个字符
+**对应内容是commit 目的的简短描述，不超过50个字符**
 
 ---
 
@@ -116,7 +116,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 - [x] 人员招募
 - [x] 方案设计
-- [ ] 编码
+- [x] 编码
 - [ ] Debug 测试
 - [ ] 完成！
 
@@ -134,7 +134,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 首先确保你的电脑安装了 Nodejs
 
-# 安装依赖
+## 安装依赖
 
 ```bash
 npm install
@@ -146,7 +146,7 @@ npm install
 npm run serve
 ```
 
-# 特别感谢：
+## 特别感谢：
 
 [IntelliJ WebStorm](https://zh.wikipedia.org/zh-hans/IntelliJ_IDEA) 是一款在各方面最大限度地提高开发人员生产力的 IDE，适用于前端平台语言。
 

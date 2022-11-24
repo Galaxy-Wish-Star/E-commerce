@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b38b4066-e59c-4de1-bfd7-ddcdafe6f4fb" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
       <workItem from="1669184375449" duration="220000" />
       <workItem from="1669185074725" duration="5730000" />
       <workItem from="1669213929517" duration="714000" />
-      <workItem from="1669294679768" duration="1331000" />
+      <workItem from="1669294679768" duration="2532000" />
     </task>
     <servers />
   </component>
