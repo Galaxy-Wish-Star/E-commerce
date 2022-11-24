@@ -1,6 +1,6 @@
 # E-commerce
 
-助农电商项目  [Live Demo](https://galaxy-wish-star.github.io/E-commerce/dist/#/home)
+助农电商项目  [Live Demo](https://galaxy-wish-star.github.io/E-commerce/)
 
 ![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD-green)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -24,7 +24,7 @@
   - [页面描述](#页面描述)
   - [安装使用](#安装使用)
 - [安装依赖](#安装依赖)
-- [开启服务器，浏览器访问 http://localhost:8080](#开启服务器浏览器访问-httplocalhost8080)
+  - [开启服务器，浏览器访问 http://localhost:8080](#开启服务器浏览器访问-httplocalhost8080)
 - [特别感谢：](#特别感谢)
 - [使用许可](#使用许可)
 
@@ -84,7 +84,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 - [x] 人员招募
 - [x] 方案设计
-- [ ] 编码
+- [x] 编码
 - [ ] Debug 测试
 - [ ] 完成！
 
@@ -95,9 +95,8 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 - [x] 商品详情
 - [x] 购物车
 - [x] 支付页
-- [ ] 我的收藏
-- [ ] 订单页
-- [ ] 个人信息管理
+- [x] 新闻页
+- [x] 订单页
 
 ## 安装使用
 
@@ -109,7 +108,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 npm install
 ```
 
-# 开启服务器，浏览器访问 http://localhost:8080
+## 开启服务器，浏览器访问 http://localhost:8080
 
 ```bash
 npm run serve
