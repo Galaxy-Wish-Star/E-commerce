@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Nav></Nav>
         <Right />
         <Left />
     </div>
@@ -8,15 +9,16 @@
 <script>
 import Right from "./Right/Right";
 import Left from "./Left/Left";
+import Nav from "@/components/Nav";
+
 export default {
     name: "news",
     components: {
         Right,
         Left,
+        Nav,
     },
 };
 </script>
-    div{
-        
-    }
+div{ }
 <style lang="scss" scoped></style>

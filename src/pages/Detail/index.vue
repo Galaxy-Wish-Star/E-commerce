@@ -447,6 +447,7 @@ export default {
                         }
 
                         .remark {
+                            font-size: 14px;
                             float: right;
                         }
                     }
@@ -809,6 +810,7 @@ export default {
                     overflow: hidden;
 
                     li {
+                        cursor: pointer;
                         line-height: 40px;
                         width: 86px;
                         float: left;

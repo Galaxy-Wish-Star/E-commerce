@@ -10,7 +10,7 @@
                             class="t-left"
                             onerror="javascript:this.src='/webpage/gxs/images/wutu.png'"
                         />
-                        <h3>热门供应</h3>
+                        <h3>优惠政策</h3>
                         <img
                             src="https://res.fupin832.com/icon/title-right.png"
                             alt=""
@@ -139,12 +139,12 @@
                         </li>
                     </ul>
                     <!-- <ul class="tab-con">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul> -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul> -->
                 </div>
             </div>
             <div class="diannao w navigation">
@@ -245,12 +245,12 @@
                         </li>
                     </ul>
                     <!-- <ul class="tab-con">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul> -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul> -->
                 </div>
             </div>
             <div class="jiaju w navigation">
@@ -351,12 +351,12 @@
                         </li>
                     </ul>
                     <!-- <ul class="tab-con">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</ul> -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul> -->
                 </div>
             </div>
             <How></How>
@@ -477,8 +477,9 @@
 </template>
 
 <script>
-import How from "@/pages/Home/How"
+import How from "@/pages/Home/How";
 import { mapState } from "vuex";
+
 export default {
     mounted() {
         //派发action:通过vuex发起ajax请求，将数据仓储在仓库当中
@@ -489,9 +490,9 @@ export default {
             floorBannerList: (state) => state.home.floorBannerList,
         }),
     },
-    components:{
-        How
-    }
+    components: {
+        How,
+    },
 };
 </script>
 
@@ -503,45 +504,55 @@ export default {
         h3 {
             margin: 0 25px;
             color: #f8523c;
+            font-size: 30px;
         }
+
         height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
 //轮播图
 .el-carousel__container {
     .el-carousel__item {
         img {
             width: 252px;
         }
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         span {
             margin: 10px;
             font-size: 24px;
             font-family: "myfont";
             color: #d1343e;
         }
+
         p {
             font-size: 12px;
             color: #d1343e;
         }
     }
 }
+
 .contain {
     width: 1226px;
     margin: 0 auto;
 }
+
 .box-hd {
     padding-right: 26.5px;
     background-color: #fff;
+
     h3 {
         padding-left: 18px;
     }
+
     height: 50px;
     display: flex;
     align-items: center;
@@ -553,10 +564,12 @@ export default {
     border-top: none;
     margin-top: 25px;
 }
+
 .tab-list li a,
 .tab-con li a {
     color: #5c5251;
 }
+
 .box-hd h3 {
     float: left;
     font-size: 18px;
@@ -600,6 +613,7 @@ export default {
     padding-right: 12.5px;
     width: 219px;
     border-right: 1px solid #ccc;
+
     &:last-child {
         border-right: none;
     }
@@ -670,15 +684,18 @@ export default {
     background-color: rgb(134, 191, 50);
     color: #fff;
 }
+
 .floor {
     .shouji,
     .diannao,
     .jiaju {
         margin: 10px 0;
+
         .box-bd {
             .tab-con {
                 .w209 {
                     border-right: 1px solid $grey-color;
+
                     .img1-activity-box {
                         padding: 20px 0;
                         background-color: #fff;
@@ -686,17 +703,21 @@ export default {
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+
                         span,
                         p {
                             color: #d1343e;
                         }
+
                         p {
                             font-size: 12px;
                         }
+
                         img {
                             height: 80%;
                             width: 90%;
                         }
+
                         span {
                             font-size: 24px;
                             font-family: "myfont";
@@ -708,19 +729,23 @@ export default {
                     .tab-con-item {
                         a {
                             height: 180px;
+
                             img {
                                 width: 50%;
                                 height: 50%;
                             }
+
                             background-color: #fff;
                             display: flex;
                             justify-content: center;
                             flex-direction: column;
                             align-items: center;
+
                             span {
                                 color: #d1343e;
                                 font-size: 19px;
                             }
+
                             p {
                                 color: #d1343e;
                                 font-size: 12px;
@@ -728,33 +753,40 @@ export default {
                         }
                     }
                 }
+
                 .w220 {
                     .tab-con-item {
                         padding: 2px 50px;
+
                         img {
                             width: 145px;
                         }
+
                         a {
                             .yunnanxuelianguo {
                                 width: 240px;
                                 position: relative;
                                 top: 10px;
                             }
+
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             flex-direction: column;
                         }
                     }
+
                     background-color: #fff;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
                     align-items: center;
+
                     span {
                         color: #d1343e;
                         font-size: 19px;
                     }
+
                     p {
                         color: #d1343e;
                         font-size: 12px;
@@ -769,6 +801,7 @@ export default {
     display: flex;
     justify-content: space-between;
 }
+
 .new-list-box {
     height: 290px;
     width: 250px;
@@ -780,6 +813,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .zn-news-lits span {
     font-size: 16px;
     color: #666;
@@ -789,6 +823,7 @@ export default {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .date {
     font-size: 16px;
     color: #666;
@@ -798,69 +833,84 @@ export default {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .zn-news-lits a {
     width: 290px;
     display: flex;
     float: right;
     float: left;
+
     span {
         right: 0;
         float: right;
     }
 }
+
 .new-list-title a {
     float: right;
     color: #c81623;
     font-size: 14px;
 }
+
 .new-list-title {
     height: 160px;
     font-size: 18px;
     font-weight: 600;
 }
-.new-list-title img :not(.weixin){
+
+.new-list-title img :not(.weixin) {
     padding-top: 10px;
 }
+
 .zn-news-lits {
     display: flex;
     flex-direction: column;
 }
+
 .weixin-link img {
     width: 150px;
     height: 150px;
 }
+
 .weixin img {
     width: 24px;
 }
-.weixin{
+
+.weixin {
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .gzh {
     margin-top: -100px;
 }
+
 .column-title {
     text-align: center;
     font-weight: bolder;
     color: #bd676c;
     font-size: 35px;
 }
+
 .list-pic {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     height: 300px;
+
     ul {
         margin: 0 15px 0 0;
     }
 }
+
 .list-plc img {
     margin: 0 auto;
     width: 1210px;
     margin-top: 10px;
 }
+
 .weixin-link {
     text-align: center;
 }
