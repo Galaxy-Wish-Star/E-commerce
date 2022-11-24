@@ -45,15 +45,17 @@
                         </li>
                         <span>|</span>
                         <li>
-                            <div v-wave="{
+                            <div
+                                v-wave="{
                                     color: 'red',
-                                }">
-                                <router-link to="/shopcart">
-                                <a>
-                                    <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-                                    购物车</a
-                                ></router-link
+                                }"
                             >
+                                <router-link to="/shopcart">
+                                    <a>
+                                        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                                        购物车</a
+                                    ></router-link
+                                >
                             </div>
                         </li>
                         <span>|</span>
@@ -64,7 +66,7 @@
                                 }"
                             >
                                 <router-link to="/personal">
-                                  <font-awesome-icon icon="fa-brands fa-wpforms" />
+                                    <font-awesome-icon icon="fa-brands fa-wpforms" />
                                     我的订单
                                 </router-link>
                             </div>
@@ -198,7 +200,7 @@
                             >
                         </ul>
                     </div>
-<!--                  <div class="header-body-right" >-->
+                    <!--                  <div class="header-body-right" >-->
                     <div class="header-body-right" v-show="loginHide">
                         <div class="login-dis" v-if="!userName">
                             <router-link to="/login" id="login-regster-btn">登录</router-link>
@@ -211,7 +213,7 @@
 
                         <span>|</span>
                         <a href="javascript:;">
-                          <font-awesome-icon icon="fa-solid fa-user" />
+                            <font-awesome-icon icon="fa-solid fa-user" />
                             排行榜</a
                         >
                     </div>
@@ -228,6 +230,7 @@ export default {
             keyword: "",
         };
     },
+
     methods: {
         //搜索按钮回调
         getSearch() {
@@ -244,12 +247,12 @@ export default {
         //退出登录
         logOut() {
             try {
-              //退出成功
-              this.$store.dispatch("userLogOut");
-              this.$router.push('/home')
-              //回到首页
-            }catch (error) {
-              alert(error.message);
+                //退出成功
+                this.$store.dispatch("userLogOut");
+                this.$router.push("/home");
+                //回到首页
+            } catch (error) {
+                alert(error.message);
             }
         },
     },
@@ -260,10 +263,7 @@ export default {
         },
         //登录按钮显示与隐藏
         loginHide() {
-            return (
-                !(this.$route.path == "/register") &&
-                !(this.$route.path == "/login")
-            );
+            return !(this.$route.path == "/register") && !(this.$route.path == "/login");
         },
         //用户名信息
         userName() {
