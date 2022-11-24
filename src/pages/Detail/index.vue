@@ -690,7 +690,6 @@ export default {
         .detail {
             width: 980px;
             float: right;
-
             .fitting {
                 border: 1px solid #ddd;
                 margin-bottom: 15px;
