@@ -43,13 +43,15 @@
 type : subject
 
 ## type 提交类型：
-* `feature`: 新特性
-* `fix`: 修改问题
-* `style`: 代码格式修改
-* `test`: 测试用例修改
-* `docs`: 文档修改
-* `refactor`: 代码重构
-* `misc`: 其他修改, 比如构建流程, 依赖管理
+* `revert:` 回滚代码
+* `feat:` 新特性
+* `fix:` 错误修复
+* `improvement:` 功能改进
+* `docs:` 文档修改
+* `perf:`性能修改
+* `test:`测试
+* `refactor:` 代码重构
+* `build:` 其他修改, 比如构建流程, 依赖管理
 ## subject 提交描述
 
 对应内容是commit 目的的简短描述，一般不超过50个字符
@@ -74,9 +76,8 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 ## 贡献者
 
-<a href="https://github.com/liusxs"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/101164913?v=4" /></a><a href="https://github.com/mason369"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/93964390?s=96&v=4" /></a><a href="https://github.com/Nehc-ik"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/117791225?v=4" /></a><a href="https://github.com/uber0213"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/117715641?v=4" /></a>
-
-<!-- <a href="https://github.com/lcwkbook"><img style="border-radius:50%;height:60px" src="https://avatars.githubusercontent.com/u/91841280?v=4" /></a> -->
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
 
 感谢以上参与项目的人
 
@@ -84,7 +85,7 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 
 - [x] 人员招募
 - [x] 方案设计
-- [x] 编码
+- [ ] 编码
 - [ ] Debug 测试
 - [ ] 完成！
 
