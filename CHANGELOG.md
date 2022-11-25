@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.1.7](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.6...v1.1.7) (2022-11-25)
+
+
+### update
+
+* 添加admin后台 ([8639d25](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/8639d25db441145e451cdea85280cdb0aa0d3f8f))
+* 添加admin后台 ([d7bed15](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/d7bed15164da987e0b8f501727f4dbcca21a3f31))
+
 ### [1.1.6](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.5...v1.1.6) (2022-11-25)
 
 
