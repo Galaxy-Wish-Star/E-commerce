@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.8](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.7...v1.1.8) (2022-11-25)
+
+
+### update
+
+* 添加admin ([30cff7d](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/30cff7d209e924c89b65c2b3d4abf7cec27c24bd))
+
 ### [1.1.7](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.6...v1.1.7) (2022-11-25)
 
 
