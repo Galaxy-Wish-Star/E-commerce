@@ -1,6 +1,6 @@
 # E-commerce
 
-助农电商项目  [Live Demo](https://galaxy-wish-star.github.io/E-commerce/)
+助农电商项目  [Live Demo](https://galaxy-wish-star.github.io/E-commerce/)Tips:由于编译后dist文件夹路径问题部分图片或请求将无法显示
 
 ![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD-green)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)

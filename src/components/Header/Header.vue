@@ -188,7 +188,7 @@
                             placeholder="请输入内容"
                             v-model="keyword"
                             @keyup.enter="getSearch"
-                        />
+                        />y
                         <button class="search-btn" @click="getSearch">搜索</button>
                         <ul id="ul">
                             <span style="float: left; margin-right: 4px">热门搜索：</span>
