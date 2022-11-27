@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.10](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.9...v1.1.10) (2022-11-27)
+
+
+### update
+
+* update to"login" and "regster" page" ([3a645b6](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/3a645b6f92515d60a75196a1a075c4ed94d7200e))
+
 ### [1.1.9](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.8...v1.1.9) (2022-11-27)
 
 
