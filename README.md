@@ -110,15 +110,16 @@ Rural-revitalization-agricultural-assistance-services 遵循 [Code of conduct](.
 </table>
 <!-- readme: collaborators,contributors -end -->
 
-感谢以上参与项目的人
+**感谢以上参与项目的人**
+---
 
 **当前进度**：
 
 - [x] 人员招募
 - [x] 方案设计
 - [x] 编码
-- [ ] Debug 测试
-- [ ] 完成！
+- [x] Debug 测试
+- [x] 完成！
 
 ## 页面描述
 
