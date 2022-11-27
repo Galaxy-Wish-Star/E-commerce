@@ -8,12 +8,12 @@
             </h3>
             <div class="Register_sFill">
                 <div class="content">
-                    <label>邮箱号:</label>
-                    <input type="text" placeholder="请输入你的邮箱" v-model="phone" />
-                    <span class="error-msg">请输入邮箱号（以此来接收你的验证码）</span>
+                    <label>手机号:</label>
+                    <input type="text" placeholder="请输入你的手机号" v-model="phone" />
+                    <span class="error-msg">请输入手机号（以此来接收你的验证码）</span>
                 </div>
                 <div class="content">
-                    <label>邮箱验证:</label>
+                    <label>验证码:</label>
                     <input type="text" placeholder="请输入验证码" v-model="code" />
                     <button style="width: 100px; height: 38px;" @click="getCode">获取验证码</button>
                     <span class="error-msg">请输入验证码</span>
@@ -46,31 +46,7 @@
 export default {
     name: "Register",
     data() {
-        var validatePass = (rule, value, callback) => {
-            if (value === "") {
-                callback(new Error("请输入密码"));
-            } else {
-                if (this.ruleForm.checkPass !== "") {
-                    this.$refs.ruleForm.validateField("checkPass");
-                }
-                callback();
-            }
-        };
-        var validatePass2 = (rule, value, callback) => {
-            if (value === "") {
-                callback(new Error("请再次输入密码"));
-            } else if (value !== this.ruleForm.pass) {
-                callback(new Error("两次输入密码不一致!"));
-            } else {
-                callback();
-            }
-        };
         return {
-            form: {},
-            rules: {
-                pass: [{ validator: validatePass, trigger: "blur" }],
-                checkPass: [{ validator: validatePass2, trigger: "blur" }],
-            },
             //收集表单数据--手机号
             phone: "",
             // 验证码
@@ -93,9 +69,6 @@ export default {
                     return false;
                 }
             });
-        },
-        resetForm(formName) {
-            this.$refs[formName].resetFields();
         },
 
         async getCode() {
