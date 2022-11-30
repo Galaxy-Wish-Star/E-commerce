@@ -38,6 +38,7 @@
                                 <span class="forget">忘记密码？</span>
                             </div>
                             <button class="btn" @click.prevent="getLogin">登&nbsp;&nbsp;录</button>
+                          <p>admin账号:13700000000密码:111111</p>
                         </form>
 
                         <div class="call clearFix">
