@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.0...v1.2.1) (2022-11-30)
+
+
+### update
+
+* add admin login ([ddf2208](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/ddf2208867c4695383d438fdcea5b4b10d45753a))
+
 ## [1.2.0](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.1.10...v1.2.0) (2022-11-29)
 
 
