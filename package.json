@@ -1,7 +1,7 @@
 {
   "name": "Agricultural-online-marketing-platform",
   "homepage": "https://github.com/Galaxy-Wish-Star/E-commerce",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
