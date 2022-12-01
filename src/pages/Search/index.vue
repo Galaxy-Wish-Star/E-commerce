@@ -20,7 +20,7 @@
                             {{ searchParams.keyword }}<i @click="removeKeyword">x</i>
                         </li>
                         <!--                      品牌的面包屑-->
-                        <li class="with-x" v-if="searchParams.trademark">
+                        <li class="with-x" v-if="searchParams.trademark">.
                             {{ searchParams.trademark.split(":")[1] }}<i @click="removeTrademark">x</i>
                         </li>
                         <!--                      平台售卖属性值展示-->

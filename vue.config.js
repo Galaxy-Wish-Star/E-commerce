@@ -18,7 +18,7 @@ module.exports = {
                 target: "http://gmall-h5-api.atguigu.cn", //代理转发路径
                 pathRewrites: { "^/api": "" }, //匹配字符串
                 ws: true, //支持websocket
-                changeOrigin: true, //host源
+                changeOrigin: true, //跨域
             },
         },
     },
