@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b38b4066-e59c-4de1-bfd7-ddcdafe6f4fb" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/东北新鲜大白菜.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/东山岛鱿鱼.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/云南紫薯.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/云南胡萝卜.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/云南雪莲果.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Detail/Common/images/仙人掌果.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Detail/Common/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Detail/Common/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/E-commerce",
+    "last_opened_file_path": "D:/E-commerce/src/pages/Detail/Common/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,11 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\E-commerce\src\pages\Detail\Common\images" />
       <recent name="D:\E-commerce\src\mock" />
       <recent name="D:\E-commerce\src\pages\Detail\comments\images" />
       <recent name="D:\E-commerce\src\api" />
       <recent name="D:\E-commerce\src\assets" />
-      <recent name="D:\E-commerce\src\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\E-commerce\src\pages\Detail\goodsInfo\images" />
@@ -142,7 +149,7 @@
       <workItem from="1669702813121" duration="742000" />
       <workItem from="1669781783301" duration="133000" />
       <workItem from="1669789296611" duration="50000" />
-      <workItem from="1669856369141" duration="896000" />
+      <workItem from="1669856369141" duration="2344000" />
     </task>
     <servers />
   </component>
