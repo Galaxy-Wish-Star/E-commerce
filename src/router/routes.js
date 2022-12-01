@@ -73,6 +73,11 @@ export default [
         name: "register",
     },
     {
+        path: "/school",
+        component: () => import("@/pages/School"),
+        name: "school",
+    },
+    {
         path: "/personal",
         component: () => import("@/pages/Personal"),
         name: "personal",
