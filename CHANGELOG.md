@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.1...v1.2.2) (2022-12-01)
+
+
+### update
+
+* update commons to detail ([6127c17](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/6127c173ed8051ff2c4be34efa42238249a9f999))
+
 ### [1.2.1](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.0...v1.2.1) (2022-11-30)
 
 
