@@ -15,12 +15,14 @@
     .banner{
         display: flex;
         justify-content: space-around;
-        margin-top: 30px;       
-        img{
+        margin-top: 30px; 
+        a{
+            img{
             transition: all 1s;
         }:hover{
-        transform: scale(1.2);
+        transform: scale(1.05);
     }
+        }    
     }
   </style>
   
