@@ -87,15 +87,15 @@
             padding-right: 5px;
         }
     }
-    .frame{
-        // width: 350px;
+    .frame{     
         margin-top: 40px;
-        background-color: rgb(234, 234, 234);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         
         .text{
+            width: 340px;
             padding: 10px;
+            background-color: rgb(234, 234, 234);
             .car{
                 display: flex;
                 img{
@@ -143,12 +143,12 @@
                 padding: 4px;
                 margin: 0 auto;
             }
-        }
-    }:hover{
+        }:hover{
         background-color: white;
         .six{
             background: green;
         }
+    }
     }
 
     }
