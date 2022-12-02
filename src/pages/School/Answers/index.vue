@@ -56,12 +56,10 @@
   </div>
   </template>
   
-  <script>
+<script>
 
-    export default {
-        
-    }
-  </script>
+export default {}
+</script>
   <style lang="scss" scoped>
 
 .content{

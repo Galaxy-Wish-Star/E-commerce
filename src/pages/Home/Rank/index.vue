@@ -90,16 +90,12 @@
 <script>
 import { mapState } from "vuex";
 export default {
-    name: "Rank",
-    mounted() {
-        this.$store.dispatch("getGoodsHot");
-    },
-    methods: {},
-    computed: {
-        ...mapState({
-            goodsHot: (state) => state.home.goodsHot,
-        }),
-    },
+	name: "Rank",
+	mounted() {
+		this.$store.dispatch("getGoodsHot");
+	},
+	methods : {},
+	computed: {...mapState({goodsHot: (state) => state.home.goodsHot})}
 };
 </script>
 

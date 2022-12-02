@@ -6,16 +6,17 @@
     </div>
   </template>
   
-  <script>
-    export default {
-        
-    }
-  </script>
+<script>
+export default {}
+</script>
   <style lang="scss" scoped>
     .banner{
         display: flex;
         justify-content: space-around;
         margin-top: 30px; 
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 15px;
         a{
             img{
             transition: all 1s;
