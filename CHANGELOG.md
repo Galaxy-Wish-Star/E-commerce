@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.3](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.2...v1.2.3) (2022-12-02)
+
+
+### update
+
+* update eslint and prettier ([7343c3e](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/7343c3e515a44957bda7df9ca30b5a215038cec4))
+
 ### [1.2.2](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.1...v1.2.2) (2022-12-01)
 
 
