@@ -487,18 +487,12 @@ import How from "@/pages/Home/How";
 import { mapState } from "vuex";
 
 export default {
-    mounted() {
-        //派发action:通过vuex发起ajax请求，将数据仓储在仓库当中
-        this.$store.dispatch("getFloorBannerList");
-    },
-    computed: {
-        ...mapState({
-            floorBannerList: (state) => state.home.floorBannerList,
-        }),
-    },
-    components: {
-        How,
-    },
+	mounted() {
+		//派发action:通过vuex发起ajax请求，将数据仓储在仓库当中
+		this.$store.dispatch("getFloorBannerList");
+	},
+	computed  : {...mapState({floorBannerList: (state) => state.home.floorBannerList})},
+	components: {How}
 };
 </script>
 

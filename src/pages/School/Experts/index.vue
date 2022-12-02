@@ -65,11 +65,9 @@
     </div>
 </template>
   
-  <script>
-    export default {
-        
-    }
-  </script>
+<script>
+export default {}
+</script>
   <style lang="scss" scoped>
    .content{
     background-color: white;
