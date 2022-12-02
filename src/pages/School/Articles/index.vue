@@ -9,8 +9,13 @@
         <div class="frame">
                 <div class="text">
                     <div class="car">
+<<<<<<< Updated upstream
                         <img src="../image/樱桃.png" alt="">
                         <span class="sis">十二月份樱桃管理要点</span>
+=======
+                        <img src="../image/葡萄.jpg" alt="">
+                        <span class="sis">十二月份葡萄管理要点</span>
+>>>>>>> Stashed changes
                     <a href="" class="six">脱贫地区 --------------------------934人阅读</a>
                    
                     </div>
@@ -19,15 +24,25 @@
                 </div>
                 <div class="text">
                     <div class="car">
+<<<<<<< Updated upstream
                         <img src="../image/草莓.jpg" alt="">
                         <span class="sis">十二月份草莓管理要点</span>
+=======
+                        <img src="../image/橘子.jpg" alt="">
+                        <span class="sis">十二月份橘子管理要点</span>
+>>>>>>> Stashed changes
                     <a href="" class="six">脱贫地区--------------------------113人阅读</a>
                     </div>
                 </div>
                 <div class="text">
                     <div class="car">
+<<<<<<< Updated upstream
                         <img src="../image/月见草.jpg" alt="">
                         <span class="sis">十二月份月见草管理要点</span>
+=======
+                        <img src="../image/草莓.jpg" alt="">
+                        <span class="sis">十二月份草莓管理要点</span>
+>>>>>>> Stashed changes
                     <a href="" class="six">脱贫地区--------------------------753人阅读</a>
                     </div>
                 </div>
