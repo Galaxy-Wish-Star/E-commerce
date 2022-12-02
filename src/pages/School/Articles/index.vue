@@ -9,8 +9,8 @@
         <div class="frame">
                 <div class="text">
                     <div class="car">
-                        <img src="../image/果园.jpg" alt="">
-                        <span class="sis">十二月份果园管理要点</span>
+                        <img src="../image/樱桃.png" alt="">
+                        <span class="sis">十二月份樱桃管理要点</span>
                     <a href="" class="six">脱贫地区 --------------------------934人阅读</a>
                    
                     </div>
@@ -19,8 +19,8 @@
                 </div>
                 <div class="text">
                     <div class="car">
-                        <img src="../image/猪仔.jpg" alt="">
-                        <span class="sis">十二月份猪仔管理要点</span>
+                        <img src="../image/草莓.jpg" alt="">
+                        <span class="sis">十二月份草莓管理要点</span>
                     <a href="" class="six">脱贫地区--------------------------113人阅读</a>
                     </div>
                 </div>
