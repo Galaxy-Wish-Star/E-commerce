@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.4](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.3...v1.2.4) (2022-12-04)
+
+
+### update
+
+* rename ([eb964a3](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/eb964a343529c69407c56e069b42be26944e4eed))
+
 ### [1.2.3](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.2...v1.2.3) (2022-12-02)
 
 
