@@ -28,7 +28,7 @@
                     <div class="car">
                         <img src="../image/thank.gif" alt="">
                         <div class="texr">
-                            <span>陈云鹏·高级兽医师</span>
+                            <span>陈某某·高级兽医师</span>
                             <span>|</span>
                             <span><a href="">详情</a></span>
                             <h3>四川省成都市龙泉驿区动物疫病预防控制中心</h3>
@@ -145,6 +145,7 @@ export default {}
         background-color: white;
         .six{
             background: green;
+            color: aliceblue;
         }
     }
     }
