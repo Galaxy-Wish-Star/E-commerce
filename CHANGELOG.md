@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.5](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.4...v1.2.5) (2022-12-07)
+
+
+### update
+
+* update Rank imgs ([29ee939](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/29ee9399b0906ffdf17fdacb08839291f7efb49e))
+
 ### [1.2.4](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.3...v1.2.4) (2022-12-04)
 
 
