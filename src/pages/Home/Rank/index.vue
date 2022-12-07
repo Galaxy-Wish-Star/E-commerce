@@ -54,7 +54,7 @@
                 </ul>
                 <div class="product_inline_b fl" v-for="goods in goodsHot.slice(0, 8)" :key="goods.length">
                     <a>
-                        <img class="rec_pic" src="https://res.fupin832.com/1658289245674.jpg@240x240" />
+                        <img class="rec_pic" :src=goods.img />
                     </a>
 
                     <a class="goods-info">{{ goods.snameInfo }}</a>
@@ -112,7 +112,7 @@ export default {
         padding: 0;
     }
     .product_inline_b {
-        background-color: #e9e9e9;
+        background-color: #fff;
         margin: 5px 15px;
         position: relative;
         &:hover {
@@ -148,7 +148,7 @@ export default {
                 flex-direction: column;
                 justify-content: space-between;
                 padding: 3px 0;
-                border: 1px solid #fff;
+                border: 1px solid #e9e9e9;
                 border-left: none;
                 border-right: none;
                 .stime {
