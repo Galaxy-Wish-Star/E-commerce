@@ -61,7 +61,6 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-<<<<<<< Updated upstream
                                     <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
@@ -186,7 +185,6 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-<<<<<<< Updated upstream
                                     <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
@@ -311,7 +309,6 @@
                         <li class="w209">
                             <ul class="tab-con-list">
                                 <li>
-<<<<<<< Updated upstream
                                     <a href="#">新鲜蔬菜</a>
                                 </li>
                                 <li>
@@ -486,7 +483,7 @@
                 </div>
                 <div class="new-list-box">
                     <div class="new-list-title">
-                        <span>资讯</span>                      
+                        <span>资讯</span>
                         <router-link to="/news">
                             <span class="gd"><a>更多>></a></span>
                         </router-link>
