@@ -22,7 +22,7 @@ jobs:
         with:
           persist-credentials: false
 
-        # npm-audit-fix
+      - name: npm-audit-fix
         uses: actions/checkout
         uses: grandmasterdev/github-action-npm-audit-fix@latest
         with:
