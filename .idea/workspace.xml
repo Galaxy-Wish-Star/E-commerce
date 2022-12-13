@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b38b4066-e59c-4de1-bfd7-ddcdafe6f4fb" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/styles/element-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/styles/element-ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/styles/transition.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/styles/transition.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/styles/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/styles/variables.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "D:/Magic-Ling-Pixel-Dungeon-Web",
+    "last_opened_file_path": "D:/Web_DEV_ING",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -162,6 +166,8 @@
       <workItem from="1670483479428" duration="838000" />
       <workItem from="1670558672463" duration="49000" />
       <workItem from="1670562288130" duration="411000" />
+      <workItem from="1670747139686" duration="14000" />
+      <workItem from="1670809651831" duration="26000" />
     </task>
     <servers />
   </component>
