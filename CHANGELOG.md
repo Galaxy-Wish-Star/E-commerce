@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.6](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.5...v1.2.6) (2022-12-21)
+
+
+### Build System
+
+* **deps:** bump akhilmhdh/contributors-readme-action ([401252d](https://www.github.com/Galaxy-Wish-Star/E-commerce/commit/401252df10090164d220b96c62bb6f7e8033a43a))
+
 ### [1.2.5](https://www.github.com/Galaxy-Wish-Star/E-commerce/compare/v1.2.4...v1.2.5) (2022-12-07)
 
 
