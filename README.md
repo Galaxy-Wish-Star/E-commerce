@@ -10,9 +10,13 @@
 [![](https://img.shields.io/badge/Vue%2Fcli-%20%5E2%2F%20%5E5.0.8-brightgreen)](https://img.shields.io/badge/Vue%2Fcli-%20%5E2%2F%20%5E5.0.8-brightgreen)
 [![](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)
 
+## 项目简介
+E-commerce 是一个基于Vue全家桶开发的电商项目，包含了商品展示、购物车、订单、用户中心等模块，项目采用前后端分离的开发模式，前端使用Vue全家桶开发，后端使用尚硅谷公共接口，项目采用模块化、组件化、工程化的模式开发。
+
 ## 内容列表
 
 - [E-commerce](#e-commerce)
+  - [项目简介](#项目简介)
   - [内容列表](#内容列表)
 - [Git规范](#git规范)
   - [Git分支命名](#git分支命名)
@@ -23,6 +27,7 @@
   - [维护者](#维护者)
   - [如何贡献](#如何贡献)
   - [贡献者](#贡献者)
+  - [**感谢以上参与项目的人**](#感谢以上参与项目的人)
   - [页面描述](#页面描述)
   - [安装使用](#安装使用)
   - [安装依赖](#安装依赖)
